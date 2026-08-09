@@ -1,0 +1,13 @@
+{
+  "name": "4thmaygames-web",
+  "version": "1.0.0",
+  "description": "포스메이게임즈 공식 홈페이지 (4th May Games)",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve --port=8080",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

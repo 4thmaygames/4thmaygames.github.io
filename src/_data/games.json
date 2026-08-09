@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "cathotel",
+    "title": "고양이호텔",
+    "titleEn": "Idle Cat Hotel",
+    "tagline": "왕발 고양이 쿠쿠와 함께하는 힐링 타이쿤",
+    "status": "출시",
+    "thumb": "/assets/images/games/cathotel-thumb.png",
+    "hero": "/assets/images/games/cathotel-hero.png",
+    "accent": "#f2a65a",
+    "stores": {
+      "appstore": "https://apps.apple.com/kr/app/id6469767467",
+      "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.cathotel"
+    }
+  },
+  {
+    "slug": "moonfrog",
+    "title": "달빛 개구리여관",
+    "titleEn": "Moonlight Frog Inn",
+    "tagline": "당신의 꿈을 제작해 드려요",
+    "status": "2027년 출시 예정",
+    "thumb": "/assets/images/games/moonfrog-thumb.png",
+    "hero": "/assets/images/games/moonfrog-hero.png",
+    "accent": "#7c8fb5",
+    "stores": {}
+  },
+  {
+    "slug": "ghosthotel",
+    "title": "유령호텔 타이쿤",
+    "titleEn": "Idle Ghost Hotel",
+    "tagline": "귀여운 유령들의 쉼터에 오신 것을 환영해요!",
+    "status": "출시",
+    "thumb": "/assets/images/games/ghosthotel-thumb.png",
+    "hero": "/assets/images/games/ghosthotel-hero.png",
+    "accent": "#8f7cb5",
+    "stores": {
+      "appstore": "https://apps.apple.com/kr/app/id1588378696",
+      "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.ghosthotel"
+    }
+  }
+]

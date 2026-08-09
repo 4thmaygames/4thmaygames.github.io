@@ -1,0 +1,59 @@
+{% set path = page.url if page.url else "" %}
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="logo" href="/" aria-label="{{ site.name }} 홈">
+      <img src="/assets/images/common/logo.png" alt="{{ site.name }}" width="150" height="32"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-text',textContent:'4TH MAY GAMES'}))">
+    </a>
+
+    <nav class="gnb" aria-label="주요 메뉴">
+      <ul class="gnb-list">
+        <li class="gnb-item has-sub">
+          <a href="/games/" class="gnb-link{% if '/games/' in path or '/cathotel/' in path or '/moonfrog/' in path or '/ghosthotel/' in path %} is-active{% endif %}">Games</a>
+          <div class="submenu">
+            <ul>
+              {% for g in games %}
+              <li><a href="/{{ g.slug }}/">{{ g.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-item">
+          <a href="/news/" class="gnb-link{% if '/news' in path %} is-active{% endif %}">News</a>
+        </li>
+        <li class="gnb-item has-sub">
+          <a href="/about/" class="gnb-link{% if '/about/' in path or '/company/' in path or '/value/' in path %} is-active{% endif %}">About</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="/company/">회사 소개</a></li>
+              <li><a href="/value/">핵심 가치</a></li>
+              <li><a href="{{ site.careersUrl }}" target="_blank" rel="noopener">팀원 모집 <span class="ext">↗</span></a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" hidden data-mobile-nav>
+  <nav aria-label="모바일 메뉴">
+    <p class="m-group">Games</p>
+    <ul class="m-list">
+      {% for g in games %}<li><a href="/{{ g.slug }}/">{{ g.title }}</a></li>{% endfor %}
+    </ul>
+    <p class="m-group"><a href="/news/">News</a></p>
+    <p class="m-group">About</p>
+    <ul class="m-list">
+      <li><a href="/company/">회사 소개</a></li>
+      <li><a href="/value/">핵심 가치</a></li>
+      <li><a href="{{ site.careersUrl }}" target="_blank" rel="noopener">팀원 모집 ↗</a></li>
+    </ul>
+  </nav>
+</div>

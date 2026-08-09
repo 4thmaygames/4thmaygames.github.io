@@ -1,0 +1,56 @@
+---
+layout: base.njk
+permalink: /cathotel/
+title: 고양이호텔
+description: "왕발 고양이 쿠쿠와 함께 포근하고 특별한 이야기를 만들어보세요! 힐링 경영 타이쿤 게임 고양이호텔."
+ogImage: /assets/images/games/cathotel-hero.png
+---
+{% from "partials/icons.njk" import storeButtons, instagram %}
+
+<section class="game-hero">
+  <div class="wrap">
+    <p class="status">출시</p>
+    <h1 class="h-xl">고양이호텔</h1>
+    <p class="tagline">왕발 고양이 쿠쿠와 함께하는 힐링 타이쿤</p>
+    {{ storeButtons(games[0].stores) }}
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="media ratio-16-9" data-label="고양이호텔 대표 이미지" data-reveal>
+    <img src="/assets/images/games/cathotel-hero.png" alt="고양이호텔 대표 이미지" width="1280" height="720">
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="prose" data-reveal>
+      <p>일상에서 훌쩍 떠나 온천에 몸과 마음을 녹이고 싶으셨던 날이 있으신가요?</p>
+      <p>타이쿤 게임 ‘고양이 호텔’에서 왕발 고양이 쿠쿠와 함께 포근하고 특별한 이야기를 만들어보세요!</p>
+      <p>고양이 호텔은 아늑한 객실, 따뜻한 온천, 그리고 여러 특별한 공간들로 이루어져있어요.</p>
+      <p>귀여운 고양이 손님들을 맞이하고 손님들의 필요를 빠르게 채워 최고의 힐링 경험을 제공해보세요.</p>
+    </div>
+
+    <div class="shot-grid">
+      {% for n in [1, 2, 3] %}
+      <div class="media ratio-1-1" data-label="스크린샷 {{ n }}" data-reveal>
+        <img src="/assets/images/games/cathotel-shot-{{ n }}.png" alt="고양이호텔 스크린샷 {{ n }}" loading="lazy" width="600" height="600">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft">
+  <div class="wrap">
+    <div class="section-head"><h2 class="h-md">SNS</h2></div>
+    <div class="sns-list">
+      <a class="sns-item" href="https://www.instagram.com/cucu_cat.hotel/" target="_blank" rel="noopener">
+        {{ instagram() }} 쿠쿠 <span class="handle">@cucu_cat.hotel</span>
+      </a>
+      <a class="sns-item" href="https://www.instagram.com/cucu_cathotel/" target="_blank" rel="noopener">
+        {{ instagram() }} 쿠쿠 <span class="handle">@cucu_cathotel</span>
+      </a>
+    </div>
+  </div>
+</section>
