@@ -1,6 +1,6 @@
 # 포스메이게임즈 홈페이지 (4th May Games)
 
-GitHub Pages로 운영되는 **단일 페이지** 정적 사이트입니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
+GitHub Pages로 운영되는 정적 사이트입니다. 홈 한 페이지 + 개인정보처리방침으로 구성됩니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
 
 - 배포 주소: https://4thmaygames.github.io
 - 최종 목표 주소: https://www.4thmaygames.com (아래 2-1 참고)
@@ -103,7 +103,6 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 ## 5. 남은 작업 (TODO)
 
 - [ ] 로고 이미지 `src/assets/images/common/logo.png`
-- [ ] `src/_data/site.json` 의 `email`
 - [ ] Google Search Console 에 사이트 등록
 
 ---
@@ -120,7 +119,8 @@ src/
 │   └── partials/
 │       └── icons.njk   # 스토어 버튼
 ├── assets/             # CSS, JS, 이미지
-├── index.njk           # ★ 홈 (유일한 페이지)
+├── index.njk           # ★ 홈
+├── privacy.njk         # 개인정보처리방침 (/privacy/)
 ├── 404.njk
 ├── sitemap.njk
 ├── robots.txt
