@@ -102,7 +102,6 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 
 ## 5. 남은 작업 (TODO)
 
-- [ ] **개구리호텔 대표 이미지** → `src/assets/images/games/froghotel.webp` (또는 .png/.jpg 로 넣고 games.json 의 `art` 경로 수정)
 - [ ] 로고 이미지 `src/assets/images/common/logo.png`
 - [ ] `src/_data/site.json` 의 `email`
 - [ ] Google Search Console 에 사이트 등록
