@@ -31,10 +31,29 @@ git push
 
 ### 최초 1회 설정
 
-1. 저장소 → **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 변경
-2. **Settings → Pages → Custom domain** 에 `www.4thmaygames.com` 입력
-3. **Enforce HTTPS** 체크
-4. 도메인 DNS 설정 (아래 참고)
+저장소 → **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 변경
+
+이 상태에서 먼저 **https://4thmaygames.github.io** 로 접속해 사이트를 확인할 수 있습니다.
+(기존 4thmaygames.com 은 그대로 서비스되므로 영향 없습니다)
+
+---
+
+## 2-1. 실제 도메인(4thmaygames.com) 으로 전환하기
+
+미리보기에서 문제가 없다고 판단되면 그때 진행하세요. **이 작업 전까지 기존 사이트는 그대로 유지**됩니다.
+
+**① CNAME 파일 활성화**
+
+```bash
+mv src/CNAME.disabled src/CNAME
+git add -A && git commit -m "커스텀 도메인 연결" && git push
+```
+
+**② DNS 변경** (아래 표)
+
+**③** 저장소 → **Settings → Pages → Custom domain** 에 `www.4thmaygames.com` 이 들어왔는지 확인하고 **Enforce HTTPS** 체크
+
+> ③의 HTTPS 체크박스는 DNS가 반영된 뒤에야 활성화됩니다. 회색이면 몇 시간 뒤 다시 확인하세요.
 
 ### DNS 설정
 
