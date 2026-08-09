@@ -20,8 +20,8 @@ description: "설렘이 가득한 5월 4일처럼! 포스메이게임즈는 설�
   </div>
 
   <div class="wrap hero-visual">
-    <div class="media ratio-21-9" data-label="메인 대표 이미지 (assets/images/common/hero.png)">
-      <img src="/assets/images/common/hero.png" alt="" width="1600" height="686">
+    <div class="media ratio-16-9" data-label="메인 대표 이미지">
+      <img src="/assets/images/common/hero.webp" alt="" width="1600" height="900">
     </div>
   </div>
 </section>
@@ -37,8 +37,8 @@ description: "설렘이 가득한 5월 4일처럼! 포스메이게임즈는 설�
     <div class="game-grid">
       {% for g in games %}
       <a class="game-card" href="/{{ g.slug }}/" data-reveal>
-        <div class="media ratio-4-3" data-label="{{ g.title }}">
-          <img src="{{ g.thumb }}" alt="{{ g.title }}" loading="lazy" width="640" height="480">
+        <div class="media ratio-16-9" data-label="{{ g.title }}">
+          <img src="{{ g.thumb }}" alt="{{ g.title }}" loading="lazy" width="960" height="540">
         </div>
         <div class="game-card-body">
           <h3>{{ g.title }}</h3>

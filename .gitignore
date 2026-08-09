@@ -5,4 +5,5 @@ _site/
 .cache/
 shots/
 shots.js
+image/
 _to_delete/

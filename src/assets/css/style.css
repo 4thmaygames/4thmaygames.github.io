@@ -195,7 +195,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
    ========================================================================== */
 .hero {
   position: relative; overflow: hidden;
-  padding: clamp(72px, 11vw, 132px) 0 clamp(60px, 9vw, 104px);
+  padding: clamp(64px, 9vw, 108px) 0 clamp(8px, 1.5vw, 20px);
   background:
     radial-gradient(70% 110% at 12% 0%, #fff6ec 0%, rgba(255, 246, 236, 0) 62%),
     radial-gradient(60% 100% at 92% 18%, #f0f3fb 0%, rgba(240, 243, 251, 0) 60%),
@@ -248,15 +248,13 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .game-hero h1 { margin-bottom: 14px; }
 .game-hero .tagline { font-size: clamp(17px, 2.1vw, 21px); color: var(--ink-2); font-weight: 500; }
 
-.store-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.store-btn {
-  display: inline-flex; align-items: center; gap: 9px;
-  padding: 12px 20px; border-radius: 12px; background: var(--ink); color: #fff;
-  font-size: 14.5px; font-weight: 600; line-height: 1;
+.store-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+.store-badge {
+  display: inline-block; border-radius: 10px;
   transition: transform .18s var(--ease), box-shadow .18s var(--ease);
 }
-.store-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
-.store-btn svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
+.store-badge img { height: 46px; width: auto; }
+.store-badge:hover { transform: translateY(-2px); box-shadow: var(--shadow-1); }
 
 .prose { max-width: 720px; }
 .prose p { margin-bottom: 18px; font-size: 16.5px; line-height: 1.95; color: var(--ink-2); }
@@ -288,9 +286,12 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 }
 
 .shot-grid {
-  display: grid; gap: 16px; margin-top: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: grid; gap: 16px; margin-top: 44px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+.shot-grid .media { box-shadow: var(--shadow-1); }
+.shot-grid .media img { transition: transform .5s var(--ease); }
+.shot-grid .media:hover img { transform: scale(1.04); }
 
 /* SNS */
 .sns-list { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -389,13 +390,15 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 
 .value-list { display: grid; gap: 18px; margin-top: 8px; }
 .value-item {
-  display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start;
-  padding: 30px 30px 32px; border-radius: var(--r-lg); border: 1px solid var(--line); background: #fff;
+  display: grid; grid-template-columns: 148px 1fr; gap: 32px; align-items: center;
+  padding: 30px 34px 32px; border-radius: var(--r-lg); border: 1px solid var(--line); background: #fff;
 }
+.value-side { display: grid; justify-items: center; gap: 10px; }
+.value-ill { width: auto; max-height: 160px; object-fit: contain; }
 .value-num {
-  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
   background: var(--soft); border: 1px solid var(--line);
-  font-size: 14px; font-weight: 800; color: var(--accent);
+  font-size: 13px; font-weight: 800; color: var(--accent);
 }
 .value-item h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
 .value-item ul li { position: relative; padding-left: 16px; margin-bottom: 7px; color: var(--ink-2); font-size: 15.5px; line-height: 1.8; }
@@ -449,7 +452,9 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   .news-item .row { grid-template-columns: 116px 1fr; gap: 16px; padding: 18px 4px; }
   .news-item h2 { font-size: 16px; }
   .news-excerpt { display: none; }
-  .value-item { grid-template-columns: 1fr; gap: 14px; padding: 26px 22px 28px; }
+  .value-item { grid-template-columns: 1fr; gap: 16px; padding: 26px 22px 28px; justify-items: start; }
+  .value-side { grid-auto-flow: column; align-items: center; gap: 14px; }
+  .value-ill { max-height: 96px; }
 }
 
 @media (max-width: 520px) {

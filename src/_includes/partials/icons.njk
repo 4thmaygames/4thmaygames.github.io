@@ -12,15 +12,27 @@
 {% if stores.appstore or stores.googleplay %}
 <div class="store-links">
   {% if stores.appstore %}
-  <a class="store-btn" href="{{ stores.appstore }}" target="_blank" rel="noopener">
-    {{ appstore() }} App Store
+  <a class="store-badge" href="{{ stores.appstore }}" target="_blank" rel="noopener" aria-label="App Store에서 다운로드">
+    <img src="/assets/images/common/badge-appstore.png" alt="App Store에서 다운로드" width="233" height="78">
   </a>
   {% endif %}
   {% if stores.googleplay %}
-  <a class="store-btn" href="{{ stores.googleplay }}" target="_blank" rel="noopener">
-    {{ googleplay() }} Google Play
+  <a class="store-badge" href="{{ stores.googleplay }}" target="_blank" rel="noopener" aria-label="Google Play에서 다운로드">
+    <img src="/assets/images/common/badge-googleplay.png" alt="Google Play에서 다운로드" width="233" height="78">
   </a>
   {% endif %}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro shotGrid(game) %}
+{% if game.shots and game.shots.length %}
+<div class="shot-grid">
+  {% for s in game.shots %}
+  <div class="media ratio-16-9" data-label="스크린샷 {{ loop.index }}" data-reveal>
+    <img src="{{ s }}" alt="{{ game.title }} 스크린샷 {{ loop.index }}" loading="lazy" width="1280" height="720">
+  </div>
+  {% endfor %}
 </div>
 {% endif %}
 {% endmacro %}

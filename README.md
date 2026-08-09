@@ -130,48 +130,36 @@ permalink: false      # ← 상세 페이지를 만들지 않고 원문으로 �
 
 ---
 
-## 5. 이미지 넣기 ⚠️ 필요한 작업
+## 5. 이미지
 
-현재 이미지 파일이 비어 있어 회색 자리표시자로 보입니다.
-아래 경로에 **원본 이미지를 그대로 복사**하면 즉시 반영됩니다. (파일명 그대로)
+원본 이미지는 `image/` 폴더에 있고, 웹용으로 변환된 파일이 `src/assets/images/` 에 들어가 있습니다.
+용량 절감을 위해 사진성 이미지는 **WebP**(품질 82), 공유 썸네일은 JPEG, 투명 배경 그래픽은 PNG로 변환했습니다.
+(원본 21MB → 웹용 2.1MB)
 
-### 공통 — `src/assets/images/common/`
+| 경로 | 내용 |
+|------|------|
+| `common/hero.webp` | 메인 상단 대표 이미지 |
+| `common/company-hero.webp` | 회사 소개 상단 |
+| `common/value-*.png` | 핵심 가치 개구리 일러스트 3종 |
+| `common/badge-*.png` | App Store / Google Play 배지 |
+| `common/favicon.png` | 브라우저 탭 아이콘 |
+| `common/og-*.jpg` | 카톡·SNS 공유 썸네일 |
+| `games/{게임}-hero.webp` | 게임 상세 대표 이미지 (16:9) |
+| `games/{게임}-thumb.webp` | 목록 카드 썸네일 (16:9) |
+| `games/{게임}-shot-N.webp` | 스크린샷 |
 
-| 파일명 | 용도 | 권장 크기 |
-|--------|------|-----------|
-| `logo.png` | 헤더 로고 (배경 투명) | 높이 56px 이상 |
-| `favicon.png` | 브라우저 탭 아이콘 | 512×512 |
-| `og-image.png` | 카톡·SNS 공유 썸네일 | 1200×630 |
-| `hero.png` | 메인 상단 대표 이미지 | 1600×686 |
-| `company-hero.png` | 회사 소개 상단 이미지 | 1280×720 |
+### 이미지를 바꾸려면
 
-### 게임 — `src/assets/images/games/`
-
-각 게임(`cathotel`, `moonfrog`, `ghosthotel`)마다:
-
-| 파일명 | 용도 | 권장 크기 |
-|--------|------|-----------|
-| `{게임}-thumb.png` | 목록 카드 썸네일 | 640×480 (4:3) |
-| `{게임}-hero.png` | 상세 페이지 대표 이미지 | 1280×720 (16:9) |
-| `{게임}-shot-1.png` ~ `-shot-3.png` | 스크린샷 | 600×600 (1:1) |
-
-예) `cathotel-thumb.png`, `cathotel-hero.png`, `cathotel-shot-1.png` …
-
-### 뉴스 — `src/assets/images/news/`
-
-각 뉴스 마크다운의 `image:` 에 적힌 파일명과 똑같이 넣어주세요.
-(예: `2024-09-23-tgs2024-seoul-pavilion.jpg`)
-
-> 이미지가 없어도 사이트는 정상 작동합니다. 자리표시자만 보입니다.
-
----
+같은 이름으로 덮어쓰고 push 하면 끝입니다. 스크린샷을 추가/삭제할 때는
+`src/_data/games.json` 의 `shots` 배열만 수정하면 화면에 자동 반영됩니다.
 
 ## 6. 아직 채워야 할 것 (TODO)
 
-- [ ] 위 이미지 파일들 넣기
 - [ ] `src/news/*.md` 안의 `link: ""` 에 원문 기사 URL 입력 (기존 Notion 페이지에서 복사)
+- [ ] 로고 이미지 (`src/assets/images/common/logo.png`, 배경 투명) — 없으면 텍스트 로고로 표시됩니다
 - [ ] `src/_data/site.json` 의 `email` 입력
 - [ ] `src/_includes/partials/footer.njk` 의 사업자 정보(상호/사업자번호/주소) 입력
+- [ ] 뉴스 썸네일 이미지 (`src/assets/images/news/`)
 - [ ] Google Search Console에 `sitemap.xml` 등록
 
 ---
@@ -199,7 +187,13 @@ src/
 ├── value.njk              # 핵심 가치
 ├── 404.njk
 ├── sitemap.njk
-└── CNAME                  # 커스텀 도메인
+└── CNAME.disabled         # 커스텀 도메인 (전환 시 CNAME 으로 이름 변경)
 ```
 
 기존 사이트와 **URL 주소를 동일하게 유지**했기 때문에 검색 순위나 외부 링크가 깨지지 않습니다.
+
+---
+
+## 원본 이미지 폴더
+
+`image/` 폴더의 원본은 git 에 올리지 않습니다 (용량). 로컬 작업용으로만 두세요.

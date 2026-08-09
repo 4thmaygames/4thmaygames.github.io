@@ -5,9 +5,15 @@
     "titleEn": "Idle Cat Hotel",
     "tagline": "왕발 고양이 쿠쿠와 함께하는 힐링 타이쿤",
     "status": "출시",
-    "thumb": "/assets/images/games/cathotel-thumb.png",
-    "hero": "/assets/images/games/cathotel-hero.png",
-    "accent": "#f2a65a",
+    "thumb": "/assets/images/games/cathotel-thumb.webp",
+    "hero": "/assets/images/games/cathotel-hero.webp",
+    "shots": [
+      "/assets/images/games/cathotel-shot-1.webp",
+      "/assets/images/games/cathotel-shot-2.webp",
+      "/assets/images/games/cathotel-shot-3.webp",
+      "/assets/images/games/cathotel-shot-4.webp",
+      "/assets/images/games/cathotel-shot-5.webp"
+    ],
     "stores": {
       "appstore": "https://apps.apple.com/kr/app/id6469767467",
       "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.cathotel"
@@ -19,9 +25,13 @@
     "titleEn": "Moonlight Frog Inn",
     "tagline": "당신의 꿈을 제작해 드려요",
     "status": "2027년 출시 예정",
-    "thumb": "/assets/images/games/moonfrog-thumb.png",
-    "hero": "/assets/images/games/moonfrog-hero.png",
-    "accent": "#7c8fb5",
+    "thumb": "/assets/images/games/moonfrog-thumb.webp",
+    "hero": "/assets/images/games/moonfrog-hero.webp",
+    "shots": [
+      "/assets/images/games/moonfrog-shot-1.webp",
+      "/assets/images/games/moonfrog-shot-2.webp",
+      "/assets/images/games/moonfrog-shot-3.webp"
+    ],
     "stores": {}
   },
   {
@@ -30,9 +40,13 @@
     "titleEn": "Idle Ghost Hotel",
     "tagline": "귀여운 유령들의 쉼터에 오신 것을 환영해요!",
     "status": "출시",
-    "thumb": "/assets/images/games/ghosthotel-thumb.png",
-    "hero": "/assets/images/games/ghosthotel-hero.png",
-    "accent": "#8f7cb5",
+    "thumb": "/assets/images/games/ghosthotel-thumb.webp",
+    "hero": "/assets/images/games/ghosthotel-hero.webp",
+    "shots": [
+      "/assets/images/games/ghosthotel-shot-1.webp",
+      "/assets/images/games/ghosthotel-shot-2.webp",
+      "/assets/images/games/ghosthotel-shot-3.webp"
+    ],
     "stores": {
       "appstore": "https://apps.apple.com/kr/app/id1588378696",
       "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.ghosthotel"

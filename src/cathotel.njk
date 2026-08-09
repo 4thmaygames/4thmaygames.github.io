@@ -3,9 +3,9 @@ layout: base.njk
 permalink: /cathotel/
 title: 고양이호텔
 description: "왕발 고양이 쿠쿠와 함께 포근하고 특별한 이야기를 만들어보세요! 힐링 경영 타이쿤 게임 고양이호텔."
-ogImage: /assets/images/games/cathotel-hero.png
+ogImage: /assets/images/common/og-cathotel.jpg
 ---
-{% from "partials/icons.njk" import storeButtons, instagram %}
+{% from "partials/icons.njk" import storeButtons, instagram, shotGrid %}
 
 <section class="game-hero">
   <div class="wrap">
@@ -18,7 +18,7 @@ ogImage: /assets/images/games/cathotel-hero.png
 
 <div class="wrap">
   <div class="media ratio-16-9" data-label="고양이호텔 대표 이미지" data-reveal>
-    <img src="/assets/images/games/cathotel-hero.png" alt="고양이호텔 대표 이미지" width="1280" height="720">
+    <img src="{{ games[0].hero }}" alt="고양이호텔 대표 이미지" width="1280" height="720">
   </div>
 </div>
 
@@ -31,13 +31,7 @@ ogImage: /assets/images/games/cathotel-hero.png
       <p>귀여운 고양이 손님들을 맞이하고 손님들의 필요를 빠르게 채워 최고의 힐링 경험을 제공해보세요.</p>
     </div>
 
-    <div class="shot-grid">
-      {% for n in [1, 2, 3] %}
-      <div class="media ratio-1-1" data-label="스크린샷 {{ n }}" data-reveal>
-        <img src="/assets/images/games/cathotel-shot-{{ n }}.png" alt="고양이호텔 스크린샷 {{ n }}" loading="lazy" width="600" height="600">
-      </div>
-      {% endfor %}
-    </div>
+    {{ shotGrid(games[0]) }}
   </div>
 </section>
 

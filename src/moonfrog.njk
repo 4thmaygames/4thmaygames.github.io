@@ -3,9 +3,9 @@ layout: base.njk
 permalink: /moonfrog/
 title: 달빛 개구리여관
 description: "당신의 꿈을 제작해 드려요. 꿈이 없는 세계에서 유일하게 꿈을 꿀 수 있는 곳, 달빛 개구리여관. 2027년 출시 예정."
-ogImage: /assets/images/games/moonfrog-hero.png
+ogImage: /assets/images/common/og-moonfrog.jpg
 ---
-{% from "partials/icons.njk" import instagram %}
+{% from "partials/icons.njk" import instagram, shotGrid %}
 
 <section class="game-hero">
   <div class="wrap">
@@ -17,7 +17,7 @@ ogImage: /assets/images/games/moonfrog-hero.png
 
 <div class="wrap">
   <div class="media ratio-16-9" data-label="달빛 개구리여관 대표 이미지" data-reveal>
-    <img src="/assets/images/games/moonfrog-hero.png" alt="달빛 개구리여관 대표 이미지" width="1280" height="720">
+    <img src="{{ games[1].hero }}" alt="달빛 개구리여관 대표 이미지" width="1280" height="720">
   </div>
 </div>
 
@@ -31,13 +31,7 @@ ogImage: /assets/images/games/moonfrog-hero.png
       <p>과연 손님은 달빛 개구리여관에서 어떤 꿈을 꾸고 돌아갈까요?</p>
     </div>
 
-    <div class="shot-grid">
-      {% for n in [1, 2, 3] %}
-      <div class="media ratio-1-1" data-label="스크린샷 {{ n }}" data-reveal>
-        <img src="/assets/images/games/moonfrog-shot-{{ n }}.png" alt="달빛 개구리여관 스크린샷 {{ n }}" loading="lazy" width="600" height="600">
-      </div>
-      {% endfor %}
-    </div>
+    {{ shotGrid(games[1]) }}
   </div>
 </section>
 

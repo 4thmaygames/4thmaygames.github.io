@@ -3,9 +3,9 @@ layout: base.njk
 permalink: /ghosthotel/
 title: 유령호텔 타이쿤
 description: "귀여운 유령들의 쉼터에 오신 것을 환영해요! 구글플레이 올해를 빛낸 인디게임 수상작, 유령호텔 타이쿤."
-ogImage: /assets/images/games/ghosthotel-hero.png
+ogImage: /assets/images/common/og-ghosthotel.jpg
 ---
-{% from "partials/icons.njk" import storeButtons, instagram, xcom %}
+{% from "partials/icons.njk" import storeButtons, instagram, xcom, shotGrid %}
 
 <section class="game-hero">
   <div class="wrap">
@@ -18,7 +18,7 @@ ogImage: /assets/images/games/ghosthotel-hero.png
 
 <div class="wrap">
   <div class="media ratio-16-9" data-label="유령호텔 타이쿤 대표 이미지" data-reveal>
-    <img src="/assets/images/games/ghosthotel-hero.png" alt="유령호텔 타이쿤 대표 이미지" width="1280" height="720">
+    <img src="{{ games[2].hero }}" alt="유령호텔 타이쿤 대표 이미지" width="1280" height="720">
   </div>
 </div>
 
@@ -37,13 +37,7 @@ ogImage: /assets/images/games/ghosthotel-hero.png
       <p>이제 유령호텔 경영자가 되어서 유령들의 편안한 휴식에 함께 동참해보세요!</p>
     </div>
 
-    <div class="shot-grid">
-      {% for n in [1, 2, 3] %}
-      <div class="media ratio-1-1" data-label="스크린샷 {{ n }}" data-reveal>
-        <img src="/assets/images/games/ghosthotel-shot-{{ n }}.png" alt="유령호텔 타이쿤 스크린샷 {{ n }}" loading="lazy" width="600" height="600">
-      </div>
-      {% endfor %}
-    </div>
+    {{ shotGrid(games[2]) }}
   </div>
 </section>
 
