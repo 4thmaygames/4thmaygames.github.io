@@ -1,55 +1,39 @@
 [
   {
+    "slug": "ghosthotel",
+    "title": "유령호텔 타이쿤",
+    "titleEn": "Idle Ghost Hotel",
+    "tagline": "귀여운 유령들의 쉼터에 오신 것을 환영해요!",
+    "desc": "간편한 터치로 호텔을 쑥쑥 발전시켜 보세요. 다양한 유령 손님들의 요구를 들어주고, 매니저를 고용해 나만의 유령호텔을 키워가는 힐링 타이쿤입니다.",
+    "award": "구글플레이 올해를 빛낸 인디게임 · 구글 인디게임 페스티벌 Top 10",
+    "art": "/assets/images/games/ghosthotel.webp",
+    "stores": {
+      "appstore": "https://apps.apple.com/kr/app/id1588378696",
+      "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.ghosthotel"
+    }
+  },
+  {
     "slug": "cathotel",
     "title": "고양이호텔",
     "titleEn": "Idle Cat Hotel",
     "tagline": "왕발 고양이 쿠쿠와 함께하는 힐링 타이쿤",
-    "status": "출시",
-    "thumb": "/assets/images/games/cathotel-thumb.webp",
-    "hero": "/assets/images/games/cathotel-hero.webp",
-    "shots": [
-      "/assets/images/games/cathotel-shot-1.webp",
-      "/assets/images/games/cathotel-shot-2.webp",
-      "/assets/images/games/cathotel-shot-3.webp",
-      "/assets/images/games/cathotel-shot-4.webp",
-      "/assets/images/games/cathotel-shot-5.webp"
-    ],
+    "desc": "아늑한 객실, 따뜻한 온천, 그리고 여러 특별한 공간들. 귀여운 고양이 손님들을 맞이하고 필요를 채워주며 최고의 힐링 경험을 선물해보세요.",
+    "art": "/assets/images/games/cathotel.webp",
     "stores": {
       "appstore": "https://apps.apple.com/kr/app/id6469767467",
       "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.cathotel"
     }
   },
   {
-    "slug": "moonfrog",
-    "title": "달빛 개구리여관",
-    "titleEn": "Moonlight Frog Inn",
-    "tagline": "당신의 꿈을 제작해 드려요",
-    "status": "2027년 출시 예정",
-    "thumb": "/assets/images/games/moonfrog-thumb.webp",
-    "hero": "/assets/images/games/moonfrog-hero.webp",
-    "shots": [
-      "/assets/images/games/moonfrog-shot-1.webp",
-      "/assets/images/games/moonfrog-shot-2.webp",
-      "/assets/images/games/moonfrog-shot-3.webp"
-    ],
-    "stores": {}
-  },
-  {
-    "slug": "ghosthotel",
-    "title": "유령호텔 타이쿤",
-    "titleEn": "Idle Ghost Hotel",
-    "tagline": "귀여운 유령들의 쉼터에 오신 것을 환영해요!",
-    "status": "출시",
-    "thumb": "/assets/images/games/ghosthotel-thumb.webp",
-    "hero": "/assets/images/games/ghosthotel-hero.webp",
-    "shots": [
-      "/assets/images/games/ghosthotel-shot-1.webp",
-      "/assets/images/games/ghosthotel-shot-2.webp",
-      "/assets/images/games/ghosthotel-shot-3.webp"
-    ],
+    "slug": "froghotel",
+    "title": "개구리호텔",
+    "titleEn": "Idle Frog Hotel",
+    "tagline": "오늘도 개구리들과 힐링하세요!",
+    "desc": "조용한 연못가에 자리 잡은 작고 귀여운 개구리호텔. 경쟁도, 속도도 필요 없이 개구리들과 함께 하루하루를 느긋하게 보내는 공간입니다.",
+    "art": "/assets/images/games/froghotel.webp",
     "stores": {
-      "appstore": "https://apps.apple.com/kr/app/id1588378696",
-      "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.ghosthotel"
+      "appstore": "https://apps.apple.com/kr/app/id6747689639",
+      "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.froghotel"
     }
   }
 ]

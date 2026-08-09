@@ -1,6 +1,9 @@
 # 포스메이게임즈 홈페이지 (4th May Games)
 
-GitHub Pages로 운영되는 정적 웹사이트입니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
+GitHub Pages로 운영되는 **단일 페이지** 정적 사이트입니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
+
+- 배포 주소: https://4thmaygames.github.io
+- 최종 목표 주소: https://www.4thmaygames.com (아래 2-1 참고)
 
 ---
 
@@ -10,157 +13,99 @@ Node.js 20 이상이 필요합니다.
 
 ```bash
 npm install      # 최초 1회
-npm start        # http://localhost:8080 에서 미리보기 (파일 저장 시 자동 새로고침)
-npm run build    # _site/ 폴더에 결과물 생성
+npm start        # http://localhost:8080 미리보기 (저장하면 자동 새로고침)
+npm run build    # _site/ 에 결과물 생성
 ```
 
 ---
 
 ## 2. 배포
 
-`main` 브랜치에 push 하면 **GitHub Actions가 자동으로 빌드 후 배포**합니다.
-(`.github/workflows/deploy.yml`)
+`main` 브랜치에 push 하면 GitHub Actions가 자동으로 빌드·배포합니다.
 
 ```bash
-git add .
-git commit -m "뉴스 추가"
-git push
+git add -A && git commit -m "수정 내용" && git push
 ```
 
-1~2분 뒤 사이트에 반영됩니다. 진행 상황은 저장소의 **Actions** 탭에서 확인할 수 있습니다.
-
-### 최초 1회 설정
-
-저장소 → **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 변경
-
-이 상태에서 먼저 **https://4thmaygames.github.io** 로 접속해 사이트를 확인할 수 있습니다.
-(기존 4thmaygames.com 은 그대로 서비스되므로 영향 없습니다)
+1~2분 뒤 반영됩니다. 진행 상황은 저장소 **Actions** 탭에서 확인하세요.
 
 ---
 
-## 2-1. 실제 도메인(4thmaygames.com) 으로 전환하기
+## 2-1. 실제 도메인으로 전환하기
 
-미리보기에서 문제가 없다고 판단되면 그때 진행하세요. **이 작업 전까지 기존 사이트는 그대로 유지**됩니다.
-
-**① CNAME 파일 활성화**
+미리보기에서 문제가 없을 때 진행하세요. **그 전까지 기존 4thmaygames.com 은 그대로 유지**됩니다.
 
 ```bash
 mv src/CNAME.disabled src/CNAME
 git add -A && git commit -m "커스텀 도메인 연결" && git push
 ```
 
-**② DNS 변경** (아래 표)
-
-**③** 저장소 → **Settings → Pages → Custom domain** 에 `www.4thmaygames.com` 이 들어왔는지 확인하고 **Enforce HTTPS** 체크
-
-> ③의 HTTPS 체크박스는 DNS가 반영된 뒤에야 활성화됩니다. 회색이면 몇 시간 뒤 다시 확인하세요.
-
-### DNS 설정
-
-도메인 등록업체(가비아, 후이즈 등) DNS 관리에서:
+그리고 도메인 등록업체(가비아·후이즈 등) DNS에서:
 
 | 타입  | 호스트 | 값 |
 |-------|--------|-----|
-| CNAME | `www`  | `<github계정명>.github.io` |
+| CNAME | `www`  | `4thmaygames.github.io` |
 | A     | `@`    | `185.199.108.153` |
 | A     | `@`    | `185.199.109.153` |
 | A     | `@`    | `185.199.110.153` |
 | A     | `@`    | `185.199.111.153` |
 
-> `A` 레코드 4개는 `4thmaygames.com`(www 없는 주소)을 `www`로 넘겨주기 위한 설정입니다.
-> DNS 반영에는 최대 24시간이 걸릴 수 있고, HTTPS 인증서 발급은 그 이후 자동으로 진행됩니다.
+마지막으로 저장소 **Settings → Pages → Custom domain** 에 `www.4thmaygames.com` 이 들어왔는지 확인하고 **Enforce HTTPS** 를 체크합니다.
+(HTTPS 체크박스는 DNS 반영 후에 활성화됩니다. 최대 24시간)
 
 ---
 
-## 3. 뉴스 글 올리기
+## 3. 게임 정보 수정 — `src/_data/games.json`
 
-`src/news/` 폴더에 마크다운 파일을 하나 추가하고 push 하면 끝입니다.
-파일명은 `YYYY-MM-DD-영문슬러그.md` 형식을 권장합니다. (파일명이 곧 URL이 됩니다)
+이 파일 하나가 페이지 전체를 만듭니다. 게임을 추가·삭제·순서 변경하려면 여기만 고치면 됩니다.
 
-### (A) 우리가 직접 쓰는 소식 — 상세 페이지가 생깁니다
-
-`src/news/2026-08-20-new-game.md`
-
-```markdown
----
-title: "신작 OOO 출시 안내"
-date: 2026-08-20
-image: /assets/images/news/2026-08-20-new-game.png   # 없으면 이 줄 삭제
-excerpt: "목록에 보이는 한 줄 요약입니다."
----
-
-본문을 마크다운으로 씁니다.
-
-## 소제목
-
-- 목록도 됩니다
-- **굵게**, [링크](https://example.com) 모두 가능합니다
-
-![이미지 설명](/assets/images/news/스크린샷.png)
+```json
+{
+  "slug": "froghotel",
+  "title": "개구리호텔",
+  "titleEn": "Idle Frog Hotel",
+  "tagline": "오늘도 개구리들과 힐링하세요!",
+  "desc": "목록에 보이는 설명 문단입니다.",
+  "award": "수상 이력 (없으면 이 줄 삭제)",
+  "art": "/assets/images/games/froghotel.webp",
+  "stores": {
+    "appstore": "https://apps.apple.com/kr/app/id6747689639",
+    "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.froghotel"
+  }
+}
 ```
 
-→ `https://www.4thmaygames.com/news/2026-08-20-new-game/` 주소가 자동 생성됩니다.
+배열 순서가 그대로 화면 순서이고, 이미지는 좌우 번갈아 배치됩니다.
+`stores` 에서 한쪽을 지우면 그 버튼만 사라집니다.
 
-### (B) 언론 보도(외부 기사) — 목록에서 원문으로 바로 이동합니다
-
-```markdown
----
-title: "OO신문, 포스메이게임즈 신작 소개"
-date: 2026-08-20
-source: OO신문
-link: https://example.com/article/123
-image: /assets/images/news/2026-08-20-article.jpg
-excerpt: "한 줄 요약"
-permalink: false      # ← 상세 페이지를 만들지 않고 원문으로 바로 연결
----
-```
-
-> `permalink: false` 가 있으면 상세 페이지 없이 목록에서 원문 링크로 연결됩니다.
-
-**정렬은 `date` 기준으로 자동(최신순)** 이라 순서를 신경 쓸 필요 없습니다.
+회사명·채용 링크·이메일은 `src/_data/site.json` 에 있습니다.
 
 ---
 
-## 4. 게임 정보 수정
+## 4. 이미지
 
-`src/_data/games.json` 파일 하나만 고치면 홈, 게임 목록, 헤더 메뉴, 푸터에 모두 반영됩니다.
-게임 상세 페이지의 본문은 각각 `src/cathotel.njk`, `src/moonfrog.njk`, `src/ghosthotel.njk` 에 있습니다.
+게임 대표 이미지는 **16:9 비율**로 잘려서 표시됩니다. 권장 원본 1280×720 이상.
 
-회사 정보(이메일, 채용 링크 등)는 `src/_data/site.json` 에 있습니다.
-
----
-
-## 5. 이미지
-
-원본 이미지는 `image/` 폴더에 있고, 웹용으로 변환된 파일이 `src/assets/images/` 에 들어가 있습니다.
-용량 절감을 위해 사진성 이미지는 **WebP**(품질 82), 공유 썸네일은 JPEG, 투명 배경 그래픽은 PNG로 변환했습니다.
-(원본 21MB → 웹용 2.1MB)
-
-| 경로 | 내용 |
+| 파일 | 용도 |
 |------|------|
-| `common/hero.webp` | 메인 상단 대표 이미지 |
-| `common/company-hero.webp` | 회사 소개 상단 |
-| `common/value-*.png` | 핵심 가치 개구리 일러스트 3종 |
-| `common/badge-*.png` | App Store / Google Play 배지 |
-| `common/favicon.png` | 브라우저 탭 아이콘 |
-| `common/og-*.jpg` | 카톡·SNS 공유 썸네일 |
-| `games/{게임}-hero.webp` | 게임 상세 대표 이미지 (16:9) |
-| `games/{게임}-thumb.webp` | 목록 카드 썸네일 (16:9) |
-| `games/{게임}-shot-N.webp` | 스크린샷 |
+| `src/assets/images/games/{slug}.webp` | 게임 대표 이미지 |
+| `src/assets/images/common/logo.png` | 헤더 로고 (배경 투명) — 없으면 텍스트로 표시 |
+| `src/assets/images/common/favicon.png` | 브라우저 탭 아이콘 |
+| `src/assets/images/common/og-image.jpg` | 카톡·SNS 공유 썸네일 (1200×630) |
+| `src/assets/images/common/badge-*.png` | App Store / Google Play 배지 |
 
-### 이미지를 바꾸려면
+이미지가 없으면 회색 자리표시자가 나오고, 사이트는 정상 동작합니다.
 
-같은 이름으로 덮어쓰고 push 하면 끝입니다. 스크린샷을 추가/삭제할 때는
-`src/_data/games.json` 의 `shots` 배열만 수정하면 화면에 자동 반영됩니다.
+원본은 `image/` 폴더에 두고 git 에는 올리지 않습니다(용량). 웹용 변환본만 커밋됩니다.
 
-## 6. 아직 채워야 할 것 (TODO)
+---
 
-- [ ] `src/news/*.md` 안의 `link: ""` 에 원문 기사 URL 입력 (기존 Notion 페이지에서 복사)
-- [ ] 로고 이미지 (`src/assets/images/common/logo.png`, 배경 투명) — 없으면 텍스트 로고로 표시됩니다
-- [ ] `src/_data/site.json` 의 `email` 입력
-- [ ] `src/_includes/partials/footer.njk` 의 사업자 정보(상호/사업자번호/주소) 입력
-- [ ] 뉴스 썸네일 이미지 (`src/assets/images/news/`)
-- [ ] Google Search Console에 `sitemap.xml` 등록
+## 5. 남은 작업 (TODO)
+
+- [ ] **개구리호텔 대표 이미지** → `src/assets/images/games/froghotel.webp` (또는 .png/.jpg 로 넣고 games.json 의 `art` 경로 수정)
+- [ ] 로고 이미지 `src/assets/images/common/logo.png`
+- [ ] `src/_data/site.json` 의 `email`
+- [ ] Google Search Console 에 사이트 등록
 
 ---
 
@@ -169,31 +114,16 @@ permalink: false      # ← 상세 페이지를 만들지 않고 원문으로 �
 ```
 src/
 ├── _data/
-│   ├── site.json          # 사이트 전역 설정 (회사명, URL, 채용 링크…)
-│   └── games.json         # 게임 목록 데이터
+│   ├── site.json       # 회사명, URL, 채용 링크
+│   └── games.json      # ★ 게임 목록 — 여기만 고치면 됩니다
 ├── _includes/
-│   ├── base.njk           # 공통 레이아웃 (head, 헤더, 푸터)
-│   ├── news.njk           # 뉴스 상세 페이지 레이아웃
-│   └── partials/          # 헤더 / 푸터 / 아이콘
-├── assets/                # CSS, JS, 이미지
-├── news/                  # 뉴스 글 (마크다운) ★ 여기에 글 추가
-├── index.njk              # 홈
-├── games.njk              # 게임 목록
-├── cathotel.njk           # 고양이호텔
-├── moonfrog.njk           # 달빛 개구리여관
-├── ghosthotel.njk         # 유령호텔 타이쿤
-├── about.njk              # About
-├── company.njk            # 회사 소개
-├── value.njk              # 핵심 가치
+│   ├── base.njk        # 공통 레이아웃 (head/헤더/푸터)
+│   └── partials/
+│       └── icons.njk   # 스토어 버튼
+├── assets/             # CSS, JS, 이미지
+├── index.njk           # ★ 홈 (유일한 페이지)
 ├── 404.njk
 ├── sitemap.njk
-└── CNAME.disabled         # 커스텀 도메인 (전환 시 CNAME 으로 이름 변경)
+├── robots.txt
+└── CNAME.disabled      # 도메인 전환 시 CNAME 으로 이름 변경
 ```
-
-기존 사이트와 **URL 주소를 동일하게 유지**했기 때문에 검색 순위나 외부 링크가 깨지지 않습니다.
-
----
-
-## 원본 이미지 폴더
-
-`image/` 폴더의 원본은 git 에 올리지 않습니다 (용량). 로컬 작업용으로만 두세요.

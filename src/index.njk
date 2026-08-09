@@ -1,101 +1,48 @@
 ---
 layout: base.njk
 permalink: /
-description: "설렘이 가득한 5월 4일처럼! 포스메이게임즈는 설렘과 기쁨이 가득한 게임으로 행복한 내일을 선사합니다."
+description: "설렘이 가득한 5월 4일처럼! 포스메이게임즈는 유령호텔 타이쿤, 고양이호텔, 개구리호텔을 만든 힐링 타이쿤 게임 개발사입니다."
 ---
-{% from "partials/icons.njk" import arrow %}
+{% from "partials/icons.njk" import storeButtons %}
 
 <section class="hero">
-  <div class="wrap hero-inner">
+  <div class="wrap">
     <p class="eyebrow">4TH MAY GAMES</p>
-    <h1 class="h-xl">설렘이 가득한<br>5월 4일처럼!</h1>
+    <h1>설렘이 가득한<br>5월 4일처럼!</h1>
     <p class="lead">
-      어린이날 전날인 5월 4일처럼, 설렘과 기쁨이 가득한 게임으로 행복한 내일을 선사합니다.
-      포스메이게임즈는 게임으로 사람들이 위안을 얻고, 더 나은 내일을 위해 힘을 낼 수 있길 바랍니다.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn--primary" href="/games/">게임 살펴보기 {{ arrow() }}</a>
-      <a class="btn btn--ghost" href="/company/">회사 소개</a>
-    </div>
-  </div>
-
-  <div class="wrap hero-visual">
-    <div class="media ratio-16-9" data-label="메인 대표 이미지">
-      <img src="/assets/images/common/hero.webp" alt="" width="1600" height="900">
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow">Games</p>
-      <h2 class="h-lg">포스메이게임즈의 게임</h2>
-      <p>아늑하고 따뜻한 세계에서 만나는 힐링 타이쿤</p>
-    </div>
-
-    <div class="game-grid">
-      {% for g in games %}
-      <a class="game-card" href="/{{ g.slug }}/" data-reveal>
-        <div class="media ratio-16-9" data-label="{{ g.title }}">
-          <img src="{{ g.thumb }}" alt="{{ g.title }}" loading="lazy" width="960" height="540">
-        </div>
-        <div class="game-card-body">
-          <h3>{{ g.title }}</h3>
-          <p class="en">{{ g.titleEn }}</p>
-          <p>{{ g.tagline }}</p>
-          <span class="badge{% if g.status == '출시' %} badge--live{% endif %}">{{ g.status }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-{% set latest = collections.news %}
-{% if latest.length %}
-<section class="section section--soft">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow">News</p>
-      <h2 class="h-lg">소식</h2>
-    </div>
-
-    <div class="news-preview">
-      {% for post in latest.slice(0, 3) %}
-      <a class="news-card" href="{{ post.url }}" data-reveal>
-        <div class="media ratio-16-9" data-label="News">
-          <img src="{{ post.data.image or '/assets/images/news/placeholder.png' }}" alt="" loading="lazy" width="640" height="360">
-        </div>
-        <div class="news-card-body">
-          <div class="news-meta">
-            <time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateKR }}</time>
-            {% if post.data.source %}<span class="news-source">{{ post.data.source }}</span>{% endif %}
-          </div>
-          <h3>{{ post.data.title }}</h3>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-
-    <p style="margin-top:32px" data-reveal>
-      <a class="btn btn--ghost" href="/news/">전체 소식 보기 {{ arrow() }}</a>
+      어린이날 전날인 5월 4일처럼, 설렘과 기쁨이 가득한 게임으로 행복한 내일을 선사합니다.<br>
+      포스메이게임즈는 아늑하고 따뜻한 힐링 타이쿤을 만듭니다.
     </p>
   </div>
 </section>
-{% endif %}
 
-<section class="statement">
+<section class="games">
   <div class="wrap">
-    <p class="quote" data-reveal>게임을 통해 사람들에게 <em>선한 마음</em>을 심어주는 것,<br>그것이 포스메이게임즈의 미션입니다.</p>
-    <p style="margin-top:28px" data-reveal><a class="btn btn--ghost" href="/value/">핵심 가치 보기 {{ arrow() }}</a></p>
+    {% for g in games %}
+    <article class="game" data-reveal>
+      <div class="game-art">
+        <div class="media" data-label="{{ g.title }}">
+          <img src="{{ g.art }}" alt="{{ g.title }}" width="960" height="540"{% if not loop.first %} loading="lazy"{% endif %}>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <h2>{{ g.title }}</h2>
+        <p class="game-en">{{ g.titleEn }}</p>
+        <p class="game-tagline">{{ g.tagline }}</p>
+        <p class="game-desc">{{ g.desc }}</p>
+        {% if g.award %}<p class="game-award">🏆 {{ g.award }}</p>{% endif %}
+        {{ storeButtons(g.stores) }}
+      </div>
+    </article>
+    {% endfor %}
   </div>
 </section>
 
-<section class="cta-band">
+<section class="cta">
   <div class="wrap">
     <h2>함께 만들어갈 팀원을 찾습니다</h2>
     <p>동심을 선물하는 게임, 같이 만들어보지 않으실래요?</p>
-    <a class="btn" href="{{ site.careersUrl }}" target="_blank" rel="noopener">채용 공고 보기 {{ arrow() }}</a>
+    <a class="btn" href="{{ site.careersUrl }}" target="_blank" rel="noopener">채용 공고 보기 →</a>
   </div>
 </section>
