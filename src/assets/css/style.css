@@ -460,8 +460,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 @media (max-width: 520px) {
   .footer-nav { grid-template-columns: 1fr 1fr; }
   .news-item .row { grid-template-columns: 92px 1fr; }
-  .store-links { flex-direction: column; align-items: stretch; }
-  .store-btn { justify-content: center; }
+  .store-badge img { height: 42px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
