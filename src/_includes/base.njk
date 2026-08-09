@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
 <header class="site-header">
   <div class="wrap">
@@ -43,7 +43,6 @@
       <p class="footer-tag">설렘이 가득한 5월 4일처럼!</p>
     </div>
     <div class="footer-links">
-      <a href="{{ site.careersUrl }}" target="_blank" rel="noopener">팀원 모집 ↗</a>
       <a href="/privacy/">개인정보처리방침</a>
       {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
     </div>

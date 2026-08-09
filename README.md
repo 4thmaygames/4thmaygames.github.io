@@ -1,6 +1,8 @@
 # 포스메이게임즈 홈페이지 (4th May Games)
 
-GitHub Pages로 운영되는 정적 사이트입니다. 홈 한 페이지 + 개인정보처리방침으로 구성됩니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
+GitHub Pages로 운영되는 정적 사이트입니다. 홈 한 페이지 + 개인정보처리방침으로 구성됩니다.
+
+홈은 **게임 아이콘 3개**만 보여주고, 아이콘을 누르면 게임 설명 팝업이 열립니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
 
 - 배포 주소: https://4thmaygames.github.io
 - 최종 목표 주소: https://www.4thmaygames.com (아래 2-1 참고)
@@ -68,6 +70,7 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
   "desc": "목록에 보이는 설명 문단입니다.",
   "award": "수상 이력 (없으면 이 줄 삭제)",
   "art": "/assets/images/games/froghotel.webp",
+  "icon": "/assets/images/games/froghotel-icon.webp",
   "stores": {
     "appstore": "https://apps.apple.com/kr/app/id6747689639",
     "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.froghotel"
@@ -75,24 +78,23 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 }
 ```
 
-배열 순서가 그대로 화면 순서이고, 이미지는 좌우 번갈아 배치됩니다.
-`stores` 에서 한쪽을 지우면 그 버튼만 사라집니다.
+배열 순서가 그대로 아이콘 순서입니다. `stores` 에서 한쪽을 지우면 그 버튼만 사라집니다.
+`icon` 은 홈에 보이는 정사각 아이콘, `art` 는 팝업 상단의 16:9 이미지입니다.
 
-회사명·채용 링크·이메일은 `src/_data/site.json` 에 있습니다.
+회사명·이메일 등은 `src/_data/site.json` 에 있습니다.
 
 ---
 
 ## 4. 이미지
 
-게임 대표 이미지는 **16:9 비율**로 잘려서 표시됩니다. 권장 원본 1280×720 이상.
-
-| 파일 | 용도 |
-|------|------|
-| `src/assets/images/games/{slug}.webp` | 게임 대표 이미지 |
-| `src/assets/images/common/logo.png` | 헤더 로고 (배경 투명) — 없으면 텍스트로 표시 |
-| `src/assets/images/common/favicon.png` | 브라우저 탭 아이콘 |
-| `src/assets/images/common/og-image.jpg` | 카톡·SNS 공유 썸네일 (1200×630) |
-| `src/assets/images/common/badge-*.png` | App Store / Google Play 배지 |
+| 파일 | 용도 | 비율 |
+|------|------|------|
+| `src/assets/images/games/{slug}-icon.webp` | 홈 화면 아이콘 | 512×512 (스토어 앱 아이콘) |
+| `src/assets/images/games/{slug}.webp` | 팝업 상단 이미지 | 1024×500 (스토어 피처 그래픽) |
+| `src/assets/images/common/logo.png` | 헤더 로고 (개인정보처리방침 페이지용) | — |
+| `src/assets/images/common/favicon.png` | 브라우저 탭 아이콘 | 1:1 |
+| `src/assets/images/common/og-image.jpg` | 카톡·SNS 공유 썸네일 | 1200×630 |
+| `src/assets/images/common/badge-*.png` | App Store / Google Play 배지 | — |
 
 이미지가 없으면 회색 자리표시자가 나오고, 사이트는 정상 동작합니다.
 

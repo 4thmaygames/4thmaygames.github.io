@@ -10,7 +10,8 @@
     "stores": {
       "appstore": "https://apps.apple.com/kr/app/id1588378696",
       "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.ghosthotel"
-    }
+    },
+    "icon": "/assets/images/games/ghosthotel-icon.webp"
   },
   {
     "slug": "cathotel",
@@ -22,7 +23,8 @@
     "stores": {
       "appstore": "https://apps.apple.com/kr/app/id6469767467",
       "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.cathotel"
-    }
+    },
+    "icon": "/assets/images/games/cathotel-icon.webp"
   },
   {
     "slug": "froghotel",
@@ -34,6 +36,7 @@
     "stores": {
       "appstore": "https://apps.apple.com/kr/app/id6747689639",
       "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.froghotel"
-    }
+    },
+    "icon": "/assets/images/games/froghotel-icon.webp"
   }
 ]

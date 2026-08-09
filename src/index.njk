@@ -1,48 +1,51 @@
 ---
 layout: base.njk
 permalink: /
+bodyClass: home
 description: "설렘이 가득한 5월 4일처럼! 포스메이게임즈는 유령호텔 타이쿤, 고양이호텔, 개구리호텔을 만든 힐링 타이쿤 게임 개발사입니다."
 ---
 {% from "partials/icons.njk" import storeButtons %}
 
-<section class="hero">
+<section class="stage">
   <div class="wrap">
-    <p class="eyebrow">4TH MAY GAMES</p>
-    <h1>설렘이 가득한<br>5월 4일처럼!</h1>
-    <p class="lead">
-      어린이날 전날인 5월 4일처럼, 설렘과 기쁨이 가득한 게임으로 행복한 내일을 선사합니다.<br>
-      포스메이게임즈는 아늑하고 따뜻한 힐링 타이쿤을 만듭니다.
-    </p>
+    <h1 class="brand">4TH MAY GAMES</h1>
+    <p class="brand-tag">설렘이 가득한 5월 4일처럼!</p>
+
+    <ul class="icon-grid">
+      {% for g in games %}
+      <li>
+        <button class="icon-btn" type="button" data-open="dlg-{{ g.slug }}" aria-haspopup="dialog">
+          <span class="icon-img">
+            <img src="{{ g.icon }}" alt="" width="512" height="512"{% if not loop.first %} loading="lazy"{% endif %}>
+          </span>
+          <span class="icon-name">{{ g.title }}</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
-<section class="games">
-  <div class="wrap">
-    {% for g in games %}
-    <article class="game" data-reveal>
-      <div class="game-art">
-        <div class="media" data-label="{{ g.title }}">
-          <img src="{{ g.art }}" alt="{{ g.title }}" width="960" height="540"{% if not loop.first %} loading="lazy"{% endif %}>
-        </div>
-      </div>
+{% for g in games %}
+<div class="modal" id="dlg-{{ g.slug }}" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="ttl-{{ g.slug }}">
+    <button class="modal-close" type="button" data-close aria-label="닫기">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
 
-      <div class="game-info">
-        <h2>{{ g.title }}</h2>
-        <p class="game-en">{{ g.titleEn }}</p>
-        <p class="game-tagline">{{ g.tagline }}</p>
-        <p class="game-desc">{{ g.desc }}</p>
-        {% if g.award %}<p class="game-award">🏆 {{ g.award }}</p>{% endif %}
-        {{ storeButtons(g.stores) }}
-      </div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+    <div class="modal-art media" data-label="{{ g.title }}">
+      <img src="{{ g.art }}" alt="{{ g.title }}" width="1024" height="500" loading="lazy">
+    </div>
 
-<section class="cta">
-  <div class="wrap">
-    <h2>함께 만들어갈 팀원을 찾습니다</h2>
-    <p>동심을 선물하는 게임, 같이 만들어보지 않으실래요?</p>
-    <a class="btn" href="{{ site.careersUrl }}" target="_blank" rel="noopener">채용 공고 보기 →</a>
+    <div class="modal-body">
+      <h2 id="ttl-{{ g.slug }}">{{ g.title }}</h2>
+      <p class="modal-en">{{ g.titleEn }}</p>
+      <p class="modal-tagline">{{ g.tagline }}</p>
+      <p class="modal-desc">{{ g.desc }}</p>
+      {% if g.award %}<p class="modal-award">🏆 {{ g.award }}</p>{% endif %}
+      {{ storeButtons(g.stores) }}
+    </div>
   </div>
-</section>
+</div>
+{% endfor %}
