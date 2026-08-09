@@ -37,18 +37,9 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div>
-      <p class="footer-logo">4TH MAY GAMES</p>
-      <p class="footer-tag">설렘이 가득한 5월 4일처럼!</p>
-    </div>
-    <div class="footer-links">
-      <a href="/privacy/">개인정보처리방침</a>
-      {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
-    </div>
-  </div>
   <div class="wrap footer-bottom">
-    <p>© {{ site.copyrightYear }} {{ site.nameEn }}. All rights reserved.</p>
+    <p class="copy">© {{ site.copyrightYear }} {{ site.nameEn }}. All rights reserved.</p>
+    {% if site.email %}<p class="contact"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% endif %}
   </div>
 </footer>
 

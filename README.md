@@ -102,7 +102,14 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 
 ---
 
-## 5. 남은 작업 (TODO)
+## 5. 개인정보처리방침
+
+`/privacy/` 주소로 살아 있지만 **푸터에 링크는 걸지 않았습니다.**
+앱스토어·구글플레이에 등록된 링크로는 정상 접속되며, 내용 수정은 `src/privacy.njk` 에서 합니다.
+
+---
+
+## 6. 남은 작업 (TODO)
 
 - [ ] 로고 이미지 `src/assets/images/common/logo.png`
 - [ ] Google Search Console 에 사이트 등록
