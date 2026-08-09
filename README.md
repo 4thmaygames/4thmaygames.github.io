@@ -91,8 +91,8 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 |------|------|------|
 | `src/assets/images/games/{slug}-icon.webp` | 홈 화면 아이콘 | 512×512 (스토어 앱 아이콘) |
 | `src/assets/images/games/{slug}.webp` | 팝업 상단 이미지 | 1024×500 (스토어 피처 그래픽) |
-| `src/assets/images/common/logo.png` | 로고 (메인 타이틀 + 헤더) | 가로형, 투명 PNG |
-| `src/assets/images/common/favicon.png` | 브라우저 탭 아이콘 (심볼) | 512×512 투명 |
+| `src/assets/images/common/logo.png` | 로고 (메인 타이틀 + 헤더) | 가로형, 좌우 22% 투명 여백 포함 |
+| `src/assets/images/common/favicon.png` | 브라우저 탭 아이콘 (심볼, 눈 부분 투명) | 512×512 투명 |
 | `src/assets/images/common/apple-touch-icon.png` | iOS 홈화면 아이콘 | 180×180 흰 배경 |
 | `src/assets/images/common/og-image.jpg` | 카톡·SNS 공유 썸네일 | 1200×630 |
 | `src/assets/images/common/badge-*.png` | App Store / Google Play 배지 | — |
@@ -118,6 +118,7 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 |---|---|---|
 | `--accent` | `#3FB5B5` | 청록 — 포커스 표시 등 |
 | `--brand-navy` | `#5A5F86` | 남보라 — 게임명, 팝업 제목 |
+| `--gap-block` | `clamp(44px, 6vw, 72px)` | 로고↔아이콘, 아이콘↔푸터 간격 |
 
 ---
 
