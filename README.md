@@ -128,6 +128,17 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 
 ---
 
+## 8. app-ads.txt
+
+`src/app-ads.txt` 를 그대로 사이트 루트(`https://www.4thmaygames.com/app-ads.txt`)로 복사합니다.
+광고 네트워크가 추가·변경되면 이 파일만 교체하고 push 하면 됩니다.
+
+- 스토어 등록정보의 **개발자 웹사이트가 `https://www.4thmaygames.com`** 이어야 크롤링됩니다
+- 파일이 존재하는데 특정 네트워크가 빠져 있으면 해당 네트워크 수익이 차단되므로, 항상 **전체 목록**으로 교체하세요
+- AdMob 반영 확인: AdMob → 앱 → app-ads.txt 탭 (크롤링에 하루 이틀 걸립니다)
+
+---
+
 ## 폴더 구조
 
 ```
@@ -145,5 +156,6 @@ src/
 ├── 404.njk
 ├── sitemap.njk
 ├── robots.txt
+├── app-ads.txt         # 광고 네트워크 인증 파일
 └── CNAME.disabled      # 도메인 전환 시 CNAME 으로 이름 변경
 ```
