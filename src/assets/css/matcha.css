@@ -120,23 +120,25 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   border-radius: 2px; background: var(--matcha);
 }
 
+/* 전시장에서 한 손으로 누르는 화면이라 모바일에서는 세로로 크게 쌓습니다 */
 .pr-stores {
-  display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
-  gap: 12px; margin-top: 20px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 14px; margin-top: 20px;
 }
 .pr-store {
   display: block; border-radius: 12px;
   transition: transform .18s var(--ease);
 }
-.pr-store img { height: 54px; width: auto; }
+.pr-store img { height: 58px; width: auto; }
 a.pr-store:active { transform: scale(.96); }
 
-/* App Store 는 URL 이 준비되면 prereg.json 의 appstore 값만 채우면 활성화됩니다 */
+/* App Store 는 URL 이 준비되면 prereg.json 의 appstore 값만 채우면 활성화됩니다.
+   스토어 배지는 색상·명암을 바꾸면 브랜드 가이드 위반이라 원본 그대로 두고,
+   아래 라벨로만 상태를 알립니다. */
 .pr-store.is-soon {
   display: flex; flex-direction: column; align-items: center; gap: 7px;
   cursor: default;
 }
-.pr-store.is-soon img { filter: grayscale(1); opacity: .38; }
 .pr-soon {
   padding: 3px 10px; border-radius: 999px; white-space: nowrap;
   background: var(--ink); color: #fff;
@@ -240,6 +242,8 @@ a.pr-store:active { transform: scale(.96); }
   .pr-icon { width: 110px; height: 110px; }
   .pr-sec { padding: 40px 0; }
   .pr-shots figure { width: 200px; }
+  .pr-stores { flex-direction: row; align-items: flex-start; gap: 16px; }
+  .pr-store img { height: 54px; }
   /* 마우스 환경에서는 하단 고정 버튼이 불필요 */
   .pr-sticky { display: none; }
 }

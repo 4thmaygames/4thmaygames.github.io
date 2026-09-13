@@ -119,30 +119,30 @@ DNS 는 **메일플러그**(ns.mailplug.com) 에서 관리합니다. 현재 설�
 "appstore": "https://apps.apple.com/app/id0000000000",
 ```
 
-### 사전예약 배지 이미지 교체
+### 사전예약 배지
 
-현재는 일반 스토어 배지(`badge-googleplay.png` / `badge-appstore.png`)를 쓰고 있습니다.
-공식 **사전예약 배지**를 받으면 파일을 `src/assets/images/common/` 에 넣고 경로만 바꾸세요.
+공식 배지를 씁니다. 두 배지의 **검은 알약 높이가 똑같이 보이도록** 여백을 잘라내고 높이 168px 로 맞춰 두었습니다.
 
-| 배지 | 받는 곳 |
+| 파일 | 원본 |
 |---|---|
-| Pre-register on Google Play | Google Partner Marketing Hub → Google Play → Lockups, icons & badges |
-| Pre-Order on the App Store | Apple Developer → App Store → Marketing Resources |
+| `badge-googleplay-prereg.png` | PRE-REGISTER ON Google Play (영문) |
+| `badge-appstore-preorder.png` | Pre-order on the App Store (US-UK) |
+
+> ⚠️ 스토어 배지는 **색상·명암을 바꾸면 브랜드 가이드 위반**입니다. 회색 처리·투명도 조절을 하지 말고,
+> 상태 표시는 배지 아래 라벨(`.pr-soon`)로만 하세요.
+
+**언어별 배지를 추가하려면** 파일을 `src/assets/images/common/` 에 넣고 `prereg.json` 의 `byLang` 에만 적으면 됩니다.
+비워 두면 `default` 를 씁니다. 새 배지는 여백을 자른 뒤 높이 168px 로 맞추고 `w` 값도 함께 고쳐 주세요.
 
 ```json
-"badges": {
-  "googleplay": {
-    "default": "/assets/images/common/badge-googleplay-prereg.png",
-    "byLang": { "ja": "/assets/images/common/badge-googleplay-prereg-ja.png" }
-  },
-  "appstore": {
-    "default": "/assets/images/common/badge-appstore-preorder.png",
-    "byLang": {}
-  }
+"googleplay": {
+  "default": "/assets/images/common/badge-googleplay-prereg.png",
+  "byLang": { "ja": "/assets/images/common/badge-googleplay-prereg-ja.png" },
+  "w": 565, "h": 168
 }
 ```
 
-`byLang` 은 비워 두면 `default` 를 씁니다. 일본어 배지만 따로 넣고 싶을 때 위처럼 쓰면 됩니다.
+받는 곳 — Google: Partner Marketing Hub → Google Play → Lockups, icons & badges / Apple: Developer → App Store → Marketing Resources
 
 ### QR 코드 — `qr/` 폴더
 

@@ -5,8 +5,8 @@
 
   "_badgeNote": "공식 사전예약 배지를 받으면 파일을 src/assets/images/common/ 에 넣고 아래 경로만 바꾸면 됩니다. {lang} 은 ja/en/ko 로 치환되며, 언어별 파일이 없으면 default 를 씁니다.",
   "badges": {
-    "googleplay": { "default": "/assets/images/common/badge-googleplay.png", "byLang": {} },
-    "appstore": { "default": "/assets/images/common/badge-appstore.png", "byLang": {} }
+    "googleplay": { "default": "/assets/images/common/badge-googleplay-prereg.png", "byLang": {}, "w": 565, "h": 168 },
+    "appstore": { "default": "/assets/images/common/badge-appstore-preorder.png", "byLang": {}, "w": 503, "h": 168 }
   },
 
   "ja": {
