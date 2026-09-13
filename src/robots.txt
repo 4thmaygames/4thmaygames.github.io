@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.4thmaygames.com/sitemap.xml
+Sitemap: https://4thmaygames.com/sitemap.xml

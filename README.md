@@ -5,7 +5,7 @@ GitHub Pages로 운영되는 정적 사이트입니다. 홈 한 페이지 + 개�
 홈은 **게임 아이콘 3개**만 보여주고, 아이콘을 누르면 게임 설명 팝업이 열립니다. [Eleventy(11ty)](https://www.11ty.dev/)로 빌드합니다.
 
 - 배포 주소: https://4thmaygames.github.io
-- 최종 목표 주소: https://www.4thmaygames.com (아래 2-1 참고)
+- 최종 목표 주소: https://4thmaygames.com (아래 2-1 참고)
 
 ---
 
@@ -33,27 +33,25 @@ git add -A && git commit -m "수정 내용" && git push
 
 ---
 
-## 2-1. 실제 도메인으로 전환하기
+## 2-1. 도메인 구성 (설정 완료됨)
 
-미리보기에서 문제가 없을 때 진행하세요. **그 전까지 기존 4thmaygames.com 은 그대로 유지**됩니다.
+사이트 기준 주소는 **www 없는 `4thmaygames.com`** 입니다. (`src/CNAME` 에 지정)
+`www.4thmaygames.com` 으로 접속하면 GitHub 이 자동으로 apex 주소로 넘겨줍니다.
 
-```bash
-mv src/CNAME.disabled src/CNAME
-git add -A && git commit -m "커스텀 도메인 연결" && git push
-```
-
-그리고 도메인 등록업체(가비아·후이즈 등) DNS에서:
+DNS 는 **메일플러그**(ns.mailplug.com) 에서 관리합니다. 현재 설정:
 
 | 타입  | 호스트 | 값 |
 |-------|--------|-----|
-| CNAME | `www`  | `4thmaygames.github.io` |
+| CNAME | `www`  | `4thmaygames.github.io` (www 접속 시 apex 로 자동 이동) |
 | A     | `@`    | `185.199.108.153` |
 | A     | `@`    | `185.199.109.153` |
 | A     | `@`    | `185.199.110.153` |
 | A     | `@`    | `185.199.111.153` |
 
-마지막으로 저장소 **Settings → Pages → Custom domain** 에 `www.4thmaygames.com` 이 들어왔는지 확인하고 **Enforce HTTPS** 를 체크합니다.
-(HTTPS 체크박스는 DNS 반영 후에 활성화됩니다. 최대 24시간)
+> ⚠️ MX(Google Workspace 메일) 와 TXT(SPF) 레코드는 절대 건드리지 마세요. 지우면 회사 메일이 끊깁니다.
+
+저장소 **Settings → Pages** 의 Custom domain 은 `src/CNAME` 값을 따라 자동 갱신됩니다.
+도메인을 바꾸면 HTTPS 인증서가 재발급되므로 **Enforce HTTPS** 를 다시 확인해 주세요.
 
 ---
 
@@ -130,10 +128,10 @@ git add -A && git commit -m "커스텀 도메인 연결" && git push
 
 ## 8. app-ads.txt
 
-`src/app-ads.txt` 를 그대로 사이트 루트(`https://www.4thmaygames.com/app-ads.txt`)로 복사합니다.
+`src/app-ads.txt` 를 그대로 사이트 루트(`https://4thmaygames.com/app-ads.txt`)로 복사합니다.
 광고 네트워크가 추가·변경되면 이 파일만 교체하고 push 하면 됩니다.
 
-- 스토어 등록정보의 **개발자 웹사이트가 `https://www.4thmaygames.com`** 이어야 크롤링됩니다
+- 스토어 등록정보의 **개발자 웹사이트가 `https://4thmaygames.com`** 이어야 크롤링됩니다
 - 파일이 존재하는데 특정 네트워크가 빠져 있으면 해당 네트워크 수익이 차단되므로, 항상 **전체 목록**으로 교체하세요
 - AdMob 반영 확인: AdMob → 앱 → app-ads.txt 탭 (크롤링에 하루 이틀 걸립니다)
 
@@ -157,5 +155,5 @@ src/
 ├── sitemap.njk
 ├── robots.txt
 ├── app-ads.txt         # 광고 네트워크 인증 파일
-└── CNAME.disabled      # 도메인 전환 시 CNAME 으로 이름 변경
+└── CNAME               # 커스텀 도메인 (4thmaygames.com)
 ```
