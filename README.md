@@ -101,6 +101,64 @@ DNS 는 **메일플러그**(ns.mailplug.com) 에서 관리합니다. 현재 설�
 
 ---
 
+## 4-1. 사전예약 페이지 — `/matcha/`
+
+전시장에서 **QR 코드로 접속하는 모바일 랜딩 페이지**입니다. 주소는 `https://4thmaygames.com/matcha`.
+
+- 문구·스토어 링크는 전부 `src/_data/prereg.json` 한 곳에 있습니다 (일본어 / 영어 / 한국어)
+- 브라우저 언어를 감지해 자동 전환하고, 우측 상단 버튼으로 직접 바꿀 수도 있습니다
+- `#ja` `#en` `#ko` 를 붙이면 해당 언어로 바로 열립니다
+- 스타일은 `src/assets/css/matcha.css` (이 페이지 전용)
+
+### App Store 링크 활성화
+
+지금은 `appstore` 값이 비어 있어 **회색 "곧 출시" 버튼**으로 표시됩니다.
+애플 링크가 나오면 `prereg.json` 의 이 한 줄만 채우면 자동으로 활성 버튼이 됩니다.
+
+```json
+"appstore": "https://apps.apple.com/app/id0000000000",
+```
+
+### 사전예약 배지 이미지 교체
+
+현재는 일반 스토어 배지(`badge-googleplay.png` / `badge-appstore.png`)를 쓰고 있습니다.
+공식 **사전예약 배지**를 받으면 파일을 `src/assets/images/common/` 에 넣고 경로만 바꾸세요.
+
+| 배지 | 받는 곳 |
+|---|---|
+| Pre-register on Google Play | Google Partner Marketing Hub → Google Play → Lockups, icons & badges |
+| Pre-Order on the App Store | Apple Developer → App Store → Marketing Resources |
+
+```json
+"badges": {
+  "googleplay": {
+    "default": "/assets/images/common/badge-googleplay-prereg.png",
+    "byLang": { "ja": "/assets/images/common/badge-googleplay-prereg-ja.png" }
+  },
+  "appstore": {
+    "default": "/assets/images/common/badge-appstore-preorder.png",
+    "byLang": {}
+  }
+}
+```
+
+`byLang` 은 비워 두면 `default` 를 씁니다. 일본어 배지만 따로 넣고 싶을 때 위처럼 쓰면 됩니다.
+
+### QR 코드 — `qr/` 폴더
+
+`qr/` 안의 파일이 `https://4thmaygames.com/matcha` 로 연결됩니다. **사이트에는 배포되지 않는 인쇄용 파일**입니다.
+
+| 파일 | 용도 |
+|---|---|
+| `matcha-qr.svg` | 인쇄용 벡터 (말차 그린). 배너·포스터는 이걸 쓰세요 |
+| `matcha-qr-black.svg` | 인쇄용 벡터 (검정) |
+| `matcha-qr.png` / `-black.png` | 2460px PNG |
+| `matcha-qr-logo.png` | 가운데에 앱 아이콘이 들어간 버전 |
+
+오류정정 레벨 H 로 만들어 로고가 들어가도 인식됩니다. 인쇄 시 **한 변 2cm 이상**, 주변 여백을 남겨 주세요.
+
+---
+
 ## 5. 개인정보처리방침
 
 `/privacy/` 주소로 살아 있지만 **푸터에 링크는 걸지 않았습니다.**
@@ -150,6 +208,7 @@ src/
 │       └── icons.njk   # 스토어 버튼
 ├── assets/             # CSS, JS, 이미지
 ├── index.njk           # ★ 홈
+├── matcha.njk          # 사전예약 랜딩 (/matcha/) — 전시장 QR 접속용
 ├── privacy.njk         # 개인정보처리방침 (/privacy/)
 ├── 404.njk
 ├── sitemap.njk

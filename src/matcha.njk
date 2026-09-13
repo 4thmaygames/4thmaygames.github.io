@@ -1,0 +1,184 @@
+---
+permalink: /matcha/
+eleventyExcludeFromCollections: true
+---
+{% set p = prereg %}
+{% macro badge(store, code, alt) %}
+{%- set b = p.badges[store] -%}
+<img src="{{ b.byLang[code] if b.byLang[code] else b.default }}" alt="{{ alt }}" width="233" height="78">
+{%- endmacro %}
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>カエルの抹茶カフェ / Frog Matcha Cafe — 事前登録</title>
+<meta name="description" content="{{ p.ja.tagline }} {{ p.ja.releaseDate }}配信予定。事前登録受付中。">
+<meta name="theme-color" content="#eef3e4">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="4th May Games">
+<meta property="og:title" content="カエルの抹茶カフェ / Frog Matcha Cafe">
+<meta property="og:description" content="{{ p.en.tagline }} Pre-register now.">
+<meta property="og:image" content="{{ site.url }}/assets/images/games/matcha.webp">
+<meta property="og:url" content="{{ site.url }}/matcha/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="{{ site.url }}/matcha/">
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/css/matcha.css">
+</head>
+<body>
+
+<nav class="pr-langs" aria-label="Language">
+  <button type="button" data-lang="ja" aria-pressed="true">日本語</button>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+</nav>
+
+{% for code in ["ja", "en", "ko"] %}
+{% set t = p[code] %}
+<div class="pr-doc" data-doc="{{ code }}"{% if code != "ja" %} hidden{% endif %}>
+
+  <header class="pr-hero">
+    <div class="pr-keyart">
+      <img src="/assets/images/games/matcha.webp" alt="" width="1024" height="500">
+    </div>
+
+    <div class="pr-wrap pr-hero-in">
+      <div class="pr-icon">
+        <img src="/assets/images/games/matcha-icon.webp" alt="{{ t.title }}" width="512" height="512">
+      </div>
+      <h1 class="pr-title">{{ t.title }}</h1>
+      {% if t.titleSub %}<p class="pr-title-sub">{{ t.titleSub }}</p>{% endif %}
+      <p class="pr-tagline">{{ t.tagline }}</p>
+      <p class="pr-release"><span>{{ t.releaseLabel }}</span> {{ t.releaseDate }}</p>
+    </div>
+  </header>
+
+  <section class="pr-cta">
+    <div class="pr-wrap">
+      <h2 class="pr-cta-head">{{ t.ctaHead }}</h2>
+      <div class="pr-stores">
+        <a class="pr-store" href="{{ p.googleplay }}" target="_blank" rel="noopener">
+          {{ badge("googleplay", code, "Google Play") }}
+        </a>
+        {% if p.appstore %}
+        <a class="pr-store" href="{{ p.appstore }}" target="_blank" rel="noopener">
+          {{ badge("appstore", code, "App Store") }}
+        </a>
+        {% else %}
+        <span class="pr-store is-soon" aria-disabled="true">
+          {{ badge("appstore", code, "App Store") }}
+          <em class="pr-soon">{{ t.soon }}</em>
+        </span>
+        {% endif %}
+      </div>
+      <p class="pr-cta-note">{{ t.ctaNote }}</p>
+    </div>
+  </section>
+
+  <section class="pr-sec">
+    <div class="pr-wrap">
+      <p class="pr-lead">{{ t.lead }}</p>
+    </div>
+  </section>
+
+  <section class="pr-sec">
+    <div class="pr-wrap">
+      <h2>{{ t.shotsHead }}</h2>
+    </div>
+    <div class="pr-shots" role="group" aria-label="{{ t.shotsHead }}">
+      {% for n in [1,2,3,4,5,6] %}
+      <figure><img src="/presskit/matcha/assets/screenshots/shot-{{ n }}.webp" alt="" width="720" height="1280"{% if n > 2 %} loading="lazy"{% endif %}></figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="pr-sec">
+    <div class="pr-wrap">
+      <h2>{{ t.featuresHead }}</h2>
+      <ul class="pr-features">
+        {% for f in t.features %}
+        <li>
+          <span class="pr-f-icon" aria-hidden="true">{{ f.i }}</span>
+          <div><h3>{{ f.t }}</h3><p>{{ f.d }}</p></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="pr-sec">
+    <div class="pr-wrap">
+      <h2>{{ t.infoHead }}</h2>
+      <dl class="pr-info">
+        {% for row in t.info %}
+        <div><dt>{{ row.k }}</dt><dd>{{ row.v }}</dd></div>
+        {% endfor %}
+      </dl>
+    </div>
+  </section>
+
+  <footer class="pr-foot">
+    <div class="pr-wrap">
+      <a class="pr-foot-link" href="/presskit/matcha/#{{ code }}">{{ t.pressLink }} →</a>
+      <a class="pr-foot-link" href="/">{{ t.siteLink }} →</a>
+      <img class="pr-foot-logo" src="/assets/images/common/logo.png" alt="4th May Games" width="2196" height="300">
+      <p class="pr-copy">© {{ site.copyrightYear }} 4th May Games. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div>
+{% endfor %}
+
+<div class="pr-sticky" hidden>
+  <a class="pr-sticky-btn" href="{{ p.googleplay }}" target="_blank" rel="noopener">
+    <img src="{{ p.badges.googleplay.default }}" alt="Google Play" width="233" height="78">
+  </a>
+</div>
+
+<script>
+(function () {
+  var docs = document.querySelectorAll("[data-doc]");
+  var btns = document.querySelectorAll("[data-lang]");
+  var LANGS = ["ja", "en", "ko"];
+
+  function apply(lang) {
+    if (LANGS.indexOf(lang) < 0) lang = "ja";
+    docs.forEach(function (d) { d.hidden = d.getAttribute("data-doc") !== lang; });
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang)); });
+    document.documentElement.lang = lang;
+    try { history.replaceState(null, "", "#" + lang); } catch (e) {}
+  }
+
+  var initial = (location.hash || "").replace("#", "");
+  if (LANGS.indexOf(initial) < 0) {
+    var nav = (navigator.language || "en").toLowerCase();
+    initial = nav.indexOf("ja") === 0 ? "ja" : nav.indexOf("ko") === 0 ? "ko" : "en";
+  }
+  apply(initial);
+
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () { apply(b.getAttribute("data-lang")); });
+  });
+
+  /* 히어로의 스토어 버튼이 화면에서 사라지면 하단 고정 버튼을 띄웁니다 */
+  var sticky = document.querySelector(".pr-sticky");
+  if (sticky && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      var anyVisible = entries.some(function (e) {
+        return e.isIntersecting && e.target.closest("[data-doc]") && !e.target.closest("[data-doc]").hidden;
+      });
+      sticky.hidden = anyVisible;
+    }, { rootMargin: "-72px 0px 0px 0px" });
+    document.querySelectorAll(".pr-cta").forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
