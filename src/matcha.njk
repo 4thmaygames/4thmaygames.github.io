@@ -67,18 +67,16 @@ eleventyExcludeFromCollections: true
         <a class="pr-store" href="{{ p.googleplay }}" target="_blank" rel="noopener">
           {{ badge("googleplay", code, "Google Play") }}
         </a>
+        {# App Store 링크가 생기면 prereg.json 의 appstore 값만 채우면 배지가 나타납니다 #}
         {% if p.appstore %}
         <a class="pr-store" href="{{ p.appstore }}" target="_blank" rel="noopener">
           {{ badge("appstore", code, "App Store") }}
         </a>
-        {% else %}
-        <span class="pr-store is-soon" aria-disabled="true">
-          {{ badge("appstore", code, "App Store") }}
-          <em class="pr-soon">{{ t.soon }}</em>
-        </span>
         {% endif %}
       </div>
-      <p class="pr-cta-note">{{ t.ctaNote }}</p>
+      <p class="pr-cta-note">
+        {% for line in t.ctaNote %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </p>
     </div>
   </section>
 

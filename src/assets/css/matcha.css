@@ -132,19 +132,8 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .pr-store img { height: 58px; width: auto; }
 a.pr-store:active { transform: scale(.96); }
 
-/* App Store 는 URL 이 준비되면 prereg.json 의 appstore 값만 채우면 활성화됩니다.
-   스토어 배지는 색상·명암을 바꾸면 브랜드 가이드 위반이라 원본 그대로 두고,
-   아래 라벨로만 상태를 알립니다. */
-.pr-store.is-soon {
-  display: flex; flex-direction: column; align-items: center; gap: 7px;
-  cursor: default;
-}
-.pr-soon {
-  padding: 3px 10px; border-radius: 999px; white-space: nowrap;
-  background: var(--ink); color: #fff;
-  font-size: 10.5px; font-weight: 700; font-style: normal; line-height: 1.6;
-  letter-spacing: .01em;
-}
+/* App Store 배지는 prereg.json 의 appstore 에 링크를 넣으면 나타납니다.
+   스토어 배지는 색상·명암을 바꾸면 브랜드 가이드 위반이라 원본 그대로 씁니다. */
 
 .pr-cta-note {
   margin-top: 22px; font-size: 13px; line-height: 1.7; color: var(--muted);
