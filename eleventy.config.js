@@ -3,6 +3,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/app-ads.txt");
+  eleventyConfig.addPassthroughCopy("src/presskit");
+  eleventyConfig.addPassthroughCopy({ "press/assets": "presskit/matcha/assets" });
   eleventyConfig.addPassthroughCopy({ "src/assets/images/common/favicon.png": "favicon.png" });
 
   eleventyConfig.addFilter("isoDate", (value) => {

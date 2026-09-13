@@ -1,0 +1,173 @@
+{
+  "slug": "matcha",
+  "updated": "2026-09-13",
+  "common": {
+    "titleEn": "Frog Matcha Cafe",
+    "titleJa": "カエルの抹茶カフェ",
+    "titleKo": "개구리 말차 카페",
+    "developer": { "en": "4th May Games", "ja": "4th May Games（フォースメイゲームズ）", "ko": "포스메이게임즈" },
+    "releaseDate": { "en": "October 8, 2026", "ja": "2026年10月8日（木）", "ko": "2026년 10월 8일 (목)" },
+    "platforms": "iOS / Android",
+    "price": { "en": "Free to play (with in-app purchases)", "ja": "基本プレイ無料（アプリ内課金あり）", "ko": "무료 (인앱결제 포함)" },
+    "languages": {
+      "en": "English, Japanese, Korean, Traditional Chinese",
+      "ja": "英語 / 日本語 / 韓国語 / 繁体字中国語",
+      "ko": "영어, 일본어, 한국어, 중국어 번체"
+    },
+    "genre": {
+      "en": "Idle · Merge · Tycoon / Simulation",
+      "ja": "放置 × マージ × 経営シミュレーション",
+      "ko": "방치형 · 머지 · 경영 시뮬레이션"
+    },
+    "email": "contact@4thmaygames.com",
+    "website": "https://4thmaygames.com",
+    "googleplay": "https://play.google.com/store/apps/details?id=com.fm.frogcafe"
+  },
+
+  "ja": {
+    "lang": "日本語",
+    "kicker": "プレスキット",
+    "tagline": "池のほとりの森に、小さな抹茶カフェを。",
+    "lead": "カエルの店員たちとお客さまを迎え、抹茶メニューを作り、マージパズルで注文を仕上げながら自分だけのカフェを育てる——競争も急ぎもいらない、のんびり癒やし系の放置経営シミュレーションです。",
+    "sections": {
+      "fact": "ファクトシート",
+      "about": "ゲーム概要",
+      "features": "主な特徴",
+      "screens": "スクリーンショット",
+      "art": "アートワーク",
+      "studio": "開発元について",
+      "contact": "お問い合わせ",
+      "assets": "素材ダウンロード"
+    },
+    "factLabels": {
+      "title": "タイトル",
+      "developer": "開発・販売",
+      "release": "配信開始日",
+      "platform": "対応プラットフォーム",
+      "price": "価格",
+      "genre": "ジャンル",
+      "languages": "対応言語",
+      "site": "公式サイト"
+    },
+    "about": [
+      "池のほとりの森に、ひっそりと佇む小さな抹茶カフェ。やわらかな感情がここに流れ込み、不器用ながらも心を込めてお客さまを迎えるカエルの店員たちが待っています。",
+      "注文を受け、メニューを作り、席へ運ぶ。店員と設備をアップグレードすれば、席を離れているあいだにもゴールドが積み上がります。小さかったカフェは少しずつ大きくなり、素朴だった空間はやがて温かな物語で満たされていきます。",
+      "競争も、スピードも必要ありません。かわいいカエルたちと一日一日をゆっくり過ごしたい方のための場所です。"
+    ],
+    "features": [
+      { "t": "カエルの店員と営むカフェ経営", "d": "注文を受け、メニューを作り、サービングする。店員と設備を育てれば放置収益でカフェが成長していきます。" },
+      { "t": "抹茶メニューの育成", "d": "さまざまな抹茶ドリンクとデザートを解放・強化して、より多くのゴールドを獲得。" },
+      { "t": "経営とつながるマージパズル", "d": "エネルギーでアイテムを生成し、同じもの同士を合成して注文書を完成。報酬はそのままカフェの成長に。" },
+      { "t": "VIPグルメガエルの特別注文", "d": "ときおり訪れるVIPの特製メニューを納品すると、一定時間カフェの収益が大きく上昇します。" },
+      { "t": "コスチュームとペットの収集", "d": "カエルのバリスタを着せ替え、かわいいペットを集めて自分だけの抹茶カフェを完成させましょう。" }
+    ],
+    "studio": [
+      "4th May Games は「こどもの日の前日＝5月4日」のような、わくわくと喜びに満ちた一日をゲームで届けることを目指す韓国のインディーゲームスタジオです。",
+      "『幽霊ホテルタイクーン』『ネコホテル』『カエルホテル』など、癒やし系経営シミュレーションを手がけてきました。"
+    ],
+    "credits": [
+      { "t": "『幽霊ホテルタイクーン』", "d": "Google Play ベストゲーム 2022 インディー部門 受賞 / Google Play インディーゲームフェスティバル 2022 Top 10" }
+    ],
+    "contact": "取材・掲載・体験版のご相談はこちらまでお気軽にご連絡ください。",
+    "assetsNote": "本ページに掲載の画像は、ゲーム紹介記事・レビュー等での使用を許諾しています。改変を伴う使用の際は事前にご連絡ください。",
+    "download": "画像素材をまとめてダウンロード"
+  },
+
+  "en": {
+    "lang": "English",
+    "kicker": "Press Kit",
+    "tagline": "A little matcha cafe in the woods by the pond.",
+    "lead": "Greet guests alongside a staff of frogs, brew matcha, complete orders through merge puzzles, and grow a cafe of your own — an idle management sim with no competition and no rush.",
+    "sections": {
+      "fact": "Fact Sheet",
+      "about": "About the Game",
+      "features": "Key Features",
+      "screens": "Screenshots",
+      "art": "Artwork",
+      "studio": "About the Studio",
+      "contact": "Contact",
+      "assets": "Asset Download"
+    },
+    "factLabels": {
+      "title": "Title",
+      "developer": "Developer / Publisher",
+      "release": "Release Date",
+      "platform": "Platforms",
+      "price": "Price",
+      "genre": "Genre",
+      "languages": "Languages",
+      "site": "Website"
+    },
+    "about": [
+      "Tucked into the woods beside a quiet pond sits a small matcha cafe. Soft feelings drift in through its door, and a staff of frogs — earnest, if a little clumsy — is there to welcome every guest.",
+      "Take orders, prepare the menu, serve the tables. Upgrade your staff and equipment and gold keeps accumulating even while you are away. The little cafe grows, and the once-modest space fills with warm stories.",
+      "No competition. No rush. Just a place for anyone who wants to spend their days slowly, in the company of very cute frogs."
+    ],
+    "features": [
+      { "t": "Run a cafe with a staff of frogs", "d": "Take orders, prepare drinks, serve guests. Upgrade staff and equipment to build idle income that grows the cafe while you're away." },
+      { "t": "Grow your matcha menu", "d": "Unlock and upgrade a range of matcha drinks and desserts to earn more gold." },
+      { "t": "Merge puzzles tied to management", "d": "Spend energy to create items and merge matching ones to complete order sheets. Rewards feed straight back into the cafe." },
+      { "t": "Special orders from VIP frogs", "d": "Deliver the signature dish a visiting VIP is after and cafe income surges for a limited time." },
+      { "t": "Collect costumes and pets", "d": "Dress up your frog barista and gather adorable pets to make the cafe your own." }
+    ],
+    "studio": [
+      "4th May Games is a Korean indie studio that sets out to deliver days as full of anticipation and delight as May 4th — the day before Children's Day.",
+      "The studio's previous titles include Idle Ghost Hotel, Idle Cat Hotel, and Idle Frog Hotel, all cozy management sims."
+    ],
+    "credits": [
+      { "t": "Idle Ghost Hotel", "d": "Google Play Best of 2022 — Best Indie Game / Google Play Indie Games Festival 2022 Top 10" }
+    ],
+    "contact": "For interviews, coverage, or review build requests, please get in touch.",
+    "assetsNote": "The images on this page may be used freely in articles, reviews, and coverage of the game. Please contact us before using them in modified form.",
+    "download": "Download all image assets"
+  },
+
+  "ko": {
+    "lang": "한국어",
+    "kicker": "프레스킷",
+    "tagline": "연못가 숲속에 열린 작은 말차카페.",
+    "lead": "개구리 직원들과 손님을 맞이하고, 말차 메뉴를 만들고, 머지 퍼즐로 주문을 완성하며 나만의 카페를 키워가는 게임. 경쟁도 속도도 필요 없는 방치형 힐링 경영 시뮬레이션입니다.",
+    "sections": {
+      "fact": "팩트시트",
+      "about": "게임 소개",
+      "features": "주요 특징",
+      "screens": "스크린샷",
+      "art": "아트워크",
+      "studio": "개발사 소개",
+      "contact": "문의",
+      "assets": "에셋 다운로드"
+    },
+    "factLabels": {
+      "title": "타이틀",
+      "developer": "개발 · 서비스",
+      "release": "출시일",
+      "platform": "플랫폼",
+      "price": "가격",
+      "genre": "장르",
+      "languages": "지원 언어",
+      "site": "공식 사이트"
+    },
+    "about": [
+      "조용한 연못가 숲속에 자리 잡은 작은 말차카페. 말랑말랑한 감정들이 이곳으로 스며들고, 서툴지만 정성껏 손님을 맞이하는 개구리 직원들이 기다리고 있습니다.",
+      "주문을 받고, 메뉴를 만들고, 자리로 나릅니다. 직원과 설비를 업그레이드하면 자리를 비운 사이에도 골드가 쌓입니다. 작았던 카페는 조금씩 커지고, 소박했던 공간은 따뜻한 이야기로 채워집니다.",
+      "경쟁도, 속도도 필요 없습니다. 귀여운 개구리들과 하루하루를 느긋하게 보내고 싶은 분을 위한 공간입니다."
+    ],
+    "features": [
+      { "t": "개구리 직원들과 함께하는 카페 경영", "d": "주문을 받고, 메뉴를 만들고, 서빙하세요. 직원과 설비를 키우면 자리를 비운 사이에도 방치 수익이 쌓입니다." },
+      { "t": "말차 메뉴 성장", "d": "다양한 말차 음료와 디저트를 해금하고 업그레이드해 더 많은 골드를 벌어보세요." },
+      { "t": "경영과 연결된 머지 퍼즐", "d": "에너지로 아이템을 만들고 같은 아이템을 합쳐 주문서를 완성합니다. 보상은 다시 카페 성장에 쓰입니다." },
+      { "t": "VIP 미식가 개구리의 특별 주문", "d": "가끔 찾아오는 VIP가 원하는 특제 메뉴를 납품하면 일정 시간 카페 수익이 크게 증가합니다." },
+      { "t": "코스튬과 펫 수집", "d": "개구리 바리스타를 꾸미고 귀여운 펫을 모아 나만의 말차카페를 완성해보세요." }
+    ],
+    "studio": [
+      "포스메이게임즈는 어린이날 전날인 5월 4일처럼, 설렘과 기쁨이 가득한 하루를 게임으로 전하고자 하는 한국의 인디 게임 스튜디오입니다.",
+      "유령호텔 타이쿤, 고양이호텔, 개구리호텔 등 힐링 경영 시뮬레이션을 만들어 왔습니다."
+    ],
+    "credits": [
+      { "t": "유령호텔 타이쿤", "d": "구글플레이 올해를 빛낸 인디게임 수상 (2022) / 구글 인디게임 페스티벌 2022 Top 10" }
+    ],
+    "contact": "취재, 기사 게재, 리뷰 빌드 요청은 아래로 연락 주세요.",
+    "assetsNote": "이 페이지의 이미지는 게임 소개 기사와 리뷰에 자유롭게 사용하실 수 있습니다. 변형해 사용하실 경우 사전에 연락 부탁드립니다.",
+    "download": "이미지 에셋 전체 다운로드"
+  }
+}
