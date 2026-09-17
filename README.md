@@ -110,14 +110,16 @@ DNS 는 **메일플러그**(ns.mailplug.com) 에서 관리합니다. 현재 설�
 - `#ja` `#en` `#ko` 를 붙이면 해당 언어로 바로 열립니다
 - 스타일은 `src/assets/css/matcha.css` (이 페이지 전용)
 
-### App Store 링크 활성화
+### 스토어 링크
 
-지금은 `appstore` 값이 비어 있어 **회색 "곧 출시" 버튼**으로 표시됩니다.
-애플 링크가 나오면 `prereg.json` 의 이 한 줄만 채우면 자동으로 활성 버튼이 됩니다.
+`prereg.json` 맨 위 두 줄이 전부입니다. 구글플레이·애플 모두 사전예약 중입니다.
 
 ```json
-"appstore": "https://apps.apple.com/app/id0000000000",
+"appstore": "https://apps.apple.com/app/id6787887558",
+"googleplay": "https://play.google.com/store/apps/details?id=com.fm.frogcafe",
 ```
+
+`appstore` 를 빈 문자열로 두면 App Store 배지가 본문과 하단 고정 바 양쪽에서 사라집니다.
 
 ### 사전예약 배지
 

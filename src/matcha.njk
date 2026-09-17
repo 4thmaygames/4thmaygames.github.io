@@ -139,6 +139,12 @@ eleventyExcludeFromCollections: true
     <img src="{{ p.badges.googleplay.default }}" alt="Google Play"
          width="{{ p.badges.googleplay.w }}" height="{{ p.badges.googleplay.h }}">
   </a>
+  {% if p.appstore %}
+  <a class="pr-sticky-btn" href="{{ p.appstore }}" target="_blank" rel="noopener">
+    <img src="{{ p.badges.appstore.default }}" alt="App Store"
+         width="{{ p.badges.appstore.w }}" height="{{ p.badges.appstore.h }}">
+  </a>
+  {% endif %}
 </div>
 
 <script>
