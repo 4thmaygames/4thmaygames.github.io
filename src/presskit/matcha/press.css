@@ -89,7 +89,7 @@ h1, h2, h3, p, dl, dd, ul, ol, figure { margin: 0; }
 .pk-facts dt { font-size: 13px; font-weight: 700; color: var(--muted); line-height: 1.7; word-break: keep-all; }
 .pk-facts dd { font-size: 14.5px; line-height: 1.7; }
 .pk-dim { color: var(--muted); font-size: 13px; }
-.pk-store { margin-top: 22px; }
+.pk-store { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
 .pk-badge { display: inline-block; transition: transform .18s var(--ease); }
 .pk-badge img { height: 44px; width: auto; }
 .pk-badge:hover { transform: translateY(-2px); }

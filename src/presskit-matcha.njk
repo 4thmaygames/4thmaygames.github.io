@@ -76,8 +76,13 @@ eleventyExcludeFromCollections: true
       </dl>
       <p class="pk-store">
         <a class="pk-badge" href="{{ c.googleplay }}" target="_blank" rel="noopener">
-          <img src="/assets/images/common/badge-googleplay.png" alt="Google Play" width="233" height="78">
+          <img src="/assets/images/common/badge-googleplay-prereg.png" alt="Google Play" width="565" height="168">
         </a>
+        {% if c.appstore %}
+        <a class="pk-badge" href="{{ c.appstore }}" target="_blank" rel="noopener">
+          <img src="/assets/images/common/badge-appstore-preorder.png" alt="App Store" width="503" height="168">
+        </a>
+        {% endif %}
       </p>
     </div>
   </section>

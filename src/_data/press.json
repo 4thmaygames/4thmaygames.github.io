@@ -1,12 +1,12 @@
 {
   "slug": "matcha",
-  "updated": "2026-09-13",
+  "updated": "2026-09-17",
   "common": {
     "titleEn": "Frog Matcha Cafe",
     "titleJa": "カエルの抹茶カフェ",
     "titleKo": "개구리 말차 카페",
     "developer": { "en": "4th May Games", "ja": "4th May Games（フォースメイゲームズ）", "ko": "포스메이게임즈" },
-    "releaseDate": { "en": "October 8, 2026", "ja": "2026年10月8日（木）", "ko": "2026년 10월 8일 (목)" },
+    "releaseDate": { "en": "October 15, 2026", "ja": "2026年10月15日（木）", "ko": "2026년 10월 15일 (목)" },
     "platforms": "iOS / Android",
     "price": { "en": "Free to play (with in-app purchases)", "ja": "基本プレイ無料（アプリ内課金あり）", "ko": "무료 (인앱결제 포함)" },
     "languages": {
@@ -21,7 +21,8 @@
     },
     "email": "contact@4thmaygames.com",
     "website": "https://4thmaygames.com",
-    "googleplay": "https://play.google.com/store/apps/details?id=com.fm.frogcafe"
+    "googleplay": "https://play.google.com/store/apps/details?id=com.fm.frogcafe",
+    "appstore": "https://apps.apple.com/app/id6787887558"
   },
 
   "ja": {
