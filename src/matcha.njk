@@ -64,15 +64,15 @@ eleventyExcludeFromCollections: true
     <div class="pr-wrap">
       <h2 class="pr-cta-head">{{ t.ctaHead }}</h2>
       <div class="pr-stores">
-        <a class="pr-store" href="{{ p.googleplay }}" target="_blank" rel="noopener">
-          {{ badge("googleplay", code, "Google Play") }}
-        </a>
-        {# App Store 링크가 생기면 prereg.json 의 appstore 값만 채우면 배지가 나타납니다 #}
+        {# App Store 링크를 prereg.json 의 appstore 에서 비우면 이 배지만 사라집니다 #}
         {% if p.appstore %}
         <a class="pr-store" href="{{ p.appstore }}" target="_blank" rel="noopener">
           {{ badge("appstore", code, "App Store") }}
         </a>
         {% endif %}
+        <a class="pr-store" href="{{ p.googleplay }}" target="_blank" rel="noopener">
+          {{ badge("googleplay", code, "Google Play") }}
+        </a>
       </div>
       <p class="pr-cta-note">
         {% for line in t.ctaNote %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
@@ -135,16 +135,16 @@ eleventyExcludeFromCollections: true
 {% endfor %}
 
 <div class="pr-sticky" hidden>
-  <a class="pr-sticky-btn" href="{{ p.googleplay }}" target="_blank" rel="noopener">
-    <img src="{{ p.badges.googleplay.default }}" alt="Google Play"
-         width="{{ p.badges.googleplay.w }}" height="{{ p.badges.googleplay.h }}">
-  </a>
   {% if p.appstore %}
   <a class="pr-sticky-btn" href="{{ p.appstore }}" target="_blank" rel="noopener">
     <img src="{{ p.badges.appstore.default }}" alt="App Store"
          width="{{ p.badges.appstore.w }}" height="{{ p.badges.appstore.h }}">
   </a>
   {% endif %}
+  <a class="pr-sticky-btn" href="{{ p.googleplay }}" target="_blank" rel="noopener">
+    <img src="{{ p.badges.googleplay.default }}" alt="Google Play"
+         width="{{ p.badges.googleplay.w }}" height="{{ p.badges.googleplay.h }}">
+  </a>
 </div>
 
 <script>
