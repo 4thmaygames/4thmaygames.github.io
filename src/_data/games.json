@@ -1,5 +1,20 @@
 [
   {
+    "slug": "store",
+    "title": "오백원 상회",
+    "titleEn": "Penny Corner Store",
+    "tagline": "오월초등학교 앞 추억의 문방구를 되살리는 힐링 방치 타이쿤!",
+    "taglineEn": "A cozy idle tycoon in front of the school gate",
+    "desc": "양 할머니와 달고나·떡볶이를 만들며 나만의 상회를 키워보세요.",
+    "descEn": "Restore a nostalgic school-front shop with Grandma Sheep in a cozy idle tycoon!",
+    "art": "/assets/images/games/store.webp",
+    "icon": "/assets/images/games/store-icon.webp",
+    "stores": {
+      "appstore": "https://apps.apple.com/kr/app/id6792523055",
+      "googleplay": "https://play.google.com/store/apps/details?id=com.fourthmay.schoolcafe"
+    }
+  },
+  {
     "slug": "matcha",
     "title": "개구리 말차 카페",
     "titleEn": "Frog Matcha Cafe",

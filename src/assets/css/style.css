@@ -95,12 +95,19 @@ h1, h2, p { margin: 0; }
   margin-inline: auto;
 }
 
+/* 게임 수가 바뀌어도 마지막 줄이 가운데 정렬되도록 flex 로 둡니다.
+   --cols 만 바꾸면 한 줄에 몇 개를 놓을지 조정됩니다. */
 .icon-grid {
+  --cols: 5;
+  --icon-gap: clamp(18px, 3vw, 36px);
   list-style: none; padding: 0;
   margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: clamp(18px, 3vw, 36px);
-  max-width: 860px;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--icon-gap);
+  max-width: 1000px;
+}
+.icon-grid > li {
+  width: calc((100% - (var(--cols) - 1) * var(--icon-gap)) / var(--cols));
 }
 .icon-btn {
   display: grid; justify-items: center; gap: 14px; width: 100%;
@@ -210,13 +217,17 @@ h1, h2, p { margin: 0; }
 .footer-bottom a:hover { color: var(--accent); }
 
 /* ---------- 모션 / 반응형 ---------- */
+@media (max-width: 1000px) {
+  .icon-grid { --cols: 3; max-width: 640px; }
+}
+
 @media (max-width: 760px) {
-  .icon-grid { grid-template-columns: repeat(2, 1fr); max-width: 420px; }
+  .icon-grid { --cols: 2; max-width: 420px; }
 }
 
 @media (max-width: 560px) {
   .brand img { max-width: 250px; }
-  .icon-grid { gap: 16px; }
+  .icon-grid { --icon-gap: 16px; }
   .icon-name { font-size: 13px; }
   .modal { padding: 12px; }
   .modal-panel { border-radius: 18px; }
