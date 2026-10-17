@@ -40,8 +40,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-bottom">
-    <p class="support">Support : <a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a></p>
-    <p class="support-note">게임 이용 중 궁금한 점은 이메일로 문의해주세요.</p>
+    <p class="support-note"
+       data-ko="게임 이용 중 궁금한 점은 이메일로 문의해주세요."
+       data-en="Questions about our games? Email us anytime.">게임 이용 중 궁금한 점은 이메일로 문의해주세요.</p>
+    <p class="support"><a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a></p>
     <p class="copy">© {{ site.copyrightYear }} {{ site.nameEn }}. All rights reserved.</p>
   </div>
 </footer>

@@ -57,4 +57,49 @@
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });
+
+  /* ---------- 한국어 / English 전환 ----------
+     번역 대상은 data-ko / data-en 속성을 가진 요소입니다.
+     문구를 고치려면 games.json 과 base.njk 의 해당 속성만 바꾸면 됩니다. */
+  var langBtns = document.querySelectorAll(".lang-switch [data-lang]");
+  if (langBtns.length) {
+    var LANGS = ["ko", "en"];
+    var STORE_KEY = "4mg-lang";
+
+    function applyLang(lang) {
+      if (LANGS.indexOf(lang) < 0) lang = "ko";
+
+      document.querySelectorAll("[data-" + lang + "]").forEach(function (el) {
+        var v = el.getAttribute("data-" + lang);
+        if (v !== null) el.textContent = v;
+      });
+
+      document.querySelectorAll(".modal-close").forEach(function (b) {
+        var v = b.getAttribute("data-" + lang + "-label");
+        if (v) b.setAttribute("aria-label", v);
+      });
+
+      langBtns.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+      });
+
+      document.documentElement.lang = lang;
+      try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
+      try { history.replaceState(null, "", lang === "ko" ? location.pathname : "#en"); } catch (e) {}
+    }
+
+    /* 우선순위: 주소의 #en/#ko → 지난번 선택 → 브라우저 언어 */
+    var initial = (location.hash || "").replace("#", "");
+    if (LANGS.indexOf(initial) < 0) {
+      try { initial = localStorage.getItem(STORE_KEY) || ""; } catch (e) { initial = ""; }
+    }
+    if (LANGS.indexOf(initial) < 0) {
+      initial = (navigator.language || "en").toLowerCase().indexOf("ko") === 0 ? "ko" : "en";
+    }
+    applyLang(initial);
+
+    langBtns.forEach(function (b) {
+      b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
+    });
+  }
 })();

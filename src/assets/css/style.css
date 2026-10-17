@@ -51,6 +51,29 @@ h1, h2, p { margin: 0; }
 .logo img { height: 30px; width: auto; }
 .logo-text { font-weight: 800; font-size: 15px; letter-spacing: .14em; }
 
+/* ---------- 언어 전환 버튼 (홈 우측 상단) ---------- */
+.lang-switch {
+  position: fixed; top: max(14px, env(safe-area-inset-top)); right: 16px; z-index: 60;
+  display: flex; gap: 2px; padding: 3px;
+  background: rgba(255,255,255,.82);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border: 1px solid var(--line); border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(25,24,23,.08);
+}
+.lang-switch button {
+  padding: 6px 13px; border: 0; border-radius: 999px; background: none; cursor: pointer;
+  font: inherit; font-size: 12.5px; font-weight: 600; line-height: 1;
+  color: var(--muted); white-space: nowrap;
+  transition: background .18s var(--ease), color .18s var(--ease);
+}
+.lang-switch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+
+@media (max-width: 560px) {
+  .lang-switch { top: 10px; right: 10px; }
+  .lang-switch button { padding: 6px 11px; font-size: 12px; }
+}
+
 /* ---------- 메인 스테이지 ---------- */
 /* 홈에서는 큰 타이틀이 곧 로고이므로 상단 헤더를 숨깁니다 */
 .home .site-header { display: none; }
@@ -166,12 +189,12 @@ h1, h2, p { margin: 0; }
   text-align: center;
 }
 .footer-bottom p { margin: 0; }
-.footer-bottom .support { font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+.footer-bottom .support-note { font-size: 13.5px; color: var(--ink-2); }
+.footer-bottom .support { font-size: 13.5px; font-weight: 600; }
 .footer-bottom .support a {
   color: var(--accent); text-decoration: underline; text-underline-offset: 3px;
 }
 .footer-bottom .support a:hover { color: var(--brand-navy); }
-.footer-bottom .support-note { font-size: 12.5px; color: var(--muted); }
 .footer-bottom .copy { margin-top: 8px; font-size: 12.5px; color: #a49c94; }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--accent); }
