@@ -166,7 +166,13 @@ h1, h2, p { margin: 0; }
   text-align: center;
 }
 .footer-bottom p { margin: 0; }
-.footer-bottom .copy { font-size: 12.5px; color: #a49c94; }
+.footer-bottom .support { font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+.footer-bottom .support a {
+  color: var(--accent); text-decoration: underline; text-underline-offset: 3px;
+}
+.footer-bottom .support a:hover { color: var(--brand-navy); }
+.footer-bottom .support-note { font-size: 12.5px; color: var(--muted); }
+.footer-bottom .copy { margin-top: 8px; font-size: 12.5px; color: #a49c94; }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--accent); }
 
