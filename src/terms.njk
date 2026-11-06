@@ -1,0 +1,98 @@
+---
+layout: base.njk
+permalink: /terms/
+title: Terms of Service
+description: "4th May Games Terms of Service — the rules for using our mobile games, virtual items, and in-app purchases."
+---
+
+<article class="legal">
+  <div class="wrap">
+    <p class="eyebrow">4TH MAY GAMES</p>
+    <h1>Terms of Service</h1>
+    <p class="legal-date">Last updated: 6 November 2026</p>
+
+    <p>These Terms of Service (the “Terms”) are an agreement between you and <strong>{{ site.legalName }}</strong> (“we”, “us”, or “our”), a company registered in the Republic of Korea. They govern your use of our mobile games and any related services, updates, websites, and support channels we provide (together, the “Games”).</p>
+
+    <p>The Terms apply to every title we publish, including:</p>
+    <ul>
+      {% for g in games %}
+      <li>{{ g.titleEn }}{% if g.titleEn != g.title %} ({{ g.title }}){% endif %}</li>
+      {% endfor %}
+    </ul>
+    <p>They also apply to any game we release in the future unless that game is published with its own separate terms.</p>
+
+    <p><strong>Please read these Terms carefully. By downloading, installing, or playing any of the Games, you agree to them. If you do not agree, please do not install or play the Games.</strong></p>
+
+    <h2>1. Who may play</h2>
+    <p>The Games are intended for a general audience. You may use the Games only if you are able to form a binding contract with us under the laws of your country. If you are a minor under the laws of your country, you may use the Games only with the consent and supervision of a parent or legal guardian, who agrees to these Terms on your behalf and is responsible for your use of the Games, including any purchases.</p>
+    <p>Parents and guardians: your device’s operating system and the app store you use provide parental controls that can restrict purchases and downloads. We encourage you to use them.</p>
+
+    <h2>2. Your licence to use the Games</h2>
+    <p>We grant you a personal, limited, non-exclusive, non-transferable, revocable licence to install and play the Games on a device you own or control, for your own private, non-commercial entertainment. We reserve every right not expressly granted to you.</p>
+
+    <h2>3. Things you must not do</h2>
+    <p>When using the Games, you agree not to:</p>
+    <ul>
+      <li>copy, modify, translate, reverse engineer, decompile, or disassemble the Games, or attempt to derive their source code, except where that right cannot be excluded by law;</li>
+      <li>use cheats, automation software, bots, mods, hacks, emulators, or any third-party software designed to change how a Game behaves or to gain an unfair advantage;</li>
+      <li>access, tamper with, or interfere with our servers, networks, or the accounts of other players;</li>
+      <li>buy, sell, trade, or otherwise transfer game accounts, virtual items, or virtual currency outside the Games or for real money;</li>
+      <li>use the Games for any unlawful purpose, or in breach of the rules of the app store you downloaded them from;</li>
+      <li>remove, obscure, or alter any copyright, trademark, or other proprietary notice.</li>
+    </ul>
+
+    <h2>4. Game progress and data</h2>
+    <p>Most of our Games store your progress on your own device. Progress stored only on your device may be permanently lost if you delete a Game, reset or lose your device, or clear its data. Where a Game offers a cloud save or account linking feature, we recommend you use it.</p>
+    <p>We are not able to restore progress that was never backed up, and we cannot transfer purchases or progress between different app store accounts or between platforms, because those systems are operated by Apple and Google rather than by us.</p>
+
+    <h2>5. Virtual items and in-app purchases</h2>
+    <p>Our Games are free to download and may offer optional in-app purchases, including virtual currency, items, and the removal of advertising (together, “Virtual Items”).</p>
+    <ul>
+      <li>Virtual Items are licensed to you for use inside the Game only. You do not own them, and they have no monetary value outside the Game.</li>
+      <li>Virtual Items cannot be exchanged for real money, goods, or anything of value outside the Game.</li>
+      <li>All purchases are processed by the app store you downloaded the Game from — Apple’s App Store or Google Play. We never see or store your payment card details.</li>
+      <li><strong>Refunds are handled by that app store under its own policy, not by us.</strong> If you want a refund, please contact Apple or Google directly. We will help where we can, but we cannot issue refunds on their behalf.</li>
+      <li>Your statutory rights as a consumer, including any right of withdrawal you may have under the law of your country, are not affected by this section. See section 13.</li>
+      <li>If a Game is discontinued (see section 9), any unused Virtual Items in it will no longer be usable.</li>
+    </ul>
+
+    <h2>6. Advertising</h2>
+    <p>Our Games are supported by advertising, including banner, interstitial, and rewarded video ads served by third-party advertising networks. Those networks may collect and use device and usage information as described in our <a href="/privacy/">Privacy Policy</a>. Where a Game offers an ad-removal purchase, it removes the ad formats described on the purchase screen in that Game.</p>
+
+    <h2>7. Our intellectual property</h2>
+    <p>The Games, including their code, artwork, characters, music, text, and the 4th May Games name and logo, are owned by us or our licensors and are protected by copyright, trademark, and other laws. Nothing in these Terms transfers any of those rights to you.</p>
+
+    <h2>8. Your feedback</h2>
+    <p>If you send us ideas, suggestions, bug reports, or other feedback about the Games, you agree that we may use them freely, without obligation or payment to you. Please do not send us confidential information or anything you are not free to share.</p>
+
+    <h2>9. Updates, changes, and discontinuing a Game</h2>
+    <p>We may update, change, suspend, or discontinue any Game or any feature within it, at any time. We may also stop supporting older operating systems or devices. Where we decide to discontinue a Game entirely, we will give reasonable advance notice through the Game, the app store listing, or this website where it is practical to do so.</p>
+
+    <h2>10. Suspending access</h2>
+    <p>We may suspend or terminate your access to a Game if you breach these Terms — for example, by cheating or by interfering with other players. Where it is reasonable and lawful to do so, we will tell you why. If you believe we have acted in error, please contact us at the address in section 15.</p>
+
+    <h2>11. Disclaimer</h2>
+    <p>The Games are provided “as is” and “as available”. To the fullest extent permitted by law, we do not warrant that the Games will be uninterrupted, error-free, or free of harmful components, or that any defect will be corrected. Some jurisdictions do not allow the exclusion of implied warranties, so some of these exclusions may not apply to you.</p>
+
+    <h2>12. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential loss, or for any loss of game progress, virtual items, data, or profits, arising out of your use of the Games. Where our liability cannot be excluded by law, it is limited to the amount you paid us in connection with the Game in the twelve months before the event giving rise to the claim.</p>
+    <p>Nothing in these Terms excludes or limits our liability for death or personal injury caused by our negligence, for fraud, or for any other liability that cannot be excluded or limited under applicable law.</p>
+
+    <h2>13. Consumers in the EEA and the United Kingdom</h2>
+    <p>If you are a consumer resident in the European Economic Area or the United Kingdom, you have statutory rights that these Terms do not affect. In particular, you may have a right to withdraw from a purchase of digital content within 14 days — although that right ends once the content has been delivered to you and you have agreed to immediate delivery, which is what normally happens when a Virtual Item is granted in a Game.</p>
+    <p>Nothing in these Terms limits your right to bring proceedings in the courts of the country where you live, or deprives you of the protection of mandatory consumer law in that country.</p>
+
+    <h2>14. Governing law</h2>
+    <p>These Terms are governed by the laws of the Republic of Korea, without regard to its conflict of law rules. Disputes will be heard by the courts of the Republic of Korea, except that, if you are a consumer, you keep the rights described in section 13.</p>
+
+    <h2>15. Changes to these Terms and how to reach us</h2>
+    <p>We may revise these Terms from time to time. When we do, we will update the date at the top of this page, and where the change is significant we will give notice in the Game or on this website. Continuing to play a Game after a change takes effect means you accept the revised Terms.</p>
+    <p>Questions about these Terms, or about anything else, can be sent to <a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a>.</p>
+
+    <p><strong>{{ site.legalName }}</strong><br>
+    Republic of Korea<br>
+    <a href="{{ site.url }}">{{ site.url }}</a></p>
+
+    <p class="legal-back"><a href="/">← 홈으로</a></p>
+  </div>
+</article>
