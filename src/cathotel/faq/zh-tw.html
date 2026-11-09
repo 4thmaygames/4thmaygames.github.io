@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
 <title>喵喵旅店 常見問題</title>
 <meta name="description" content="喵喵旅店的遊戲進度、升星、烹飪、經理、資料備份、購買、廣告與錯誤等常見問題與解答。">
 <meta property="og:title" content="喵喵旅店 常見問題">
@@ -31,40 +32,8 @@
   --btn-bg: #854d21;
   --btn-fg: #fffeec;
   --shadow: 0 2px 0 rgba(227, 177, 151, .45);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #2b1f18;
-    --surface: #3a2a20;
-    --surface-2: #4a3528;
-    --field: #3a2a20;
-    --text: #f7e6d3;
-    --text-2: #cfa68c;
-    --line: #4e3a2d;
-    --accent: #ff905a;
-    --accent-ink: #f2b27e;
-    --accent-soft: #4a3528;
-    --note-bg: #3f2d22;
-    --btn-bg: #f2b27e;
-    --btn-fg: #2b1f18;
-    --shadow: none;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #2b1f18;
-  --surface: #3a2a20;
-  --surface-2: #4a3528;
-  --field: #3a2a20;
-  --text: #f7e6d3;
-  --text-2: #cfa68c;
-  --line: #4e3a2d;
-  --accent: #ff905a;
-  --accent-ink: #f2b27e;
-  --accent-soft: #4a3528;
-  --note-bg: #3f2d22;
-  --btn-bg: #f2b27e;
-  --btn-fg: #2b1f18;
-  --shadow: none;
+  /* 다크 모드에서도 게임과 같은 밝은 색을 쓴다 */
+  color-scheme: only light;
 }
 
 * { box-sizing: border-box; }
