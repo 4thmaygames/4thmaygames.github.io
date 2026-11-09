@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ねこホテル よくある質問</title>
+<meta name="description" content="ねこホテルのゲーム進行、昇格、料理、マネージャー、データのバックアップ、購入、広告、エラーに関するよくある質問と回答です。">
+<meta property="og:title" content="ねこホテル よくある質問">
+<meta property="og:description" content="ねこホテルのゲーム進行、昇格、料理、マネージャー、データのバックアップ、購入、広告、エラーに関するよくある質問と回答です。">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+<link rel="alternate" hreflang="ko" href="ko.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="ja" href="ja.html">
+<link rel="alternate" hreflang="zh-Hant" href="zh-tw.html">
+<style>
+:root {
+  --bg: #fbf6ef;
+  --surface: #ffffff;
+  --surface-2: #f5ece0;
+  --text: #3b2f27;
+  --text-2: #7a6a5d;
+  --line: #eadfd1;
+  --accent: #e48c3a;
+  --accent-ink: #b8651c;
+  --accent-soft: #fbe7d3;
+  --note-bg: #fff6e8;
+  --shadow: 0 1px 2px rgba(80, 50, 20, .06), 0 4px 16px rgba(80, 50, 20, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1d1814;
+    --surface: #272019;
+    --surface-2: #31281f;
+    --text: #f1e8de;
+    --text-2: #b9aa9b;
+    --line: #3d3228;
+    --accent: #f0a45c;
+    --accent-ink: #f4b77c;
+    --accent-soft: #3a2b1d;
+    --note-bg: #2f251b;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1d1814;
+  --surface: #272019;
+  --surface-2: #31281f;
+  --text: #f1e8de;
+  --text-2: #b9aa9b;
+  --line: #3d3228;
+  --accent: #f0a45c;
+  --accent-ink: #f4b77c;
+  --accent-soft: #3a2b1d;
+  --note-bg: #2f251b;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent-ink); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: 48px 0 24px; text-align: center; }
+.paw { font-size: 40px; line-height: 1; }
+h1 { font-size: 28px; line-height: 1.3; margin: 12px 0 8px; letter-spacing: -0.01em; }
+.lead { color: var(--text-2); margin: 0; }
+
+.search {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--bg);
+  padding: 12px 0;
+}
+.search input {
+  width: 100%;
+  font: inherit;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 8px; }
+nav.toc a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  white-space: nowrap;
+}
+nav.toc a:hover { border-color: var(--accent); color: var(--accent-ink); }
+.toc-label { width: 100%; font-size: 13px; color: var(--text-2); margin-top: 8px; }
+
+section { padding-top: 32px; }
+section > h2 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  display: flex; align-items: center; gap: 8px;
+  scroll-margin-top: 80px;
+}
+section > h2 .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 28px; height: 28px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent-ink);
+  font-size: 14px; font-weight: 700;
+}
+.part {
+  margin: 48px 0 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-2);
+}
+
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 80px;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 44px 14px 16px;
+  font-weight: 600;
+  position: relative;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "Q. "; color: var(--accent-ink); font-weight: 700; }
+summary::after {
+  content: "";
+  position: absolute; right: 18px; top: 50%;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .15s;
+}
+details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+details[open] summary { border-bottom: 1px solid var(--line); }
+.a { padding: 12px 16px 16px; }
+.a p { margin: 0 0 8px; }
+.a p:last-child, .a ul:last-child { margin-bottom: 0; }
+.a ul { margin: 0 0 8px; padding-left: 20px; }
+.menu {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tip {
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+.empty { display: none; text-align: center; color: var(--text-2); padding: 32px 0; }
+
+.contact {
+  margin: 48px 0 0;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: center;
+}
+.contact h2 { margin: 0 0 8px; font-size: 18px; }
+.contact p { margin: 0 0 8px; color: var(--text-2); }
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+footer { text-align: center; color: var(--text-2); font-size: 13px; padding: 32px 0 48px; }
+
+@media (max-width: 480px) {
+  header { padding-top: 32px; }
+  h1 { font-size: 24px; }
+}
+
+.langs {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 4px;
+  padding-top: 16px;
+}
+.langs a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.langs a:hover { color: var(--accent-ink); }
+.langs a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
+header { padding-top: 24px; }
+
+/* 일본어·중국어는 띄어쓰기가 없어 keep-all 이면 줄바꿈이 안 된다 */
+html:lang(ja) body, html:lang(zh-Hant) body { word-break: normal; line-break: strict; }
+html:lang(ja) body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+}
+html:lang(zh-Hant) body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+html:lang(en) body { word-break: normal; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langs" aria-label="Language">
+  <a href="ko.html" hreflang="ko" lang="ko">한국어</a>
+  <a href="en.html" hreflang="en" lang="en">English</a>
+  <a href="ja.html" aria-current="page" hreflang="ja" lang="ja">日本語</a>
+  <a href="zh-tw.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+</nav>
+
+<header>
+  <div class="paw" aria-hidden="true">🐾</div>
+  <h1>ねこホテル よくある質問</h1>
+  <p class="lead">こんにちは、社長！ねこホテルのマネージャー、ククです。<br>よくいただくご質問をまとめました。</p>
+</header>
+
+<div class="search">
+  <input id="q" type="search" placeholder="キーワードで検索（例：バックアップ、昇格、料理）" aria-label="FAQを検索">
+</div>
+
+<nav class="toc">
+  <span class="toc-label">ゲームのご案内</span>
+  <a href="#play">レベル・ミッション</a>
+  <a href="#promote">昇格</a>
+  <a href="#cook">料理</a>
+  <a href="#manager">マネージャー</a>
+  <a href="#puzzle">パズル・衣装</a>
+  <a href="#env">言語・プレイ環境</a>
+  <a href="#data">データ・バックアップ</a>
+  <span class="toc-label">購入・広告・エラー</span>
+  <a href="#pay">購入・商品</a>
+  <a href="#ads">広告</a>
+  <a href="#error">エラー・お問い合わせ</a>
+</nav>
+
+<main>
+
+<p class="part">ゲームのご案内</p>
+
+<section>
+  <h2 id="play"><span class="num">1</span>レベル・ミッション</h2>
+
+  <details id="level-up">
+    <summary>レベルゲージが上がりません。どうすればレベルアップできますか？</summary>
+    <div class="a">
+      <p>画面上部の<b>ミッションをクリア</b>すると経験値がもらえ、ホテルのレベルが上がります。ミッションを進めないとゲージは動きません。</p>
+      <p>ミッションをクリアできない場合は、<a href="#mission-stuck">ミッションが進みません</a>をご覧ください。</p>
+    </div>
+  </details>
+
+  <details id="unlock">
+    <summary>パズル、ククくんの家、製作、昇格はいつ開放されますか？</summary>
+    <div class="a">
+      <ul><li>ホテルLv.6：<span class="menu">パズル</span></li><li>ホテルLv.7：<span class="menu">ククくんの家</span>（マネージャーの衣装）</li><li>ホテルLv.8：<span class="menu">製作</span>（客室アイテム）</li><li>ホテルLv.9：<span class="menu">昇格</span></li></ul>
+    </div>
+  </details>
+
+  <details id="new-content">
+    <summary>7つ星ホテルまでクリアしました。新しいコンテンツはいつ追加されますか？</summary>
+    <div class="a">
+      <p>最後まで育てていただき、本当にありがとうございます！新しいコンテンツは準備ができ次第、アップデートでお知らせします。いただいたご意見はすべてチームに共有しています。</p>
+    </div>
+  </details>
+
+  <details id="winter">
+    <summary>背景がずっと冬です。季節は変わりますか？</summary>
+    <div class="a">
+      <p>ねこホテルは<b>冬の村</b>にあるホテルです。そのため、現在は季節によって背景が変わることはありません。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="promote"><span class="num">2</span>昇格</h2>
+
+  <details id="promote-reset">
+    <summary>昇格したら客室の階がなくなって2階だけになりました。不具合ですか？</summary>
+    <div class="a">
+      <p>不具合ではありません。昇格すると、新しいランクで再び成長できるよう<b>客室とホテルパスが最初の段階に戻ります。</b></p>
+      <p>そのかわり、客室料金などのゴールド獲得量とミッションの経験値が増え、新しい客室や共用施設がオープンします。</p>
+    </div>
+  </details>
+
+  <details id="promote-manager">
+    <summary>昇格すると雇ったマネージャーもいなくなりますか？</summary>
+    <div class="a">
+      <p>雇ったマネージャーは昇格してもいなくなりません。階が減るため、画面に表示されるマネージャーの数が一時的に少なくなることがあります。</p>
+    </div>
+  </details>
+
+  <details id="promote-pass">
+    <summary>昇格すると、今のホテルパスの報酬はどうなりますか？</summary>
+    <div class="a">
+      <p>昇格すると、現在のランクのホテルパス報酬は受け取れなくなります。<b>昇格する前に、受け取れる報酬をすべて受け取っておいてください。</b>昇格時にも案内が表示されます。</p>
+    </div>
+  </details>
+
+  <details id="promote-condition">
+    <summary>マネージャーをたくさん雇ったのに、昇格条件のマネージャー数が満たされません。</summary>
+    <div class="a">
+      <p>昇格条件は雇った人数ではなく、<b>配置されているマネージャーの数</b>です。1つの場所に配置できるのは1名だけなので、階や施設をさらにオープンして配置できる場所を増やしてください。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="cook"><span class="num">3</span>料理</h2>
+
+  <details id="cook-next">
+    <summary>次の段階の料理（例：3段階）はどうやって発見しますか？</summary>
+    <div class="a">
+      <p><b>同じ段階の料理を2つドラッグして合わせる</b>と、1段階上の料理になります。2段階の料理を2つ合わせると、3段階の料理を発見できます。</p>
+      <p class="tip">最新バージョンでは、新しい料理を発見できないまま料理を作るほど、お料理の研究の最高段階の料理が出る確率が少しずつ上がります（最大+20%p）。</p>
+    </div>
+  </details>
+
+  <details id="cook-research">
+    <summary>[お料理の研究]のレベルが上がりません。</summary>
+    <div class="a">
+      <p>お料理の研究を次のレベルに上げるには、<b>その段階の料理を先に発見</b>する必要があります。たとえばLv.3に上げるには、先に3段階の料理を合成して発見してください。</p>
+    </div>
+  </details>
+
+  <details id="cook-max">
+    <summary>料理は何段階までありますか？</summary>
+    <div class="a">
+      <p>最大24段階まであります。</p>
+    </div>
+  </details>
+
+  <details id="cook-count">
+    <summary>料理の回数がすぐになくなります。</summary>
+    <div class="a">
+      <p>料理の回数は時間がたつと回復します。広告を見るとすぐに5回分もらえ、ホテルのレベルが上がったときにも回復します。「貴族ペルシャンシーニさん」を雇うと、料理の最大回数が増えます。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="manager"><span class="num">4</span>マネージャー</h2>
+
+  <details id="manager-move">
+    <summary>配置したマネージャーを別の部署に移せますか？</summary>
+    <div class="a">
+      <p>別の部署には移せません。1つの場所に<b>4名まで雇用</b>でき、そのうち1名を<span class="menu">配置する</span>で働かせます。不要なマネージャーは<span class="menu">マネージャー解雇</span>で解雇できます。</p>
+    </div>
+  </details>
+
+  <details id="manager-full">
+    <summary>マネージャーの枠がいっぱいで、これ以上雇えません。</summary>
+    <div class="a">
+      <p>1つの場所には4名まで雇用できます。いっぱいの場合は、マネージャーを解雇するか、別の階や施設の空いている場所に雇ってください。</p>
+    </div>
+  </details>
+
+  <details id="name">
+    <summary>ねこや社長の名前を変えられますか？</summary>
+    <div class="a">
+      <p>現在、名前を変更する機能はありません。いただいたご意見はチームに共有します。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="puzzle"><span class="num">5</span>パズル・衣装</h2>
+
+  <details id="puzzle-hard">
+    <summary>パズルが難しいです。合わせたピースが動いてしまいます。</summary>
+    <div class="a">
+      <p>最新バージョンでは、<b>正しい位置に置いたピースは固定</b>され、表示されます。アプリを最新バージョンにアップデートしてください。</p>
+    </div>
+  </details>
+
+  <details id="currency">
+    <summary>光るキャットニップや黄金のねこ毛糸は課金しないと手に入りませんか？</summary>
+    <div class="a">
+      <p>いいえ。<b>広告を見ると10個ずつ無料で</b>もらえるほか、ホテルパスの報酬でも手に入ります。</p>
+      <ul><li>光るキャットニップ：<span class="menu">製作</span>でアイテムを強化するときに使います。</li><li>ねこ毛糸・黄金のねこ毛糸：ワードローブで衣装をオープンするときに使います。</li></ul>
+    </div>
+  </details>
+
+  <details id="wear">
+    <summary>購入した衣装（例：韓服）はどうやって着せますか？</summary>
+    <div class="a">
+      <p><span class="menu">ククくんの家</span>のワードローブで、マネージャーに衣装を着せられます。韓服はワードローブの「韓服」テーマにあります。</p>
+    </div>
+  </details>
+
+  <details id="box">
+    <summary>ククくんの家で「ボックスをタップしてオープンしましょう！」が押せません。</summary>
+    <div class="a">
+      <p>ボックスは順番に開きます。<b>吹き出しが出ているボックス</b>をタップしてください。それでも開かない場合は<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="env"><span class="num">6</span>言語・プレイ環境</h2>
+
+  <details id="language">
+    <summary>ゲームの言語を変えられますか？</summary>
+    <div class="a">
+      <p><span class="menu">設定</span> &gt; <span class="menu">言語変更</span>から変更できます。変更するとゲームが再起動します。</p>
+      <p>対応言語：韓国語、英語、日本語、中国語（簡体字・繁体字）、ドイツ語、ロシア語、タイ語、マレー語</p>
+    </div>
+  </details>
+
+  <details id="offline">
+    <summary>インターネットなしでも遊べますか？</summary>
+    <div class="a">
+      <p>はい、オフラインでも遊べます。ただし、<b>報酬型広告、デイリー報酬、クラウドバックアップ</b>にはインターネット接続が必要です。</p>
+    </div>
+  </details>
+
+  <details id="landscape">
+    <summary>タブレットで横画面にできますか？</summary>
+    <div class="a">
+      <p>現在は縦画面のみ対応しています。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="data"><span class="num">7</span>データ・バックアップ</h2>
+
+  <details id="backup">
+    <summary>アプリを削除して再インストールしたら、最初からになりました。復旧できますか？</summary>
+    <div class="a">
+      <p>ねこホテルのデータは<b>端末に保存</b>されます。アプリを削除する前に、必ずバックアップしてください。</p>
+      <ul><li>バックアップ：<span class="menu">設定</span> &gt; <span class="menu">クラウドバックアップ/復元</span> &gt; <span class="menu">クラウドにバックアップする</span></li><li>復元：同じメニューの<span class="menu">クラウドから復元する</span>で<b>GAME IDと復旧コード</b>を入力</li></ul>
+      <p>バックアップしたことがない場合、復旧が難しいことがあります。以前のGAME IDがわかる場合は<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+
+  <details id="game-id">
+    <summary>再インストールするたびにGAME IDが変わります。</summary>
+    <div class="a">
+      <p>新しくインストールすると、新しいGAME IDが作られます。バックアップ時に表示される<b>GAME IDと復旧コードを控えておいてください。</b>復元するときは、新しいIDではなくバックアップしたときのIDを入力します。</p>
+    </div>
+  </details>
+
+  <details id="device">
+    <summary>機種変更するときはどうすればいいですか？GoogleやAppleのアカウントと連携できますか？</summary>
+    <div class="a">
+      <p>Google Play ゲームやiCloudとの連携はありません。以前の端末で<span class="menu">クラウドにバックアップする</span>を行い、新しい端末でGAME IDと復旧コードを使って復元してください。</p>
+    </div>
+  </details>
+
+  <details id="two-devices">
+    <summary>スマホとタブレットで同じデータを一緒に使えますか？</summary>
+    <div class="a">
+      <p>一緒には使えません。別の端末で復元すると、<b>元の端末ではそのデータでゲームを起動できなくなります。</b></p>
+    </div>
+  </details>
+
+  <details id="backup-wait">
+    <summary>バックアップボタンが押せません。</summary>
+    <div class="a">
+      <p>一度バックアップすると、1時間はバックアップできません。しばらくしてからもう一度お試しください。</p>
+    </div>
+  </details>
+</section>
+
+<p class="part">購入・広告・エラー</p>
+
+<section>
+  <h2 id="pay"><span class="num">8</span>購入・商品</h2>
+
+  <details id="pay-missing">
+    <summary>購入したのに商品が届きません。</summary>
+    <div class="a">
+      <p>iOSの場合は、まず<span class="menu">商店</span>の<span class="menu">購入履歴を復元する</span>をタップしてください。</p>
+      <p>それでも届かない場合は、<span class="menu">設定</span> &gt; <span class="menu">お問い合わせ</span>から<b>購入日時と商品名</b>をお送りください。お問い合わせメールにはGAME IDと端末情報が自動で入ります。</p>
+    </div>
+  </details>
+
+  <details id="refund">
+    <summary>返金してほしいです。</summary>
+    <div class="a">
+      <p>決済と返金は各ストアで処理されます。App Storeでの購入はApple、Google Playでの購入はGoogleの返金リクエストをご利用ください。</p>
+      <p>購入した商品が届いていない場合は、<a href="#pay-missing">上記のご案内</a>のとおりお問い合わせください。</p>
+    </div>
+  </details>
+
+  <details id="remove-ads">
+    <summary>広告削除に期限はありますか？再インストールしたらどうなりますか？</summary>
+    <div class="a">
+      <p>「広告削除釣りねこキキくん」は<b>一度購入すればずっと有効</b>です。再インストール後に反映されていない場合、iOSは<span class="menu">商店</span>の<span class="menu">購入履歴を復元する</span>をタップし、Androidは<a href="#contact">お問い合わせ</a>ください。</p>
+      <p class="tip">30日で終了するのは「貴族ペルシャンシーニさん」です。</p>
+    </div>
+  </details>
+
+  <details id="remove-ads-button">
+    <summary>広告削除を購入したのに、広告報酬のボタンがそのまま残っています。</summary>
+    <div class="a">
+      <p>広告削除を購入すると、広告を見るかわりに<b>ボタンを押すだけで報酬をすぐに</b>受け取れます。そのためボタンは残ります。押しても広告が流れる場合は<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+
+  <details id="package">
+    <summary>「広告削除釣りねこキキくん」と「まとめパック+広告削除」は何が違いますか？</summary>
+    <div class="a">
+      <p>どちらにも広告削除が含まれています。まとめパックは広告削除にほかのアイテムが付いたパッケージです。詳しい内容は<span class="menu">商店</span>の商品説明をご確認ください。</p>
+      <p>どちらか一方を購入すると、もう一方は購入できません。</p>
+    </div>
+  </details>
+
+  <details id="offline-manager">
+    <summary>「オフラインマネージャーサーフィくん」を雇うと、アプリを閉じていてもお客さんを迎えますか？</summary>
+    <div class="a">
+      <p>サーフィくんは、<b>オフライン報酬を受け取れる時間を最大24時間まで延ばしてくれる</b>マネージャーです。アプリを閉じている間にたまったゴールドを、次に起動したときにより多く受け取れます。</p>
+    </div>
+  </details>
+
+  <details id="sale">
+    <summary>セールの画面が1日だけ表示されて、次の日から出なくなりました。</summary>
+    <div class="a">
+      <p>ホテルパスのセールは、条件を満たしたときに<b>24時間だけ</b>表示されます。毎日表示されるものではありません。</p>
+    </div>
+  </details>
+
+  <details id="pay-declined">
+    <summary>購入しようとすると「お支払いが拒否されました」と表示されます。</summary>
+    <div class="a">
+      <p>多くの場合、ストアのお支払い方法の問題です。Play ストアの<span class="menu">お支払いと定期購入</span>、またはApple IDのお支払い情報をご確認ください。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="ads"><span class="num">9</span>広告</h2>
+
+  <details id="ads-many">
+    <summary>広告は必ず見ないといけませんか？</summary>
+    <div class="a">
+      <p>いいえ。ねこホテルの広告はすべて、<b>見たいときだけ選んで見る報酬型広告</b>です。広告を見なくても遊べ、追加の報酬がほしいときだけ見れば大丈夫です。</p>
+      <p>広告をまったく見たくない場合は、「広告削除釣りねこキキくん」で広告なしで報酬を受け取れます。</p>
+    </div>
+  </details>
+
+  <details id="no-ad">
+    <summary>「準備された広告がありません」と表示されます。</summary>
+    <div class="a">
+      <p>しばらくしてからもう一度お試しください。何度も表示される場合は、ネットワーク接続をご確認ください。広告を見るにはインターネット接続が必要です。</p>
+    </div>
+  </details>
+
+  <details id="ad-close">
+    <summary>広告に閉じる（×）ボタンがありません。</summary>
+    <div class="a">
+      <p>一部の広告は、最後まで再生されたあとに閉じるボタンが表示されます。広告が終わってもボタンが出ない場合は、機種名を添えて<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="error"><span class="num">10</span>エラー・お問い合わせ</h2>
+
+  <details id="mission-stuck">
+    <summary>ミッションが進みません。（マネージャー雇用、衣装オープン、アイテム製作など）</summary>
+    <div class="a">
+      <p>最新バージョンでは、今クリアできないミッションは<b>ログイン時に別のミッションに入れ替わります</b>。空いているマネージャーの枠がない、購入できる衣装がない、レベル不足でロックされているミッションなどの場合です。</p>
+      <p>アプリを最新バージョンにアップデートしてから、もう一度ゲームを起動してください。それでも変わらない場合は<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+
+  <details id="cook-order">
+    <summary>お料理の研究を上げたら、注文書の低い段階の料理が作れなくなりました。</summary>
+    <div class="a">
+      <p>お料理の研究Lv.3で、注文の2段階の料理が出なかった問題を修正しました。最新バージョンにアップデートしてください。1段階の料理を2つ合わせて2段階の料理を作ることもできます。</p>
+    </div>
+  </details>
+
+  <details id="sound">
+    <summary>広告を見たあと、ゲームの音が出ません。</summary>
+    <div class="a">
+      <p>ゲームを再起動すると音が戻ります。アプリを最新バージョンにアップデートしてください。何度も起こる場合は、機種名を添えて<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+
+  <details id="ad-crash">
+    <summary>広告を見ている途中でゲームが落ちます。</summary>
+    <div class="a">
+      <p>アプリを最新バージョンにアップデートして、もう一度お試しください。続く場合は、機種名とOSバージョンを添えて<a href="#contact">お問い合わせ</a>ください。</p>
+    </div>
+  </details>
+
+  <details id="black-screen">
+    <summary>起動すると黒い画面やロード画面で止まります。</summary>
+    <div class="a">
+      <p>アプリを最新バージョンにアップデートし、端末を再起動してください。それでも改善しない場合はゲーム内のお問い合わせを使えないため、<a href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>まで機種名とOSバージョンをお送りください。</p>
+      <p class="tip">アプリを削除する前に、データがバックアップされているか確認してください。<a href="#backup">バックアップの方法を見る</a></p>
+    </div>
+  </details>
+
+  <details id="how-contact">
+    <summary>質問や不具合はどこに問い合わせればいいですか？</summary>
+    <div class="a">
+      <p>ゲーム内の<span class="menu">設定</span> &gt; <span class="menu">お問い合わせ</span>をタップしてください。メールにGAME ID、端末、OS、バージョンが自動で入るので、よりスムーズにご案内できます。</p>
+    </div>
+  </details>
+</section>
+
+<p class="empty" id="empty">該当する質問が見つかりませんでした。別のキーワードで検索するか、下記からお問い合わせください。</p>
+
+<div class="contact" id="contact">
+  <h2>解決しませんでしたか？</h2>
+  <p>ゲーム内の[設定] &gt; [お問い合わせ]からご連絡いただくのが一番早いです。</p>
+  <p>ゲームを起動できない場合は、メールでお送りください。</p>
+  <a class="btn" href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>
+</div>
+
+</main>
+
+<footer>© 4th May Games · ねこホテル</footer>
+
+</div>
+
+<script>
+  (function () {
+    var input = document.getElementById('q');
+    var items = Array.prototype.slice.call(document.querySelectorAll('main details'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('main section'));
+    var parts = Array.prototype.slice.call(document.querySelectorAll('main .part'));
+    var empty = document.getElementById('empty');
+
+    function openFromHash() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (el && el.tagName === 'DETAILS') el.open = true;
+    }
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (d) {
+        var hit = !q || d.textContent.toLowerCase().indexOf(q) !== -1;
+        d.hidden = !hit;
+        d.open = !!q && hit;
+        if (hit) shown++;
+      });
+      sections.forEach(function (s) { s.hidden = !s.querySelector('details:not([hidden])'); });
+      parts.forEach(function (p) { p.hidden = !!q; });
+      empty.style.display = shown ? 'none' : 'block';
+      if (!q) openFromHash();
+    });
+
+    // 다른 언어로 갈 때 지금 보고 있는 질문(#id)을 유지
+    Array.prototype.forEach.call(document.querySelectorAll('.langs a'), function (a) {
+      a.addEventListener('click', function () {
+        if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
+      });
+    });
+
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+    if (location.hash) {
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) setTimeout(function () { el.scrollIntoView(); }, 0);
+    }
+  })();
+</script>
+</body>
+</html>

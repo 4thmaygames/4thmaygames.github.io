@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>喵喵旅店 常見問題</title>
+<meta name="description" content="喵喵旅店的遊戲進度、升星、烹飪、經理、資料備份、購買、廣告與錯誤等常見問題與解答。">
+<meta property="og:title" content="喵喵旅店 常見問題">
+<meta property="og:description" content="喵喵旅店的遊戲進度、升星、烹飪、經理、資料備份、購買、廣告與錯誤等常見問題與解答。">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+<link rel="alternate" hreflang="ko" href="ko.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="ja" href="ja.html">
+<link rel="alternate" hreflang="zh-Hant" href="zh-tw.html">
+<style>
+:root {
+  --bg: #fbf6ef;
+  --surface: #ffffff;
+  --surface-2: #f5ece0;
+  --text: #3b2f27;
+  --text-2: #7a6a5d;
+  --line: #eadfd1;
+  --accent: #e48c3a;
+  --accent-ink: #b8651c;
+  --accent-soft: #fbe7d3;
+  --note-bg: #fff6e8;
+  --shadow: 0 1px 2px rgba(80, 50, 20, .06), 0 4px 16px rgba(80, 50, 20, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1d1814;
+    --surface: #272019;
+    --surface-2: #31281f;
+    --text: #f1e8de;
+    --text-2: #b9aa9b;
+    --line: #3d3228;
+    --accent: #f0a45c;
+    --accent-ink: #f4b77c;
+    --accent-soft: #3a2b1d;
+    --note-bg: #2f251b;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1d1814;
+  --surface: #272019;
+  --surface-2: #31281f;
+  --text: #f1e8de;
+  --text-2: #b9aa9b;
+  --line: #3d3228;
+  --accent: #f0a45c;
+  --accent-ink: #f4b77c;
+  --accent-soft: #3a2b1d;
+  --note-bg: #2f251b;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent-ink); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: 48px 0 24px; text-align: center; }
+.paw { font-size: 40px; line-height: 1; }
+h1 { font-size: 28px; line-height: 1.3; margin: 12px 0 8px; letter-spacing: -0.01em; }
+.lead { color: var(--text-2); margin: 0; }
+
+.search {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--bg);
+  padding: 12px 0;
+}
+.search input {
+  width: 100%;
+  font: inherit;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 8px; }
+nav.toc a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  white-space: nowrap;
+}
+nav.toc a:hover { border-color: var(--accent); color: var(--accent-ink); }
+.toc-label { width: 100%; font-size: 13px; color: var(--text-2); margin-top: 8px; }
+
+section { padding-top: 32px; }
+section > h2 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  display: flex; align-items: center; gap: 8px;
+  scroll-margin-top: 80px;
+}
+section > h2 .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 28px; height: 28px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent-ink);
+  font-size: 14px; font-weight: 700;
+}
+.part {
+  margin: 48px 0 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-2);
+}
+
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 80px;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 44px 14px 16px;
+  font-weight: 600;
+  position: relative;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "Q. "; color: var(--accent-ink); font-weight: 700; }
+summary::after {
+  content: "";
+  position: absolute; right: 18px; top: 50%;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .15s;
+}
+details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+details[open] summary { border-bottom: 1px solid var(--line); }
+.a { padding: 12px 16px 16px; }
+.a p { margin: 0 0 8px; }
+.a p:last-child, .a ul:last-child { margin-bottom: 0; }
+.a ul { margin: 0 0 8px; padding-left: 20px; }
+.menu {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tip {
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+.empty { display: none; text-align: center; color: var(--text-2); padding: 32px 0; }
+
+.contact {
+  margin: 48px 0 0;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: center;
+}
+.contact h2 { margin: 0 0 8px; font-size: 18px; }
+.contact p { margin: 0 0 8px; color: var(--text-2); }
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+footer { text-align: center; color: var(--text-2); font-size: 13px; padding: 32px 0 48px; }
+
+@media (max-width: 480px) {
+  header { padding-top: 32px; }
+  h1 { font-size: 24px; }
+}
+
+.langs {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 4px;
+  padding-top: 16px;
+}
+.langs a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.langs a:hover { color: var(--accent-ink); }
+.langs a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
+header { padding-top: 24px; }
+
+/* 일본어·중국어는 띄어쓰기가 없어 keep-all 이면 줄바꿈이 안 된다 */
+html:lang(ja) body, html:lang(zh-Hant) body { word-break: normal; line-break: strict; }
+html:lang(ja) body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+}
+html:lang(zh-Hant) body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+html:lang(en) body { word-break: normal; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langs" aria-label="Language">
+  <a href="ko.html" hreflang="ko" lang="ko">한국어</a>
+  <a href="en.html" hreflang="en" lang="en">English</a>
+  <a href="ja.html" hreflang="ja" lang="ja">日本語</a>
+  <a href="zh-tw.html" aria-current="page" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+</nav>
+
+<header>
+  <div class="paw" aria-hidden="true">🐾</div>
+  <h1>喵喵旅店 常見問題</h1>
+  <p class="lead">老闆您好！我是喵喵旅店的經理庫庫。<br>這裡整理了大家最常問的問題。</p>
+</header>
+
+<div class="search">
+  <input id="q" type="search" placeholder="搜尋問題（例如：備份、升星、料理）" aria-label="搜尋常見問題">
+</div>
+
+<nav class="toc">
+  <span class="toc-label">遊戲說明</span>
+  <a href="#play">等級・任務</a>
+  <a href="#promote">升星</a>
+  <a href="#cook">料理</a>
+  <a href="#manager">經理</a>
+  <a href="#puzzle">拼圖・造型</a>
+  <a href="#env">語言・遊玩環境</a>
+  <a href="#data">資料・備份</a>
+  <span class="toc-label">購買・廣告・錯誤</span>
+  <a href="#pay">購買・商品</a>
+  <a href="#ads">廣告</a>
+  <a href="#error">錯誤・聯絡我們</a>
+</nav>
+
+<main>
+
+<p class="part">遊戲說明</p>
+
+<section>
+  <h2 id="play"><span class="num">1</span>等級・任務</h2>
+
+  <details id="level-up">
+    <summary>等級進度條都不動，要怎麼升級？</summary>
+    <div class="a">
+      <p><b>完成畫面上方的任務</b>就能獲得經驗值，讓旅店升級。沒有進行任務的話，進度條不會移動喔。</p>
+      <p>如果任務無法完成，請參考<a href="#mission-stuck">任務一直無法完成</a>。</p>
+    </div>
+  </details>
+
+  <details id="unlock">
+    <summary>拼圖、庫庫的家、製作和升星什麼時候開放？</summary>
+    <div class="a">
+      <ul><li>旅店等級 Lv.6：<span class="menu">拼圖</span></li><li>旅店等級 Lv.7：<span class="menu">庫庫的家</span>（經理造型）</li><li>旅店等級 Lv.8：<span class="menu">製作</span>（客房道具）</li><li>旅店等級 Lv.9：<span class="menu">升星</span></li></ul>
+    </div>
+  </details>
+
+  <details id="new-content">
+    <summary>我已經玩到7星旅店了，新內容什麼時候推出？</summary>
+    <div class="a">
+      <p>感謝您一路把旅店經營到最後！新內容準備好後會透過更新通知大家。老闆們的意見我們都會轉達給團隊喔。</p>
+    </div>
+  </details>
+
+  <details id="winter">
+    <summary>背景一直是冬天，季節會改變嗎？</summary>
+    <div class="a">
+      <p>喵喵旅店位於<b>冬天的小鎮</b>，所以目前背景不會隨季節改變喔。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="promote"><span class="num">2</span>升星</h2>
+
+  <details id="promote-reset">
+    <summary>升星後樓層（客房）都不見了，只剩2層，這是錯誤嗎？</summary>
+    <div class="a">
+      <p>這不是錯誤喔。升星後為了在新的星級重新成長，<b>客房和旅店通行證會回到初始階段。</b></p>
+      <p>相對地，客房費用等金幣收入與任務經驗值都會增加，還會開放新的客房和公共設施。</p>
+    </div>
+  </details>
+
+  <details id="promote-manager">
+    <summary>升星後雇用的經理也會消失嗎？</summary>
+    <div class="a">
+      <p>雇用的經理升星後不會消失喔。因為樓層變少，畫面上看到的經理人數可能會暫時減少。</p>
+    </div>
+  </details>
+
+  <details id="promote-pass">
+    <summary>升星後，目前的旅店通行證獎勵會怎麼樣？</summary>
+    <div class="a">
+      <p>升星後就無法再領取目前星級的旅店通行證獎勵。<b>升星前請先領完所有可領取的獎勵。</b>升星時遊戲也會顯示提醒喔。</p>
+    </div>
+  </details>
+
+  <details id="promote-condition">
+    <summary>我雇用了很多經理，但升星條件的經理人數還是不夠。</summary>
+    <div class="a">
+      <p>升星條件計算的不是雇用人數，而是<b>已安排的經理人數</b>。每個位置只能安排1位經理，請開放更多樓層和設施來增加位置喔。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="cook"><span class="num">3</span>料理</h2>
+
+  <details id="cook-next">
+    <summary>要怎麼發現下一階段的料理（例如第3階段）？</summary>
+    <div class="a">
+      <p><b>把兩個相同階段的料理拖曳合成</b>，就會變成高一階段的料理。合成兩個第2階段料理，就能發現第3階段料理。</p>
+      <p class="tip">最新版本中，越是在沒發現新料理的情況下製作料理，烹飪研究最高階段料理出現的機率就會逐漸提高（最多+20%p）。</p>
+    </div>
+  </details>
+
+  <details id="cook-research">
+    <summary>[烹飪研究]無法升級。</summary>
+    <div class="a">
+      <p>要讓烹飪研究升到下一級，需要<b>先發現該階段的料理</b>。例如要升到 Lv.3，請先合成並發現第3階段料理。</p>
+    </div>
+  </details>
+
+  <details id="cook-max">
+    <summary>料理最多有幾個階段？</summary>
+    <div class="a">
+      <p>最多有24個階段。</p>
+    </div>
+  </details>
+
+  <details id="cook-count">
+    <summary>烹飪次數很快就用完了。</summary>
+    <div class="a">
+      <p>烹飪次數會隨時間恢復。觀看廣告可以立即獲得5次，旅店升級時也會補滿。雇用「貴族波斯西妮」還能增加烹飪次數上限喔。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="manager"><span class="num">4</span>經理</h2>
+
+  <details id="manager-move">
+    <summary>已安排的經理可以調到其他部門嗎？</summary>
+    <div class="a">
+      <p>經理無法調到其他部門喔。每個位置<b>最多可雇用4位</b>，並從中選1位用<span class="menu">安排</span>讓他工作。不需要的經理可以用<span class="menu">解僱經理</span>解僱。</p>
+    </div>
+  </details>
+
+  <details id="manager-full">
+    <summary>經理欄位滿了，無法再雇用。</summary>
+    <div class="a">
+      <p>每個位置最多可雇用4位經理。如果已滿，請解僱經理，或雇用到其他樓層或設施的空位。</p>
+    </div>
+  </details>
+
+  <details id="name">
+    <summary>可以幫貓咪或老闆改名字嗎？</summary>
+    <div class="a">
+      <p>目前沒有改名功能。您的意見我們會轉達給團隊喔。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="puzzle"><span class="num">5</span>拼圖・造型</h2>
+
+  <details id="puzzle-hard">
+    <summary>拼圖好難，拼好的碎片一直被移動。</summary>
+    <div class="a">
+      <p>最新版本中，<b>放在正確位置的碎片會被固定</b>並標示出來。請將App更新到最新版本喔。</p>
+    </div>
+  </details>
+
+  <details id="currency">
+    <summary>螢光貓薄荷或金絲喵線球一定要付費才能取得嗎？</summary>
+    <div class="a">
+      <p>不用喔。<b>觀看廣告就能免費獲得10個</b>，也能從旅店通行證獎勵中取得。</p>
+      <ul><li>螢光貓薄荷：在<span class="menu">製作</span>中強化道具時使用。</li><li>喵線球・金絲喵線球：在衣櫃中解鎖造型時使用。</li></ul>
+    </div>
+  </details>
+
+  <details id="wear">
+    <summary>購買的造型（例如韓服）要怎麼穿上？</summary>
+    <div class="a">
+      <p>可以在<span class="menu">庫庫的家</span>的衣櫃幫經理換上造型。韓服在衣櫃的「韓服」主題中喔。</p>
+    </div>
+  </details>
+
+  <details id="box">
+    <summary>在庫庫的家「輕觸箱子來開啟驚喜！」點不了。</summary>
+    <div class="a">
+      <p>箱子會依順序開啟。請點選<b>上方有對話框的箱子</b>。如果還是不行，請<a href="#contact">聯絡我們</a>。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="env"><span class="num">6</span>語言・遊玩環境</h2>
+
+  <details id="language">
+    <summary>可以更改遊戲語言嗎？</summary>
+    <div class="a">
+      <p>可以在<span class="menu">設定</span> &gt; <span class="menu">更改語言</span>中變更，變更後遊戲會重新啟動。</p>
+      <p>支援語言：韓文、英文、日文、中文（簡體・繁體）、德文、俄文、泰文、馬來文</p>
+    </div>
+  </details>
+
+  <details id="offline">
+    <summary>沒有網路也能玩嗎？</summary>
+    <div class="a">
+      <p>可以，離線也能遊玩。不過<b>獎勵廣告、每日獎勵和雲端備份</b>需要連上網路喔。</p>
+    </div>
+  </details>
+
+  <details id="landscape">
+    <summary>平板可以橫向遊玩嗎？</summary>
+    <div class="a">
+      <p>目前只支援直向畫面。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="data"><span class="num">7</span>資料・備份</h2>
+
+  <details id="backup">
+    <summary>刪除App後重新安裝，進度從頭開始了，可以復原嗎？</summary>
+    <div class="a">
+      <p>喵喵旅店的資料是<b>儲存在裝置上</b>的，刪除App前請務必先備份。</p>
+      <ul><li>備份：<span class="menu">設定</span> &gt; <span class="menu">雲端備份/還原</span> &gt; <span class="menu">雲端備份</span></li><li>還原：在同一選單的<span class="menu">雲端還原</span>輸入<b>GAME ID和復原碼</b></li></ul>
+      <p>如果從未備份，可能很難復原。若您記得之前的GAME ID，請<a href="#contact">聯絡我們</a>。</p>
+    </div>
+  </details>
+
+  <details id="game-id">
+    <summary>每次重新安裝，GAME ID都會改變。</summary>
+    <div class="a">
+      <p>每次全新安裝都會產生新的GAME ID。請<b>記下備份時顯示的GAME ID和復原碼。</b>還原時要輸入備份時的ID，而不是新的ID喔。</p>
+    </div>
+  </details>
+
+  <details id="device">
+    <summary>換手機時該怎麼做？可以連結Google或Apple帳號嗎？</summary>
+    <div class="a">
+      <p>目前沒有連結Google Play遊戲或iCloud。請在舊裝置上使用<span class="menu">雲端備份</span>，再到新裝置用GAME ID和復原碼還原。</p>
+    </div>
+  </details>
+
+  <details id="two-devices">
+    <summary>手機和平板可以共用同一份進度嗎？</summary>
+    <div class="a">
+      <p>無法共用喔。在其他裝置還原後，<b>原本的裝置就無法再用這份資料執行遊戲。</b></p>
+    </div>
+  </details>
+
+  <details id="backup-wait">
+    <summary>備份按鈕按不了。</summary>
+    <div class="a">
+      <p>備份一次後，1小時內無法再次備份。請稍後再試。</p>
+    </div>
+  </details>
+</section>
+
+<p class="part">購買・廣告・錯誤</p>
+
+<section>
+  <h2 id="pay"><span class="num">8</span>購買・商品</h2>
+
+  <details id="pay-missing">
+    <summary>付款了但沒有收到商品。</summary>
+    <div class="a">
+      <p>iOS請先點選<span class="menu">商店</span>中的<span class="menu">恢復購買紀錄</span>。</p>
+      <p>如果還是沒收到，請透過<span class="menu">設定</span> &gt; <span class="menu">聯絡我們</span>告訴我們<b>付款時間和商品名稱</b>。聯絡信件會自動附上GAME ID和裝置資訊。</p>
+    </div>
+  </details>
+
+  <details id="refund">
+    <summary>我想申請退款。</summary>
+    <div class="a">
+      <p>付款與退款由各商店處理。App Store的購買請向Apple申請，Google Play的購買請向Google申請退款。</p>
+      <p>如果是付款後沒收到商品，請依照<a href="#pay-missing">上方說明</a>聯絡我們。</p>
+    </div>
+  </details>
+
+  <details id="remove-ads">
+    <summary>移除廣告有期限嗎？重新安裝後會怎麼樣？</summary>
+    <div class="a">
+      <p>「移除廣告釣魚達人奇奇」<b>購買一次就永久有效</b>。重新安裝後若沒有套用，iOS請點選<span class="menu">商店</span>中的<span class="menu">恢復購買紀錄</span>，Android請<a href="#contact">聯絡我們</a>。</p>
+      <p class="tip">30天後結束的商品是「貴族波斯西妮」喔。</p>
+    </div>
+  </details>
+
+  <details id="remove-ads-button">
+    <summary>買了移除廣告，但廣告獎勵按鈕還在。</summary>
+    <div class="a">
+      <p>購買移除廣告後，<b>按下按鈕就能直接獲得獎勵</b>，不用看廣告，所以按鈕會保留。如果按下後還是播放廣告，請<a href="#contact">聯絡我們</a>。</p>
+    </div>
+  </details>
+
+  <details id="package">
+    <summary>「移除廣告釣魚達人奇奇」和「多合一+廣告掰掰」有什麼不同？</summary>
+    <div class="a">
+      <p>兩者都包含移除廣告。多合一是在移除廣告之外，再加上其他內容的組合包。詳細內容請參考<span class="menu">商店</span>中的商品說明。</p>
+      <p>購買其中一個後，就無法再購買另一個。</p>
+    </div>
+  </details>
+
+  <details id="offline-manager">
+    <summary>雇用「離線經理瑟菲」後，關掉App也會接待客人嗎？</summary>
+    <div class="a">
+      <p>瑟菲是能<b>將離線獎勵時間延長到最多24小時</b>的經理。關掉App期間累積的金幣，下次登入時能領到更多。</p>
+    </div>
+  </details>
+
+  <details id="sale">
+    <summary>優惠視窗只出現一天，隔天就不見了。</summary>
+    <div class="a">
+      <p>旅店通行證優惠只會在符合條件時開放<b>24小時</b>，並不是每天都會出現喔。</p>
+    </div>
+  </details>
+
+  <details id="pay-declined">
+    <summary>付款時顯示「付款遭拒」。</summary>
+    <div class="a">
+      <p>大多是商店付款方式的問題。請確認Play 商店的<span class="menu">付款和訂閱</span>，或Apple ID的付款資訊。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="ads"><span class="num">9</span>廣告</h2>
+
+  <details id="ads-many">
+    <summary>一定要看廣告嗎？</summary>
+    <div class="a">
+      <p>不用喔。喵喵旅店的廣告都是<b>想看時才選擇觀看的獎勵廣告</b>。不看廣告也能遊玩，只有想要額外獎勵時再看就好。</p>
+      <p>如果完全不想看廣告，可以透過「移除廣告釣魚達人奇奇」不看廣告直接領取獎勵。</p>
+    </div>
+  </details>
+
+  <details id="no-ad">
+    <summary>顯示「目前沒有準備好的廣告」。</summary>
+    <div class="a">
+      <p>請稍後再試。如果一直出現，請確認網路連線。觀看廣告需要連上網路喔。</p>
+    </div>
+  </details>
+
+  <details id="ad-close">
+    <summary>廣告沒有關閉（X）按鈕。</summary>
+    <div class="a">
+      <p>部分廣告要播放完畢後才會出現關閉按鈕。如果廣告結束後還是沒有按鈕，請<a href="#contact">聯絡我們</a>並告知手機型號。</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="error"><span class="num">10</span>錯誤・聯絡我們</h2>
+
+  <details id="mission-stuck">
+    <summary>任務一直無法完成（雇用經理、解鎖造型、製作道具等）。</summary>
+    <div class="a">
+      <p>最新版本中，目前無法完成的任務會<b>在登入時換成其他任務</b>。例如沒有空的經理位置、沒有可購買的造型，或因等級不足而鎖定的任務。</p>
+      <p>請將App更新到最新版本後重新進入遊戲。如果還是一樣，請<a href="#contact">聯絡我們</a>。</p>
+    </div>
+  </details>
+
+  <details id="cook-order">
+    <summary>烹飪研究升級後，做不出訂單需要的低階料理。</summary>
+    <div class="a">
+      <p>我們已修正烹飪研究 Lv.3 時不會出現第2階段訂單料理的問題，請更新到最新版本。也可以合成兩個第1階段料理來做出第2階段料理喔。</p>
+    </div>
+  </details>
+
+  <details id="sound">
+    <summary>看完廣告後遊戲沒有聲音。</summary>
+    <div class="a">
+      <p>重新啟動遊戲就會恢復聲音。請將App更新到最新版本。如果一直發生，請<a href="#contact">聯絡我們</a>並告知手機型號。</p>
+    </div>
+  </details>
+
+  <details id="ad-crash">
+    <summary>看廣告時遊戲閃退。</summary>
+    <div class="a">
+      <p>請將App更新到最新版本後再試一次。如果持續發生，請<a href="#contact">聯絡我們</a>並告知手機型號和系統版本。</p>
+    </div>
+  </details>
+
+  <details id="black-screen">
+    <summary>啟動後停在黑畫面或載入畫面。</summary>
+    <div class="a">
+      <p>請將App更新到最新版本並重新啟動裝置。如果還是不行，因為無法使用遊戲內的聯絡功能，請將手機型號和系統版本寄到<a href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>。</p>
+      <p class="tip">刪除App前，請先確認資料是否已備份。<a href="#backup">查看備份方法</a></p>
+    </div>
+  </details>
+
+  <details id="how-contact">
+    <summary>有問題或要回報錯誤，該怎麼聯絡？</summary>
+    <div class="a">
+      <p>請點選遊戲中的<span class="menu">設定</span> &gt; <span class="menu">聯絡我們</span>。信件會自動附上GAME ID、裝置、系統和遊戲版本，我們能更快協助您喔。</p>
+    </div>
+  </details>
+</section>
+
+<p class="empty" id="empty">找不到相關問題。請換個關鍵字，或透過下方聯絡我們。</p>
+
+<div class="contact" id="contact">
+  <h2>找不到答案嗎？</h2>
+  <p>在遊戲中點選[設定] &gt; [聯絡我們]最快喔。</p>
+  <p>如果無法進入遊戲，請寄信給我們。</p>
+  <a class="btn" href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>
+</div>
+
+</main>
+
+<footer>© 4th May Games · 喵喵旅店</footer>
+
+</div>
+
+<script>
+  (function () {
+    var input = document.getElementById('q');
+    var items = Array.prototype.slice.call(document.querySelectorAll('main details'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('main section'));
+    var parts = Array.prototype.slice.call(document.querySelectorAll('main .part'));
+    var empty = document.getElementById('empty');
+
+    function openFromHash() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (el && el.tagName === 'DETAILS') el.open = true;
+    }
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (d) {
+        var hit = !q || d.textContent.toLowerCase().indexOf(q) !== -1;
+        d.hidden = !hit;
+        d.open = !!q && hit;
+        if (hit) shown++;
+      });
+      sections.forEach(function (s) { s.hidden = !s.querySelector('details:not([hidden])'); });
+      parts.forEach(function (p) { p.hidden = !!q; });
+      empty.style.display = shown ? 'none' : 'block';
+      if (!q) openFromHash();
+    });
+
+    // 다른 언어로 갈 때 지금 보고 있는 질문(#id)을 유지
+    Array.prototype.forEach.call(document.querySelectorAll('.langs a'), function (a) {
+      a.addEventListener('click', function () {
+        if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
+      });
+    });
+
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+    if (location.hash) {
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) setTimeout(function () { el.scrollIntoView(); }, 0);
+    }
+  })();
+</script>
+</body>
+</html>

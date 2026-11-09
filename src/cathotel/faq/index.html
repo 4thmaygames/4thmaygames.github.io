@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idle Cat Hotel FAQ</title>
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="alternate" hreflang="ko" href="ko.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="ja" href="ja.html">
+<link rel="alternate" hreflang="zh-Hant" href="zh-tw.html">
+<script>
+  (function () {
+    // ?lang=ko|en|ja|zh-tw 가 있으면 그 언어, 없으면 브라우저 언어로 이동. #id 는 그대로 넘긴다.
+    var m = /[?&]lang=([a-zA-Z-]+)/.exec(location.search);
+    var l = (m ? m[1] : (navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+    var file = 'en.html';
+    if (l.indexOf('ko') === 0) file = 'ko.html';
+    else if (l.indexOf('ja') === 0) file = 'ja.html';
+    else if (l.indexOf('zh') === 0 && /tw|hk|mo|hant/.test(l)) file = 'zh-tw.html';
+    location.replace(file + location.hash);
+  })();
+</script>
+<style>
+  body { font-family: system-ui, sans-serif; text-align: center; padding: 48px 16px; background: #fbf6ef; color: #3b2f27; }
+  a { display: inline-block; margin: 6px 8px; color: #b8651c; }
+</style>
+</head>
+<body>
+<p><a href="ko.html">한국어</a><a href="en.html">English</a><a href="ja.html">日本語</a><a href="zh-tw.html">繁體中文</a></p>
+</body>
+</html>

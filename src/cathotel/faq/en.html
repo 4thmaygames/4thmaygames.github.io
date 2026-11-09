@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idle Cat Hotel FAQ</title>
+<meta name="description" content="Answers to frequently asked questions about Idle Cat Hotel: progress, promotion, cooking, managers, data backup, purchases, ads and errors.">
+<meta property="og:title" content="Idle Cat Hotel FAQ">
+<meta property="og:description" content="Answers to frequently asked questions about Idle Cat Hotel: progress, promotion, cooking, managers, data backup, purchases, ads and errors.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+<link rel="alternate" hreflang="ko" href="ko.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="ja" href="ja.html">
+<link rel="alternate" hreflang="zh-Hant" href="zh-tw.html">
+<style>
+:root {
+  --bg: #fbf6ef;
+  --surface: #ffffff;
+  --surface-2: #f5ece0;
+  --text: #3b2f27;
+  --text-2: #7a6a5d;
+  --line: #eadfd1;
+  --accent: #e48c3a;
+  --accent-ink: #b8651c;
+  --accent-soft: #fbe7d3;
+  --note-bg: #fff6e8;
+  --shadow: 0 1px 2px rgba(80, 50, 20, .06), 0 4px 16px rgba(80, 50, 20, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1d1814;
+    --surface: #272019;
+    --surface-2: #31281f;
+    --text: #f1e8de;
+    --text-2: #b9aa9b;
+    --line: #3d3228;
+    --accent: #f0a45c;
+    --accent-ink: #f4b77c;
+    --accent-soft: #3a2b1d;
+    --note-bg: #2f251b;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1d1814;
+  --surface: #272019;
+  --surface-2: #31281f;
+  --text: #f1e8de;
+  --text-2: #b9aa9b;
+  --line: #3d3228;
+  --accent: #f0a45c;
+  --accent-ink: #f4b77c;
+  --accent-soft: #3a2b1d;
+  --note-bg: #2f251b;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent-ink); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: 48px 0 24px; text-align: center; }
+.paw { font-size: 40px; line-height: 1; }
+h1 { font-size: 28px; line-height: 1.3; margin: 12px 0 8px; letter-spacing: -0.01em; }
+.lead { color: var(--text-2); margin: 0; }
+
+.search {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--bg);
+  padding: 12px 0;
+}
+.search input {
+  width: 100%;
+  font: inherit;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 8px; }
+nav.toc a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  white-space: nowrap;
+}
+nav.toc a:hover { border-color: var(--accent); color: var(--accent-ink); }
+.toc-label { width: 100%; font-size: 13px; color: var(--text-2); margin-top: 8px; }
+
+section { padding-top: 32px; }
+section > h2 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  display: flex; align-items: center; gap: 8px;
+  scroll-margin-top: 80px;
+}
+section > h2 .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 28px; height: 28px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent-ink);
+  font-size: 14px; font-weight: 700;
+}
+.part {
+  margin: 48px 0 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-2);
+}
+
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 80px;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 44px 14px 16px;
+  font-weight: 600;
+  position: relative;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "Q. "; color: var(--accent-ink); font-weight: 700; }
+summary::after {
+  content: "";
+  position: absolute; right: 18px; top: 50%;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .15s;
+}
+details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+details[open] summary { border-bottom: 1px solid var(--line); }
+.a { padding: 12px 16px 16px; }
+.a p { margin: 0 0 8px; }
+.a p:last-child, .a ul:last-child { margin-bottom: 0; }
+.a ul { margin: 0 0 8px; padding-left: 20px; }
+.menu {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tip {
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+.empty { display: none; text-align: center; color: var(--text-2); padding: 32px 0; }
+
+.contact {
+  margin: 48px 0 0;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: center;
+}
+.contact h2 { margin: 0 0 8px; font-size: 18px; }
+.contact p { margin: 0 0 8px; color: var(--text-2); }
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+footer { text-align: center; color: var(--text-2); font-size: 13px; padding: 32px 0 48px; }
+
+@media (max-width: 480px) {
+  header { padding-top: 32px; }
+  h1 { font-size: 24px; }
+}
+
+.langs {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 4px;
+  padding-top: 16px;
+}
+.langs a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.langs a:hover { color: var(--accent-ink); }
+.langs a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
+header { padding-top: 24px; }
+
+/* 일본어·중국어는 띄어쓰기가 없어 keep-all 이면 줄바꿈이 안 된다 */
+html:lang(ja) body, html:lang(zh-Hant) body { word-break: normal; line-break: strict; }
+html:lang(ja) body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+}
+html:lang(zh-Hant) body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+html:lang(en) body { word-break: normal; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langs" aria-label="Language">
+  <a href="ko.html" hreflang="ko" lang="ko">한국어</a>
+  <a href="en.html" aria-current="page" hreflang="en" lang="en">English</a>
+  <a href="ja.html" hreflang="ja" lang="ja">日本語</a>
+  <a href="zh-tw.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+</nav>
+
+<header>
+  <div class="paw" aria-hidden="true">🐾</div>
+  <h1>Idle Cat Hotel FAQ</h1>
+  <p class="lead">Hello, Boss! This is CuCu, the manager of Idle Cat Hotel.<br>Here are answers to the questions we hear most.</p>
+</header>
+
+<div class="search">
+  <input id="q" type="search" placeholder="Search the FAQ (e.g. backup, promote, food)" aria-label="Search the FAQ">
+</div>
+
+<nav class="toc">
+  <span class="toc-label">Playing the game</span>
+  <a href="#play">Levels &amp; missions</a>
+  <a href="#promote">Promotion</a>
+  <a href="#cook">Cooking</a>
+  <a href="#manager">Managers</a>
+  <a href="#puzzle">Puzzles &amp; outfits</a>
+  <a href="#env">Language &amp; device</a>
+  <a href="#data">Data &amp; backup</a>
+  <span class="toc-label">Purchases, ads &amp; errors</span>
+  <a href="#pay">Purchases</a>
+  <a href="#ads">Ads</a>
+  <a href="#error">Errors &amp; contact</a>
+</nav>
+
+<main>
+
+<p class="part">Playing the game</p>
+
+<section>
+  <h2 id="play"><span class="num">1</span>Levels &amp; missions</h2>
+
+  <details id="level-up">
+    <summary>My level bar isn't moving. How do I level up?</summary>
+    <div class="a">
+      <p>Your hotel levels up when you <b>complete the missions</b> shown at the top of the screen. The bar won't move unless you complete missions.</p>
+      <p>If a mission can't be completed, see <a href="#mission-stuck">A mission won't complete</a>.</p>
+    </div>
+  </details>
+
+  <details id="unlock">
+    <summary>When do Puzzle, House, Craft and Promote unlock?</summary>
+    <div class="a">
+      <ul><li>Hotel Lv.6: <span class="menu">Puzzle</span></li><li>Hotel Lv.7: <span class="menu">House</span> (manager outfits)</li><li>Hotel Lv.8: <span class="menu">Craft</span> (room items)</li><li>Hotel Lv.9: <span class="menu">Promote</span></li></ul>
+    </div>
+  </details>
+
+  <details id="new-content">
+    <summary>I've finished the 7-star hotel. When is new content coming?</summary>
+    <div class="a">
+      <p>Thank you so much for growing your hotel all the way! We'll announce new content through updates as soon as it's ready. Every suggestion you send is shared with our team.</p>
+    </div>
+  </details>
+
+  <details id="winter">
+    <summary>It's always winter in the game. Do the seasons change?</summary>
+    <div class="a">
+      <p>Idle Cat Hotel is located in a <b>winter village</b>, so the background doesn't change with the seasons for now.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="promote"><span class="num">2</span>Promotion</h2>
+
+  <details id="promote-reset">
+    <summary>After promoting, my floors disappeared and only 2 are left. Is this a bug?</summary>
+    <div class="a">
+      <p>It's not a bug. When you promote, <b>your rooms and Hotel Pass reset</b> so you can grow again at the new star level.</p>
+      <p>In return, you earn more gold (such as room fees) and more mission experience, and new rooms and facilities open up.</p>
+    </div>
+  </details>
+
+  <details id="promote-manager">
+    <summary>Do I lose my managers when I promote?</summary>
+    <div class="a">
+      <p>No, the managers you've hired stay with you. Because there are fewer floors, you may see fewer managers on screen for a while.</p>
+    </div>
+  </details>
+
+  <details id="promote-pass">
+    <summary>What happens to my current Hotel Pass rewards when I promote?</summary>
+    <div class="a">
+      <p>After promoting, you can no longer claim rewards from the current Hotel Pass. <b>Please claim all available rewards before you promote.</b> The game also shows a warning when you promote.</p>
+    </div>
+  </details>
+
+  <details id="promote-condition">
+    <summary>I've hired lots of managers, but the promotion requirement still isn't met.</summary>
+    <div class="a">
+      <p>The requirement counts <b>assigned managers</b>, not hired ones. Only one manager can be assigned to each spot, so open more floors and facilities to get more spots.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="cook"><span class="num">3</span>Cooking</h2>
+
+  <details id="cook-next">
+    <summary>How do I discover the next food level (e.g. level 3)?</summary>
+    <div class="a">
+      <p><b>Drag two foods of the same level together</b> to make the next level. Merge two level-2 foods to discover a level-3 food.</p>
+      <p class="tip">In the latest version, the more you cook without discovering a new food, the higher the chance of getting the top-level food from Food Research (up to +20 percentage points).</p>
+    </div>
+  </details>
+
+  <details id="cook-research">
+    <summary>I can't upgrade [Food Research].</summary>
+    <div class="a">
+      <p>To upgrade Food Research, you first need to <b>discover a food of that level</b>. For example, to reach Lv.3, merge foods to discover a level-3 food first.</p>
+    </div>
+  </details>
+
+  <details id="cook-max">
+    <summary>How many food levels are there?</summary>
+    <div class="a">
+      <p>There are up to 24 levels.</p>
+    </div>
+  </details>
+
+  <details id="cook-count">
+    <summary>I run out of cooking attempts quickly.</summary>
+    <div class="a">
+      <p>Cooking attempts refill over time. You can get 5 right away by watching an ad, and they also refill when your hotel levels up. Hiring 'Noble Persian Sini' increases your maximum attempts.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="manager"><span class="num">4</span>Managers</h2>
+
+  <details id="manager-move">
+    <summary>Can I move an assigned manager to a different job?</summary>
+    <div class="a">
+      <p>Managers can't be moved to another job. You can <b>hire up to 4 managers per spot</b> and put one of them to work with <span class="menu">Assign</span>. You can let go of managers you don't need with <span class="menu">Firing Managers</span>.</p>
+    </div>
+  </details>
+
+  <details id="manager-full">
+    <summary>My manager slots are full and I can't hire more.</summary>
+    <div class="a">
+      <p>Each spot can have up to 4 managers. If it's full, let one go or hire for an empty spot on another floor or facility.</p>
+    </div>
+  </details>
+
+  <details id="name">
+    <summary>Can I rename the cats or set my own name?</summary>
+    <div class="a">
+      <p>Renaming isn't available right now. We'll share your suggestion with our team.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="puzzle"><span class="num">5</span>Puzzles &amp; outfits</h2>
+
+  <details id="puzzle-hard">
+    <summary>Puzzles are hard, and pieces I've placed keep moving.</summary>
+    <div class="a">
+      <p>In the latest version, <b>pieces placed in the correct spot are locked</b> and highlighted. Please update the app to the latest version.</p>
+    </div>
+  </details>
+
+  <details id="currency">
+    <summary>Do I have to pay to get Catnip of Light or Golden Yarn?</summary>
+    <div class="a">
+      <p>No. You can get <b>10 for free by watching an ad</b>, and you can also earn them as Hotel Pass rewards.</p>
+      <ul><li>Catnip of Light: used to upgrade items in <span class="menu">Craft</span>.</li><li>Yarn and Golden Yarn: used to unlock outfits in the Closet.</li></ul>
+    </div>
+  </details>
+
+  <details id="wear">
+    <summary>How do I dress my managers in outfits I bought?</summary>
+    <div class="a">
+      <p>Go to the Closet in <span class="menu">House</span> to dress your managers. Outfits are grouped by theme there (for example, the Korean hanbok outfits are under the 'Korean' theme).</p>
+    </div>
+  </details>
+
+  <details id="box">
+    <summary>In the House, "Tap the box to open it!" doesn't respond.</summary>
+    <div class="a">
+      <p>Boxes open in order. Please tap <b>the box with the speech bubble</b> above it. If that doesn't work, please <a href="#contact">contact us</a>.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="env"><span class="num">6</span>Language &amp; device</h2>
+
+  <details id="language">
+    <summary>Can I change the game language?</summary>
+    <div class="a">
+      <p>Yes. Go to <span class="menu">Settings</span> &gt; <span class="menu">Change Language</span>. The game restarts after you change it.</p>
+      <p>Supported languages: Korean, English, Japanese, Chinese (Simplified and Traditional), German, Russian, Thai and Malay.</p>
+    </div>
+  </details>
+
+  <details id="offline">
+    <summary>Can I play offline?</summary>
+    <div class="a">
+      <p>Yes, you can play offline. However, <b>reward ads, daily rewards and cloud backup</b> need an internet connection.</p>
+    </div>
+  </details>
+
+  <details id="landscape">
+    <summary>Can I play in landscape on a tablet?</summary>
+    <div class="a">
+      <p>The game currently supports portrait mode only.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="data"><span class="num">7</span>Data &amp; backup</h2>
+
+  <details id="backup">
+    <summary>I reinstalled the app and my progress is gone. Can I recover it?</summary>
+    <div class="a">
+      <p>Game data is <b>saved on your device</b>, so please back it up before deleting the app.</p>
+      <ul><li>Back up: <span class="menu">Settings</span> &gt; <span class="menu">Cloud Backup/Restoration</span> &gt; <span class="menu">Back Up Cloud</span></li><li>Restore: <span class="menu">Restore Cloud</span> in the same menu, then enter your <b>GAME ID and backup code</b></li></ul>
+      <p>Without a backup, recovery may not be possible. If you know your old GAME ID, please <a href="#contact">contact us</a>.</p>
+    </div>
+  </details>
+
+  <details id="game-id">
+    <summary>My GAME ID changes every time I reinstall.</summary>
+    <div class="a">
+      <p>A new GAME ID is created with each new install. <b>Write down the GAME ID and backup code shown when you back up.</b> To restore, enter the ID you backed up with, not the new one.</p>
+    </div>
+  </details>
+
+  <details id="device">
+    <summary>I'm getting a new phone. Can I link my Google or Apple account?</summary>
+    <div class="a">
+      <p>The game doesn't link to Google Play Games or iCloud. Use <span class="menu">Back Up Cloud</span> on your old device, then restore on the new device with your GAME ID and backup code.</p>
+    </div>
+  </details>
+
+  <details id="two-devices">
+    <summary>Can I play the same save on my phone and tablet?</summary>
+    <div class="a">
+      <p>No. Once you restore on another device, <b>that save can no longer be played on the original device.</b></p>
+    </div>
+  </details>
+
+  <details id="backup-wait">
+    <summary>The backup button doesn't work.</summary>
+    <div class="a">
+      <p>After backing up, you can't back up again for one hour. Please try again later.</p>
+    </div>
+  </details>
+</section>
+
+<p class="part">Purchases, ads &amp; errors</p>
+
+<section>
+  <h2 id="pay"><span class="num">8</span>Purchases</h2>
+
+  <details id="pay-missing">
+    <summary>I paid, but I didn't receive my item.</summary>
+    <div class="a">
+      <p>On iOS, first tap <span class="menu">Restore Purchase History</span> in the <span class="menu">Shop</span>.</p>
+      <p>If it still hasn't arrived, send us the <b>purchase date and item name</b> via <span class="menu">Settings</span> &gt; <span class="menu">Inquiry</span>. Your GAME ID and device info are added to the email automatically.</p>
+    </div>
+  </details>
+
+  <details id="refund">
+    <summary>I'd like a refund.</summary>
+    <div class="a">
+      <p>Payments and refunds are handled by each store. Please request a refund through Apple for App Store purchases, or through Google for Google Play purchases.</p>
+      <p>If you didn't receive an item you paid for, please follow <a href="#pay-missing">the steps above</a>.</p>
+    </div>
+  </details>
+
+  <details id="remove-ads">
+    <summary>Does Remove Ads expire? What if I reinstall?</summary>
+    <div class="a">
+      <p>'Ad Remover, Fisher Kiki' is <b>yours permanently</b> once purchased. If it isn't applied after reinstalling, tap <span class="menu">Restore Purchase History</span> in the <span class="menu">Shop</span> on iOS, or <a href="#contact">contact us</a> on Android.</p>
+      <p class="tip">'Noble Persian Sini' is the item that ends after 30 days.</p>
+    </div>
+  </details>
+
+  <details id="remove-ads-button">
+    <summary>I bought Remove Ads, but the ad reward buttons are still there.</summary>
+    <div class="a">
+      <p>With Remove Ads, <b>tapping the button gives you the reward instantly</b> instead of playing an ad, so the buttons stay. If an ad still plays when you tap, please <a href="#contact">contact us</a>.</p>
+    </div>
+  </details>
+
+  <details id="package">
+    <summary>What's the difference between 'Ad Remover, Fisher Kiki' and 'All-in-one + Remove Ads'?</summary>
+    <div class="a">
+      <p>Both include Remove Ads. The All-in-one package adds other items on top of it. Please check the item description in the <span class="menu">Shop</span> for details.</p>
+      <p>Once you buy one of them, the other can no longer be purchased.</p>
+    </div>
+  </details>
+
+  <details id="offline-manager">
+    <summary>If I hire Offline Manager Surfy, does the hotel serve guests while the app is closed?</summary>
+    <div class="a">
+      <p>Surfy <b>extends your offline rewards to up to 24 hours</b>. You collect more of the gold earned while the app was closed the next time you play.</p>
+    </div>
+  </details>
+
+  <details id="sale">
+    <summary>A sale offer appeared for one day and then disappeared.</summary>
+    <div class="a">
+      <p>The Hotel Pass sale opens <b>for 24 hours only</b> when certain conditions are met. It isn't a daily offer.</p>
+    </div>
+  </details>
+
+  <details id="pay-declined">
+    <summary>My payment says it was declined.</summary>
+    <div class="a">
+      <p>This is usually an issue with the store's payment method. Please check <span class="menu">Payments &amp; subscriptions</span> in the Play Store, or your Apple ID payment information.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="ads"><span class="num">9</span>Ads</h2>
+
+  <details id="ads-many">
+    <summary>Do I have to watch ads?</summary>
+    <div class="a">
+      <p>No. All ads in Idle Cat Hotel are <b>optional reward ads that you choose to watch</b>. You can play without them and only watch one when you want an extra reward.</p>
+      <p>If you'd rather never watch ads, 'Ad Remover, Fisher Kiki' gives you those rewards without ads.</p>
+    </div>
+  </details>
+
+  <details id="no-ad">
+    <summary>It says there are no ads available.</summary>
+    <div class="a">
+      <p>Please try again in a little while. If it keeps happening, check your network connection. Ads need an internet connection.</p>
+    </div>
+  </details>
+
+  <details id="ad-close">
+    <summary>There's no close (X) button on an ad.</summary>
+    <div class="a">
+      <p>Some ads show the close button only after they finish playing. If the button doesn't appear even after the ad ends, please <a href="#contact">contact us</a> with your device model.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="error"><span class="num">10</span>Errors &amp; contact</h2>
+
+  <details id="mission-stuck">
+    <summary>A mission won't complete (hire a manager, unlock an outfit, craft an item, etc.).</summary>
+    <div class="a">
+      <p>In the latest version, missions that can't be completed right now are <b>replaced with another mission when you log in</b>. For example, when there are no empty manager spots, no outfits left to buy, or the mission is locked by level.</p>
+      <p>Please update the app to the latest version and open the game again. If it still happens, please <a href="#contact">contact us</a>.</p>
+    </div>
+  </details>
+
+  <details id="cook-order">
+    <summary>After upgrading Food Research, I can't make the lower-level food an order needs.</summary>
+    <div class="a">
+      <p>We fixed the issue where level-2 order foods didn't appear at Food Research Lv.3. Please update to the latest version. You can also merge two level-1 foods to make a level-2 food.</p>
+    </div>
+  </details>
+
+  <details id="sound">
+    <summary>The game has no sound after I watch an ad.</summary>
+    <div class="a">
+      <p>Restarting the game brings the sound back. Please update the app to the latest version. If it keeps happening, please <a href="#contact">contact us</a> with your device model.</p>
+    </div>
+  </details>
+
+  <details id="ad-crash">
+    <summary>The game crashes while an ad is playing.</summary>
+    <div class="a">
+      <p>Please update the app to the latest version and try again. If it continues, please <a href="#contact">contact us</a> with your device model and OS version.</p>
+    </div>
+  </details>
+
+  <details id="black-screen">
+    <summary>The game gets stuck on a black screen or the loading screen.</summary>
+    <div class="a">
+      <p>Please update the app to the latest version and restart your device. If that doesn't help, you won't be able to use the in-game contact menu, so please email your device model and OS version to <a href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>.</p>
+      <p class="tip">Before deleting the app, make sure your data is backed up. <a href="#backup">See how to back up</a></p>
+    </div>
+  </details>
+
+  <details id="how-contact">
+    <summary>How do I ask a question or report a bug?</summary>
+    <div class="a">
+      <p>Tap <span class="menu">Settings</span> &gt; <span class="menu">Inquiry</span> in the game. Your GAME ID, device, OS and game version are added to the email automatically, so we can help you faster.</p>
+    </div>
+  </details>
+</section>
+
+<p class="empty" id="empty">No results. Try another word, or contact us below.</p>
+
+<div class="contact" id="contact">
+  <h2>Can&#x27;t find your answer?</h2>
+  <p>The fastest way is [Settings] &gt; [Inquiry] in the game.</p>
+  <p>If you can&#x27;t open the game, please email us.</p>
+  <a class="btn" href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>
+</div>
+
+</main>
+
+<footer>© 4th May Games · Idle Cat Hotel</footer>
+
+</div>
+
+<script>
+  (function () {
+    var input = document.getElementById('q');
+    var items = Array.prototype.slice.call(document.querySelectorAll('main details'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('main section'));
+    var parts = Array.prototype.slice.call(document.querySelectorAll('main .part'));
+    var empty = document.getElementById('empty');
+
+    function openFromHash() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (el && el.tagName === 'DETAILS') el.open = true;
+    }
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (d) {
+        var hit = !q || d.textContent.toLowerCase().indexOf(q) !== -1;
+        d.hidden = !hit;
+        d.open = !!q && hit;
+        if (hit) shown++;
+      });
+      sections.forEach(function (s) { s.hidden = !s.querySelector('details:not([hidden])'); });
+      parts.forEach(function (p) { p.hidden = !!q; });
+      empty.style.display = shown ? 'none' : 'block';
+      if (!q) openFromHash();
+    });
+
+    // 다른 언어로 갈 때 지금 보고 있는 질문(#id)을 유지
+    Array.prototype.forEach.call(document.querySelectorAll('.langs a'), function (a) {
+      a.addEventListener('click', function () {
+        if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
+      });
+    });
+
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+    if (location.hash) {
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) setTimeout(function () { el.scrollIntoView(); }, 0);
+    }
+  })();
+</script>
+</body>
+</html>
