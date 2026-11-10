@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Idle Frog Hotel FAQ</title>
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="ko" href="ko.html">
+<script>
+  (function () {
+    // ?lang=ko|en 이 있으면 그 언어, 없으면 브라우저 언어로 이동. #id 는 그대로 넘긴다.
+    var m = /[?&]lang=([a-zA-Z-]+)/.exec(location.search);
+    var l = (m ? m[1] : (navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+    var file = 'en.html';
+    if (l.indexOf('ko') === 0) file = 'ko.html';
+    location.replace(file + location.hash);
+  })();
+</script>
+<style>
+  body { font-family: system-ui, sans-serif; text-align: center; padding: 48px 16px; background: #fffeec; color: #854d21; }
+  a { display: inline-block; margin: 6px 8px; color: #a9521d; }
+</style>
+</head>
+<body>
+<p><a href="en.html">English</a><a href="ko.html">한국어</a></p>
+</body>
+</html>

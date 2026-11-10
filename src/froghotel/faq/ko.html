@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>개구리호텔 자주 묻는 질문</title>
+<meta name="description" content="개구리호텔 매니저, 홍보 벨, 감정의 정원, 승급, 요리, 보석, 보상, 백업, 결제, 광고, 오류에 대한 자주 묻는 질문과 답변입니다.">
+<meta property="og:title" content="개구리호텔 자주 묻는 질문">
+<meta property="og:description" content="개구리호텔 매니저, 홍보 벨, 감정의 정원, 승급, 요리, 보석, 보상, 백업, 결제, 광고, 오류에 대한 자주 묻는 질문과 답변입니다.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/images/common/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="ko" href="ko.html">
+<style>
+:root {
+  /* 개구리호텔: 연못 초록 + 크림. 강조색 #56B267 은 게임 문구의 '오픈' 초록 */
+  --bg: #f7fbec;
+  --surface: #e7f3d6;
+  --surface-2: #f7fbec;
+  --field: #ffffff;
+  --text: #3d5a2a;
+  --text-2: #5f7a4a;
+  --line: #c8e0b0;
+  --accent: #56b267;
+  --accent-ink: #2e7a3c;
+  --accent-soft: #d6eec6;
+  --note-bg: #fff6d8;
+  --btn-bg: #3d5a2a;
+  --btn-fg: #f7fbec;
+  --shadow: 0 2px 0 rgba(150, 190, 120, .40);
+  /* 다크 모드에서도 게임과 같은 밝은 색을 쓴다 */
+  color-scheme: only light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent-ink); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: 48px 0 24px; text-align: center; }
+.paw { font-size: 40px; line-height: 1; }
+h1 { font-size: 28px; line-height: 1.3; margin: 12px 0 8px; letter-spacing: -0.01em; }
+.lead { color: var(--text-2); margin: 0; }
+
+.search {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--bg);
+  padding: 12px 0;
+}
+.search input {
+  width: 100%;
+  font: inherit;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--field);
+  color: var(--text);
+  outline: none;
+}
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 8px; }
+nav.toc a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  white-space: nowrap;
+}
+nav.toc a:hover { border-color: var(--accent); color: var(--accent-ink); }
+.toc-label { width: 100%; font-size: 13px; color: var(--text-2); margin-top: 8px; }
+
+section { padding-top: 32px; }
+section > h2 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  display: flex; align-items: center; gap: 8px;
+  scroll-margin-top: 80px;
+}
+section > h2 .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 28px; height: 28px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent-ink);
+  font-size: 14px; font-weight: 700;
+}
+.part {
+  margin: 48px 0 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-2);
+}
+
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 80px;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 44px 14px 16px;
+  font-weight: 600;
+  position: relative;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "Q. "; color: var(--accent-ink); font-weight: 700; }
+summary::after {
+  content: "";
+  position: absolute; right: 18px; top: 50%;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .15s;
+}
+details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+details[open] summary { border-bottom: 1px solid var(--line); }
+.a { padding: 12px 16px 16px; }
+.a p { margin: 0 0 8px; }
+.a p:last-child, .a ul:last-child { margin-bottom: 0; }
+.a ul { margin: 0 0 8px; padding-left: 20px; }
+.menu {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tip {
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+.empty { display: none; text-align: center; color: var(--text-2); padding: 32px 0; }
+
+.contact {
+  margin: 48px 0 0;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: center;
+}
+.contact h2 { margin: 0 0 8px; font-size: 18px; }
+.contact p { margin: 0 0 8px; color: var(--text-2); }
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  text-decoration: none;
+  font-weight: 700;
+}
+footer { text-align: center; color: var(--text-2); font-size: 13px; padding: 32px 0 48px; }
+
+@media (max-width: 480px) {
+  header { padding-top: 32px; }
+  h1 { font-size: 24px; }
+}
+
+.langs {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 4px;
+  padding-top: 16px;
+}
+.langs a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.langs a:hover { color: var(--accent-ink); }
+.langs a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
+header { padding-top: 24px; }
+
+/* 일본어·중국어는 띄어쓰기가 없어 keep-all 이면 줄바꿈이 안 된다 */
+html:lang(ja) body, html:lang(zh-Hant) body { word-break: normal; line-break: strict; }
+html:lang(ja) body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+}
+html:lang(zh-Hant) body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+html:lang(en) body { word-break: normal; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langs" aria-label="Language">
+  <a href="en.html" hreflang="en" lang="en">English</a>
+  <a href="ko.html" aria-current="page" hreflang="ko" lang="ko">한국어</a>
+</nav>
+
+<header>
+  <div class="paw" aria-hidden="true">🐸</div>
+  <h1>개구리호텔 자주 묻는 질문</h1>
+  <p class="lead">안녕하세요, 사장님! 개구리호텔 수석매니저 티티예요.<br>자주 물어보시는 내용을 여기 모아 두었어요.</p>
+</header>
+
+<div class="search">
+  <input id="q" type="search" placeholder="궁금한 내용을 검색해 보세요 (예: 매니저, 정원, 백업)" aria-label="FAQ 검색">
+</div>
+
+<nav class="toc">
+  <span class="toc-label">게임 안내</span>
+  <a href="#basics">레벨·미션</a>
+  <a href="#managers">매니저</a>
+  <a href="#guests">손님·벨·정원</a>
+  <a href="#upgrade">증축·승급</a>
+  <a href="#activities">식당·제작·미니게임</a>
+  <a href="#gems">보석·보상</a>
+  <span class="toc-label">데이터·결제·광고·오류</span>
+  <a href="#data">데이터·백업</a>
+  <a href="#purchases">결제·상품</a>
+  <a href="#ads">광고</a>
+  <a href="#etc">오류·기타</a>
+</nav>
+
+<main>
+
+<p class="part">게임 안내</p>
+
+<section>
+  <h2 id="basics"><span class="num">1</span>레벨·미션</h2>
+
+  <details id="level-up">
+    <summary>호텔 레벨은 어떻게 올리나요?</summary>
+    <div class="a">
+      <p>호텔 레벨은 <b>시설(층·객실·공공시설)을 레벨업</b>하면 올라가요. 골드로 레벨업할 때마다 경험치가 쌓이고, 보석으로 올리는 항목은 쓴 보석 수만큼 경험치가 쌓여요.</p>
+      <p>미션을 완료하면 경험치 대신 <span class="menu">호텔패스</span>에 쓰는 <b>반짝 조개</b>를 받아요. 미션 묶음을 모두 끝내면 <a href="#roulette">개굴룰렛</a>을 돌릴 수 있어요.</p>
+    </div>
+  </details>
+
+  <details id="unlock">
+    <summary>식당, 제작, 퍼즐 같은 메뉴는 언제 열리나요?</summary>
+    <div class="a">
+      <p>호텔 레벨이 오르면 차례로 열려요.</p>
+      <ul><li>Lv.3: <span class="menu">상점</span>, 골드·매니저 부스트</li><li>Lv.4: <span class="menu">식당</span></li><li>Lv.5: <span class="menu">메가 부스트</span>, <span class="menu">광산</span></li><li>Lv.6: <a href="#garden">감정의 정원</a></li><li>Lv.7: <span class="menu">제작</span>, 점술가(타로)</li><li>Lv.8: <span class="menu">승급</span></li><li>Lv.9: <span class="menu">퍼즐</span></li></ul>
+    </div>
+  </details>
+
+  <details id="mission-stuck">
+    <summary>미션이 넘어가지 않아요. (매니저 칸이 꽉 찼는데 고용 미션, 같은 층 레벨업 반복, 잠긴 메뉴)</summary>
+    <div class="a">
+      <ul><li><b>매니저 칸이 꽉 찼는데 '매니저 고용' 미션이 나올 때:</b> 필요 없는 매니저를 <span class="menu">매니저 해고</span>로 내보내고 다시 고용하세요. 다시 고용해도 미션에 들어가요. <a href="#manager-many">매니저 안내</a>도 참고해 주세요.</li><li><b>같은 층 레벨업 미션이 계속 나올 때:</b> 층 레벨업 미션은 레벨업 비용이 가장 싼 층을 고르기 때문에, 열린 층이 적으면 같은 층이 반복될 수 있어요. 층을 더 열면 달라져요.</li><li><b>메뉴가 아직 잠겨 있을 때:</b> 제작·식당 미션은 그 메뉴가 열려야 할 수 있어요. <a href="#level-up">시설 레벨업</a>으로 호텔 레벨을 올려 주세요.</li><li>만들 아이템이 없는 '아이템 제작' 미션이나 Lv.9 전에 나온 '퍼즐' 미션은 자동으로 손님 미션으로 바뀌어요.</li></ul>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="managers"><span class="num">2</span>매니저</h2>
+
+  <details id="manager-what">
+    <summary>매니저는 무슨 일을 하나요? 왜 고용해야 하나요?</summary>
+    <div class="a">
+      <p>매니저는 사장님 대신 터치를 해 줘서 호텔이 저절로 돌아가게 해요. 종류마다 맡는 일이 달라요.</p>
+      <ul><li><b>프론트:</b> 손님 체크인</li><li><b>홍보:</b> <a href="#bell">홍보 벨</a> 게이지를 채워 새 손님을 불러요</li><li><b>접객:</b> 마당 손님을 프론트로 안내</li><li><b>엘리베이터:</b> 손님을 엘리베이터에 태워요</li><li><b>청소:</b> 객실 청소 시간을 줄여요</li><li><b>골드:</b> 골드 보관함을 자동으로 수거</li><li><b>객실:</b> 체크아웃을 자동으로 하고 이용 시간을 줄여요</li></ul>
+      <p>등급이 높은 매니저일수록 더 빨리 일해요.</p>
+    </div>
+  </details>
+
+  <details id="manager-many">
+    <summary>매니저가 한 명씩만 일하는데 여러 명 고용하는 이유가 뭔가요? '휴식 중' 매니저는 잠을 자야 하나요?</summary>
+    <div class="a">
+      <p>자리마다 매니저를 4명까지 둘 수 있지만, <b><span class="menu">배치하기</span>로 배치한 1명만 실제로 일해요.</b> 나머지는 <span class="menu">휴식 중</span>으로 표시되고 효과가 없어요. 체력이나 잠은 없어서 번갈아 쉬게 할 필요도 없어요.</p>
+      <p>매니저 등급(인턴, 사원, 팀장, 실장)은 고용할 때 무작위로 정해져요. 여러 번 고용하면 더 좋은 매니저를 만날 수 있으니, 가장 좋은 매니저를 배치해 두세요.</p>
+      <p class="tip">필요 없는 매니저는 <span class="menu">매니저 해고</span>로 내보내면 자리가 비고, 골드도 조금 돌려받아요.</p>
+    </div>
+  </details>
+
+  <details id="super-manager">
+    <summary>매니저가 손님 2명을 동시에 처리하는 걸 본 적이 없어요. 슈퍼 매니저는 어떻게 받나요?</summary>
+    <div class="a">
+      <p>손님 2명 동시 처리는 그 종류의 <b>슈퍼 매니저</b>를 얻은 뒤부터 돼요. 슈퍼 매니저가 있으면 그 종류에 배치한 매니저가 손님을 2명씩 처리해요.</p>
+      <ul><li><b>프론트:</b> 처음 시작하고 1일 뒤 무료</li><li><b>홍보:</b> 처음 시작하고 7일 뒤 무료</li><li><b>접객, 엘리베이터:</b> 각각 보석 1,000개</li></ul>
+      <p>슈퍼 매니저는 이 4종류에만 있어요. 알림을 허용하면 무료 슈퍼 매니저가 도착할 때 알려 드려요.</p>
+    </div>
+  </details>
+
+  <details id="manager-choose">
+    <summary>원하는 개구리를 매니저로 고를 수 있나요? 다른 층으로 옮길 수 있나요?</summary>
+    <div class="a">
+      <p>고르는 건 자리(종류와 층)이고, 매니저의 등급과 모습은 무작위예요. 고용할 때 <span class="menu">개굴 추천장</span> 1장이 들어요.</p>
+      <p>배치한 매니저를 다른 자리로 옮길 수는 없어요. 나올 수 있는 최고 등급은 호텔 성급에 따라 달라요. 0성에서는 사원, 1성에서는 팀장, 2성부터는 실장까지 나와요.</p>
+      <p>객실 매니저는 그 층 객실을 연 뒤에 고용할 수 있어요. 승급해도 매니저는 그대로 남아요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="guests"><span class="num">3</span>손님·벨·정원</h2>
+
+  <details id="bell">
+    <summary>작은 종(벨)은 무슨 기능인가요?</summary>
+    <div class="a">
+      <p>벨은 <b>호텔을 홍보해서 새 손님을 부르는</b> 버튼이에요. 누를 때마다 홍보 게이지가 차고, 가득 차면 손님이 한 명 찾아와요.</p>
+      <p>누르기를 멈추면 게이지가 조금씩 줄어요. <b>홍보 매니저</b>를 배치하면 자동으로 채워 주고, 홍보 슈퍼 매니저가 있으면 손님이 2명씩 와요.</p>
+    </div>
+  </details>
+
+  <details id="garden">
+    <summary>감정의 정원은 뭔가요? 무엇을 하면 되나요?</summary>
+    <div class="a">
+      <p>호텔 <b>Lv.6</b>이 되면 마당을 지나가는 손님을 터치해 보세요. 이야기가 나오고, <b>다음 날(24시간 뒤)</b> <span class="menu">감정의 정원</span>이 열려요.</p>
+      <ul><li>손님 20종마다 감정 화분이 하나씩 있어요.</li><li>그 손님을 많이 접객할수록 화분이 자라요. 10, 40, 100, 300, 600, 1,000, 3,000번째 방문 때 성장 버튼을 눌러 주세요.</li><li>12시간마다 화분 하나에 편지가 와요. 받은 편지는 <span class="menu">편지도감</span>에서 다시 볼 수 있어요.</li><li><span class="menu">빛나는 정원들</span>은 총 접객 수 랭킹이에요.</li></ul>
+      <p>정원은 천천히 모으며 즐기는 콘텐츠예요. 골드나 보석을 주지 않으니 따로 관리하지 않아도 괜찮아요.</p>
+    </div>
+  </details>
+
+  <details id="mine">
+    <summary>광산은 뭔가요?</summary>
+    <div class="a">
+      <p><span class="menu">광산</span>(Lv.5)은 시간이 지나며 쌓이는 호텔 수익을 모아 두는 곳이에요. 자리를 비운 동안의 보상과 같은 수익이고, 게임 중에도 <span class="menu">받기</span>로 받을 수 있어요. 일꾼을 터치하면 조금씩 빨라져요.</p>
+      <p>최대 3시간치까지 쌓여요. <a href="#offline-manager">오프라인 매니저 채구리</a>가 있으면 24시간치까지 쌓여요.</p>
+    </div>
+  </details>
+
+  <details id="whisper">
+    <summary>손님 말풍선을 끌 수 있나요?</summary>
+    <div class="a">
+      <p>네. <span class="menu">설정</span>에서 '손님들의 속삭임을 듣는다.'를 '조용히 쉰다.'로 바꾸면 손님 혼잣말이 나오지 않아요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="upgrade"><span class="num">4</span>증축·승급</h2>
+
+  <details id="more-floors">
+    <summary>호텔 꼭대기까지 다 지었어요. 층을 더 열려면 어떻게 하나요?</summary>
+    <div class="a">
+      <p>성급마다 지을 수 있는 층 수가 정해져 있어요. 다 지었다면 <b><span class="menu">승급</span>으로 호텔 등급을 올리면</b> 위로 새 층이 생겨요.</p>
+      <p><span class="menu">증축하기</span>에는 정해진 호텔 레벨과 골드가 필요하고, 아래층을 먼저 지어야 해요. 증축은 한 번에 한 층씩만 할 수 있어요.</p>
+      <ul><li>증축 시간은 처음 5분에서 시작해 나중에는 최대 2시간이에요.</li><li>바로 끝내려면 남은 1분당 보석 1개를 쓰거나, 광고를 보고 30분을 줄일 수 있어요. 맨 처음 증축은 무료예요.</li><li>증축을 완료하면 승급에 쓰는 <span class="menu">황금 나사</span> 10개를 받아요.</li></ul>
+    </div>
+  </details>
+
+  <details id="upgrade-need">
+    <summary>승급하려면 무엇이 필요한가요?</summary>
+    <div class="a">
+      <p>승급은 호텔 Lv.8에 열려요. 호텔 레벨, <span class="menu">황금 나사</span>, 보석이 필요해요.</p>
+      <ul><li>1성: Lv.11, 나사 70개, 보석 50개</li><li>2성: Lv.27, 나사 150개, 보석 150개</li><li>3성: Lv.41, 나사 180개, 보석 360개</li><li>4성: Lv.62, 나사 210개, 보석 600개</li><li>5성: Lv.84, 나사 240개, 보석 900개</li><li>6성: Lv.109, 나사 280개, 보석 1,400개</li><li>7성: Lv.137, 나사 320개, 보석 2,000개</li></ul>
+      <p>황금 나사는 <a href="#roulette">개굴룰렛</a>, 증축 완료, 점술가, 광고(한 번에 10개)로 모을 수 있어요.</p>
+    </div>
+  </details>
+
+  <details id="upgrade-keep">
+    <summary>승급하면 층이나 매니저가 사라지나요?</summary>
+    <div class="a">
+      <p>아니요. 층, 시설 레벨, 매니저, 골드, 호텔 레벨은 모두 그대로예요. 지금 호텔 <b>위로 이어서</b> 지어요.</p>
+      <p>새로 시작되는 것은 미션 목록과 새 성급의 <span class="menu">호텔패스</span>예요. 승급하면 이전 성급의 호텔패스 보상은 받을 수 없으니 <b>승급 전에 보상을 모두 받아 두세요.</b></p>
+      <p>성급마다 새 시설이 열려요. 슈페리어룸(1성), 피트니스(2성), 디럭스룸(3성), 베이커리(4성), 프리미엄룸(5성), 재즈카페(6성), 프라이빗풀과 스위트룸(7성)이에요.</p>
+    </div>
+  </details>
+
+  <details id="hotel-pass">
+    <summary>호텔패스는 어떻게 쓰나요?</summary>
+    <div class="a">
+      <p>미션을 완료하면 반짝 조개를 받고, 지금 성급의 <span class="menu">호텔패스</span>가 채워져요. 단계마다 무료 보상과 프리미엄 보상이 있어요.</p>
+      <p>프리미엄 보상은 <span class="menu">프리미엄 구매하기</span>로 열 수 있고, <b>구매한 성급에서만</b> 적용돼요. 성급마다 패스가 따로 있어요.</p>
+    </div>
+  </details>
+
+  <details id="after-7">
+    <summary>7성까지 다 했어요. 다음은 뭔가요?</summary>
+    <div class="a">
+      <p>축하드려요, 사장님! 지금은 7성이 최고 등급이에요. 모든 미션을 끝내면 '모든 성급의 미션이 클리어 되었습니다.'가 나와요.</p>
+      <p><span class="menu">테마지도</span>의 다른 호텔은 아직 준비 중이에요. 아직 일정을 알려 드릴 수 없고, 새 콘텐츠는 업데이트로 알려 드릴게요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="activities"><span class="num">5</span>식당·제작·미니게임</h2>
+
+  <details id="food-merge">
+    <summary>높은 단계 요리는 어떻게 만드나요?</summary>
+    <div class="a">
+      <p><b>같은 단계</b> 요리 두 개를 드래그해서 겹치면 다음 단계 요리가 돼요. 요리는 24단계까지 있어요.</p>
+      <p><span class="menu">요리 스킬</span>의 <span class="menu">요리 연구</span>를 올리면 높은 단계 요리가 나올 확률이 올라가요. 다음 레벨로 올리려면 그 단계 요리를 합성으로 먼저 발견해야 해요.</p>
+    </div>
+  </details>
+
+  <details id="cook-count">
+    <summary>요리하려면 계속 광고를 봐야 하나요?</summary>
+    <div class="a">
+      <p>아니요. 요리 횟수는 <b>1분마다 1회씩</b> 저절로 차고, 호텔 레벨이 오르면 모두 충전돼요.</p>
+      <p>광고는 횟수가 0일 때 바로 채우고 싶을 때만 고르는 거예요(10분에 한 번).</p>
+      <p>최대 횟수는 <span class="menu">제작</span>의 버섯 모빌 아이템으로 늘릴 수 있고, 산중호걸 호랑이 있으면 2회 더 늘어요.</p>
+    </div>
+  </details>
+
+  <details id="kitchen">
+    <summary>접시나 보관함이 꽉 찼어요. 주문서는 어떻게 바꾸나요?</summary>
+    <div class="a">
+      <ul><li><span class="menu">접시 추가</span>: 접시는 4개로 시작해 12개까지 늘릴 수 있어요. 5번째는 무료이고, 그다음부터는 보석이 두 배씩 들어요.</li><li>요리를 <span class="menu">요리 보관함</span>에 드래그하면 보관되고, <span class="menu">휴지통</span>에 넣으면 버려져요.</li><li><span class="menu">요리주문서 새로고침</span>: 3회가 있고 호텔 레벨이 오르면 다시 차요. 광고를 보면 3회가 충전되고, 하루 3번까지예요(자정에 초기화).</li></ul>
+    </div>
+  </details>
+
+  <details id="enhance">
+    <summary>아이템 강화는 어떻게 되나요? 100%인데 실패했어요.</summary>
+    <div class="a">
+      <p><span class="menu">제작하기</span>는 시간만 들어요. <span class="menu">강화하기</span>에는 <span class="menu">뚝딱 클로버</span>가 (레벨 × 10)개 들고, 첫 강화는 무료예요.</p>
+      <p>성공 확률은 100%에서 시작해요. 성공할 때마다 6%p씩 내려가고(최소 50%), 실패하면 10%p 올라가요. 100%일 때는 반드시 성공해요.</p>
+      <p>100%에서 실패했다면 GAME ID, 아이템 이름, 시간을 <span class="menu">의견 남기기</span>로 보내 주세요. 확인해 드릴게요.</p>
+    </div>
+  </details>
+
+  <details id="tarot">
+    <summary>점술가(타로)는 어떻게 하나요?</summary>
+    <div class="a">
+      <p>카드를 한 라운드씩 뽑아(최대 10라운드) 골드, 보석, 황금 나사, 개굴 추천장 같은 보상을 모아요. 처음 3라운드는 항상 안전해요.</p>
+      <p><b>카드는 계속 뽑을 수 있어요.</b> 원할 때 <span class="menu">보상 획득하고</span> <span class="menu">끝내기</span>로 멈추세요. 실패하면 빨간 악마가 보상을 잠가요. 광고를 보고 <span class="menu">잠금풀기</span>를 하거나 <span class="menu">떠나기</span>를 고를 수 있어요.</p>
+      <p>한 판이 끝나면 점술가는 30분 쉬어요.</p>
+    </div>
+  </details>
+
+  <details id="roulette">
+    <summary>개굴룰렛은 어떻게 돌리나요?</summary>
+    <div class="a">
+      <p>미션 묶음을 모두 끝내면 <span class="menu">개굴룰렛 돌리기!</span>로 한 번 무료로 돌려요. <span class="menu">한번 더!</span>는 광고(30분마다) 또는 보석 30개로 돌릴 수 있어요.</p>
+      <p>황금 나사, 보석(최대 300개), 개굴 추천장, 요리 횟수, 부스트, 골드가 나와요. 황금 나사를 가장 많이 얻는 곳이에요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="gems"><span class="num">6</span>보석·보상</h2>
+
+  <details id="free-gems">
+    <summary>보석이 부족해요. 무료로 얻는 방법이 있나요?</summary>
+    <div class="a">
+      <ul><li><b>상점:</b> 24시간마다 무료 10개, 광고를 보면 3시간마다 10개</li><li><b><a href="#daily">출석 보상</a>:</b> 20일 동안 410개</li><li><b><a href="#time-reward">접속시간 보상</a>:</b> 처음 5일 동안 최대 1,050개</li><li><b>미션, 개굴룰렛, 점술가, 퍼즐, 증축 완료</b></li><li><b>도감</b>에 새 손님과 새 요리가 등록될 때</li><li><b>인스타그램:</b> <span class="menu">설정</span>의 인스타그램 버튼을 처음 누르면 100개</li></ul>
+      <p class="tip">시설 수익을 올리는 레벨업은 언제나 골드로 해요. 이용 시간 감소 같은 보석 업그레이드는 선택이니, 보석은 승급용으로 먼저 모아 두세요.</p>
+    </div>
+  </details>
+
+  <details id="gem-furniture">
+    <summary>가구 레벨업에 갑자기 보석이 필요해요.</summary>
+    <div class="a">
+      <p>가구는 평소 골드로 올리지만, Lv.10, 20, 30처럼 10단위로 넘어갈 때만 보석(10, 20, 30개…)이 들어요. 이때 광고를 보고 대신 올릴 수도 있어요.</p>
+      <p>시설 테마는 보석 50개나, 매일 처음 접속할 때 받는 테마시설 오픈권으로 열 수 있어요.</p>
+    </div>
+  </details>
+
+  <details id="time-reward">
+    <summary>접속시간 보상이 멈췄어요. 자정에 초기화되지 않아요.</summary>
+    <div class="a">
+      <p><span class="menu">접속시간 보상</span>은 <b>설치한 날부터 5일 동안만</b> 진행되는 이벤트예요. 하루에 게임을 10, 20, 30, 40, 50, 60분 할 때마다 보석 10~60개를 받아요.</p>
+      <ul><li>시간은 <b>게임 화면이 켜져 있을 때만</b> 쌓여요. 백그라운드에서는 쌓이지 않아요.</li><li>보상을 받으려면 인터넷이 필요해요. 네트워크를 확인하라는 말풍선이 보이면 연결한 뒤 말풍선을 터치해 주세요.</li><li>기기 시간 기준 자정에 초기화되고, 그날 받지 않은 보상은 사라져요.</li><li>5일이 지나면 이벤트가 끝나서 버튼이 사라져요.</li></ul>
+    </div>
+  </details>
+
+  <details id="daily">
+    <summary>출석 보상과 매일 보석 패스는 어떻게 되나요?</summary>
+    <div class="a">
+      <ul><li><b><span class="menu">출석 보상</span>:</b> 20일 달력에서 하루에 한 칸씩 받아요. 하루 빠져도 처음으로 돌아가지 않아요. 받을 때 인터넷이 필요해요.</li><li><b>매일 보석 패스:</b> 28일짜리 상품이에요. 매일 보석 300개, 첫날과 7일마다 600개를 받아 모두 9,900개예요. 지나간 날의 보상은 받을 수 없어요.</li></ul>
+    </div>
+  </details>
+</section>
+
+<p class="part">데이터·결제·광고·오류</p>
+
+<section>
+  <h2 id="data"><span class="num">7</span>데이터·백업</h2>
+
+  <details id="backup">
+    <summary>게임 데이터는 어떻게 백업하나요? GAME ID와 복구 코드는 어디서 보나요?</summary>
+    <div class="a">
+      <p>게임 진행은 <b>기기에만 저장</b>돼요. 앱을 지우거나 폰을 바꾸기 전에 꼭 백업해 주세요.</p>
+      <ul><li><span class="menu">설정</span> &gt; <span class="menu">클라우드 백업/복원</span> &gt; <span class="menu">클라우드 백업하기</span>를 눌러요.</li><li>백업이 끝나면 <b>GAME ID(영문 6자리)</b>와 <b>복구 코드(숫자 4자리)</b>가 나와요. 둘 다 적어 두거나 화면을 캡처해 두세요.</li><li>GAME ID는 <span class="menu">설정</span>에서도 볼 수 있어요. 마지막 복구 코드는 <span class="menu">클라우드 백업하기</span>를 다시 누르면 볼 수 있어요.</li></ul>
+      <p class="tip">백업할 때마다 새 코드가 나오고, 코드는 한 번만 쓸 수 있어요. 항상 가장 최근 코드를 쓰세요.</p>
+    </div>
+  </details>
+
+  <details id="restore">
+    <summary>새 폰이나 다시 설치한 뒤에 어떻게 복원하나요?</summary>
+    <div class="a">
+      <p><span class="menu">설정</span> &gt; <span class="menu">클라우드 백업/복원</span> &gt; <span class="menu">클라우드 복원하기</span>에서 <b>백업할 때 받은 GAME ID와 복구 코드</b>를 넣어 주세요. 새로 설치하면서 생긴 새 ID가 아니에요. 복원하면 게임이 다시 시작돼요.</p>
+      <p>백업한 적이 없으면 자동으로 되살릴 수 없어요. 예전 GAME ID를 아시면 <span class="menu">의견 남기기</span>로 알려 주세요. 확인해 볼게요.</p>
+    </div>
+  </details>
+
+  <details id="two-devices">
+    <summary>기기 두 대에서 할 수 있나요? '다른 기기에서 사용중'이라고 나와요.</summary>
+    <div class="a">
+      <p>할 수 없어요. 다른 기기에서 복원하면 원래 기기에서는 그 데이터로 게임을 할 수 없고 '게임 데이터가 다른 기기에서 사용중입니다.'가 나와요. 복원한 기기에서 이어서 해 주세요.</p>
+      <p>한 번 백업하면 1시간 동안은 다시 백업할 수 없어요.</p>
+    </div>
+  </details>
+
+  <details id="account">
+    <summary>구글이나 애플 계정으로 로그인해야 하나요?</summary>
+    <div class="a">
+      <p>아니요. 계정 없이 바로 시작하고, 구글·애플 계정과 연동되지 않아요. 데이터를 옮길 때는 <a href="#backup">클라우드 백업</a>을 써 주세요.</p>
+      <p>Google Play 게임즈나 Game Center 로그인은 <span class="menu">빛나는 정원들</span> 랭킹을 열 때만 나오고, 저장과는 상관없어요.</p>
+    </div>
+  </details>
+
+  <details id="reset">
+    <summary>처음부터 다시 하고 싶어요.</summary>
+    <div class="a">
+      <p><span class="menu">설정</span> &gt; <span class="menu">게임 데이터 초기화</span>를 이용하세요. 두 번 확인하고, <b>삭제된 데이터는 되살릴 수 없어요.</b> 구매한 영구 상품은 그대로 남아요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="purchases"><span class="num">8</span>결제·상품</h2>
+
+  <details id="not-received">
+    <summary>결제했는데 상품이 안 들어왔어요.</summary>
+    <div class="a">
+      <p>먼저 인터넷에 연결한 상태로 게임을 다시 시작해 주세요.</p>
+      <p>그래도 없으면 <span class="menu">의견 남기기</span>로 GAME ID, 결제 일시, 상품 이름, 영수증이나 주문 번호를 보내 주세요. 확인 후 지급해 드릴게요.</p>
+    </div>
+  </details>
+
+  <details id="refund">
+    <summary>환불받고 싶어요.</summary>
+    <div class="a">
+      <p>App Store 결제는 Apple이, Google Play 결제는 Google이 환불을 처리해요. 각 스토어의 환불 요청 메뉴를 이용해 주세요.</p>
+      <p>환불이 처리되면 그 상품과 상품으로 받은 보석이 게임에서 회수되고, 게임이 다시 시작돼요.</p>
+    </div>
+  </details>
+
+  <details id="ad-free">
+    <summary>광고스킵 낚시꾼 태공은 뭔가요? 계속 유지되나요?</summary>
+    <div class="a">
+      <p>네, 한 번 사면 계속 유지돼요. 광고를 봐야 받는 보상을 <b>광고 없이 바로</b> 받아요. 보상 버튼과 기다리는 시간은 그대로예요.</p>
+      <p><span class="menu">올인원 + 광고스킵</span>에는 같은 광고스킵 효과에 보석, 수익 부스트, 퍼즐 간식이 더 들어 있어요. 둘 중 하나(또는 패키지)를 사면 다른 하나는 살 수 없어요.</p>
+    </div>
+  </details>
+
+  <details id="offline-manager">
+    <summary>오프라인 매니저 채구리와 산중호걸 호랑은 뭔가요?</summary>
+    <div class="a">
+      <ul><li><b>오프라인 매니저 채구리</b>(영구): 자리를 비운 동안 쌓이는 수익이 3시간이 아니라 <b>최대 24시간</b>까지 쌓여요. 게임을 끈 동안 손님을 실제로 받는 것은 아니고, 다시 들어왔을 때 받는 보상이 커져요.</li><li><b>산중호걸 호랑</b>(30일): 보석 300개를 바로 받고, 매일 50개(프론트의 호랑을 터치), 낚시꾼 태공·숨겨진 골드 2배, 요리 횟수 +2, 오프라인 수익 +2시간. 30일이 지나면 자동으로 끝나요.</li></ul>
+    </div>
+  </details>
+
+  <details id="pay-failed">
+    <summary>'구매에 실패했습니다'라고 나와요.</summary>
+    <div class="a">
+      <p>대부분 스토어 결제 수단 문제예요. App Store(Apple ID)나 Google Play의 결제 정보를 확인하고, 인터넷이 안정적인 곳에서 다시 시도해 주세요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="ads"><span class="num">9</span>광고</h2>
+
+  <details id="ads-many">
+    <summary>광고가 많나요?</summary>
+    <div class="a">
+      <p>광고는 거의 모두 <b>보상을 받고 싶을 때 직접 고르는</b> 광고예요. 보지 않아도 게임을 할 수 있어요.</p>
+      <p>결제나 보상 광고 시청 기록이 없는 경우, 층 레벨업 창을 닫을 때 가끔 광고가 나올 수 있고 이때도 골드를 드려요. 광고를 아예 보고 싶지 않다면 <a href="#ad-free">광고스킵 낚시꾼 태공</a>으로 광고 없이 보상을 받을 수 있어요.</p>
+    </div>
+  </details>
+
+  <details id="ad-no-reward">
+    <summary>광고를 봤는데 보상이 없어요. / '준비된 광고가 없습니다'라고 나와요.</summary>
+    <div class="a">
+      <p>보상은 광고가 <b>끝까지 재생되어야</b> 지급돼요. 중간에 닫거나, 광고에서 스토어로 넘어갔다가 게임이 다시 시작되면 보상이 없을 수 있어요.</p>
+      <p>'준비된 광고가 없습니다'는 아직 광고가 준비되지 않았다는 뜻이에요. 잠시 뒤 다시 시도하고 인터넷 연결을 확인해 주세요. 이때는 보상 기회나 대기 시간이 쓰이지 않아요.</p>
+      <p>계속 반복되면 <span class="menu">의견 남기기</span>로 기종을 알려 주세요.</p>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2 id="etc"><span class="num">10</span>오류·기타</h2>
+
+  <details id="language">
+    <summary>다른 언어로 할 수 있나요?</summary>
+    <div class="a">
+      <p><b>영어와 한국어</b>를 지원해요. <span class="menu">설정</span> &gt; <span class="menu">언어 변경하기</span>에서 바꿀 수 있고, 바꾸면 게임이 다시 불러와져요.</p>
+      <p>다른 언어는 아직 지원하지 않아요. 요청해 주신 의견은 팀에 전달했어요.</p>
+    </div>
+  </details>
+
+  <details id="offline">
+    <summary>인터넷 없이도 할 수 있나요?</summary>
+    <div class="a">
+      <p>네. 기본 게임은 인터넷 없이 할 수 있어요.</p>
+      <p><a href="#daily">출석 보상</a>, <a href="#time-reward">접속시간 보상</a>, 슈퍼 매니저, <a href="#backup">클라우드 백업</a>, 자리를 비운 동안의 보상, 광고, 결제는 인터넷이 필요해요.</p>
+    </div>
+  </details>
+
+  <details id="landscape">
+    <summary>가로 화면으로 할 수 있나요?</summary>
+    <div class="a">
+      <p>세로 화면만 지원해요.</p>
+    </div>
+  </details>
+
+  <details id="crash">
+    <summary>화면이 까맣게 나오거나 게임이 자꾸 꺼져요.</summary>
+    <div class="a">
+      <p>최신 버전으로 업데이트하고 기기를 다시 시작해 주세요. 게임이 꺼지면서 보상(예: 룰렛 보상)을 못 받았다면 GAME ID와 시간을 <span class="menu">의견 남기기</span>로 보내 주세요.</p>
+      <p>게임에 아예 들어갈 수 없다면 <a href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>으로 기종과 OS 버전을 보내 주세요.</p>
+    </div>
+  </details>
+
+  <details id="suggest">
+    <summary>자유롭게 꾸미거나 개구리를 옮기거나 엘리베이터를 더 놓을 수 있나요?</summary>
+    <div class="a">
+      <p>지금은 할 수 없어요. 시설 모습은 <span class="menu">테마상점</span>과 시설 테마 오픈으로 바꿀 수 있어요.</p>
+      <p>보내 주시는 아이디어는 모두 읽고 있어요. <span class="menu">의견 남기기</span>로 보내 주세요.</p>
+    </div>
+  </details>
+
+  <details id="contact">
+    <summary>버그나 궁금한 점은 어디로 문의하나요?</summary>
+    <div class="a">
+      <p><span class="menu">설정</span> &gt; <span class="menu">의견 남기기</span>를 눌러 주세요. 메일에 GAME ID, 기기, OS, 버전이 자동으로 들어가서 더 빨리 도와드릴 수 있어요.</p>
+    </div>
+  </details>
+</section>
+
+<p class="empty" id="empty">검색 결과가 없어요. 다른 단어로 찾아보거나 아래로 문의해 주세요.</p>
+
+<div class="contact" id="contact">
+  <h2>찾는 답이 없나요?</h2>
+  <p>게임 안의 [설정] &gt; [의견 남기기]를 이용하시면 가장 빨라요.</p>
+  <p>게임에 들어갈 수 없다면 메일로 보내 주세요.</p>
+  <a class="btn" href="mailto:help@4thmaygames.com">help@4thmaygames.com</a>
+</div>
+
+</main>
+
+<footer>© 4th May Games · 개구리호텔</footer>
+
+</div>
+
+<script>
+  (function () {
+    var input = document.getElementById('q');
+    var items = Array.prototype.slice.call(document.querySelectorAll('main details'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('main section'));
+    var parts = Array.prototype.slice.call(document.querySelectorAll('main .part'));
+    var empty = document.getElementById('empty');
+
+    function openFromHash() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (el && el.tagName === 'DETAILS') el.open = true;
+    }
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (d) {
+        var hit = !q || d.textContent.toLowerCase().indexOf(q) !== -1;
+        d.hidden = !hit;
+        d.open = !!q && hit;
+        if (hit) shown++;
+      });
+      sections.forEach(function (s) { s.hidden = !s.querySelector('details:not([hidden])'); });
+      parts.forEach(function (p) { p.hidden = !!q; });
+      empty.style.display = shown ? 'none' : 'block';
+      if (!q) openFromHash();
+    });
+
+    // 다른 언어로 갈 때 지금 보고 있는 질문(#id)을 유지
+    Array.prototype.forEach.call(document.querySelectorAll('.langs a'), function (a) {
+      a.addEventListener('click', function () {
+        if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
+      });
+    });
+
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+    if (location.hash) {
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) setTimeout(function () { el.scrollIntoView(); }, 0);
+    }
+  })();
+</script>
+</body>
+</html>

@@ -173,6 +173,17 @@ App Store 배지는 `appstore` 가 비어 있는 동안 **아예 표시되지 �
 
 ---
 
+## 4-3. 개구리호텔 FAQ — `/froghotel/faq/`
+
+개구리호텔 자주 묻는 질문 페이지입니다. 주소는 `https://4thmaygames.com/froghotel/faq/` (브라우저 언어에 따라 한국어·영어로 자동 이동).
+
+- `src/froghotel/faq/*.html` 은 **FrogHotel 저장소에서 생성한 완성본**을 그대로 복사한 것입니다 (Eleventy는 손대지 않고 복사만 함)
+- 내용을 고칠 때는 FrogHotel 저장소의 `Tools/faq/faq_content.py` 를 고치고 `python3 Tools/faq/build_faq.py` 로 다시 만든 뒤, `docs/faq/*.html` 을 이 폴더에 덮어쓰세요
+- 특정 질문으로 바로 연결: `/froghotel/faq/en.html#manager-many` 처럼 질문 id 를 붙이면 그 질문이 펼쳐진 채로 열립니다
+- 언어 지정: `/froghotel/faq/?lang=ko`
+
+---
+
 ## 5. 개인정보처리방침
 
 `/privacy/` 주소로 살아 있지만 **푸터에 링크는 걸지 않았습니다.**
@@ -223,6 +234,7 @@ src/
 ├── assets/             # CSS, JS, 이미지
 ├── index.njk           # ★ 홈
 ├── cathotel/faq/       # 고양이호텔 FAQ (/cathotel/faq/) — CatHotel 저장소에서 생성한 HTML
+├── froghotel/faq/      # 개구리호텔 FAQ (/froghotel/faq/) — FrogHotel 저장소에서 생성한 HTML
 ├── matcha.njk          # 사전예약 랜딩 (/matcha/) — 전시장 QR 접속용
 ├── privacy.njk         # 개인정보처리방침 (/privacy/)
 ├── 404.njk
